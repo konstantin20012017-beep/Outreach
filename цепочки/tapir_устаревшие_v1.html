@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тапир – Устаревшие интернет-магазины – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5; color: #1a1a1a; padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta { font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6; }
+        .sources-card {
+            background: #fffbe6; border: 1px solid #f0e6b0;
+            border-radius: 12px; padding: 24px 28px; margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label { font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px; }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px; margin-top: 2px;
+        }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тапир – Устаревшие интернет-магазины</h1>
+        <div class="meta">
+            Сегмент: retail, fashion, электроника, мебель (60+ млн выручка)<br>
+            Менеджер: Надежда Хегай<br>
+            CTA: бесплатный аудит потенциала трафика → номер телефона
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Айсбрекер: технологический стек сайта (CMS как триггер)</div>
+                <div class="source-quote">«Триггеры: Сайт устарел, слабая конверсия»</div>
+                <span class="source-tag">брифы/tapir_устаревшие_бриф.md → Триггеры</span>
+                <div class="source-quote">«Технологический стек мы можем анализировать, сайты на каких CMS, какие-то инструменты аналитики»</div>
+                <span class="source-tag">Инструкции.docx → Типы триггеров</span>
+                <div class="source-quote">«Те, которые работают на конструкторах. И, скажем так, масштабирование на конструкторе это либо невозможно, либо делать тяжело»</div>
+                <span class="source-tag">брифы/tapir_устаревшие_бриф.md → Созвон с клиентом</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Боль: низкая конверсия, плохой SEO, ограничения CMS</div>
+                <div class="source-quote">«Боли: Низкая конверсия. Плохая SEO-оптимизация. Ограничения CMS»</div>
+                <span class="source-tag">брифы/tapir_устаревшие_бриф.md → Боли</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Кейс Kitogo: рост конверсии через UX + SEO</div>
+                <div class="source-quote">«Упростили навигацию и фильтрацию. Улучшили карточки товаров (контент, структура, CTA). Добавили рекомендации и блоки похожих товаров. Внедрили чат, быстрый поиск и адаптивный интерфейс»</div>
+                <span class="source-tag">брифы/tapir_кейсы.md → Kitogo → Что сделали (UX)</span>
+                <div class="source-quote">«Глубина просмотра: +70%. Повторные визиты: +34%. С 0 до 5 000+ органических пользователей в месяц. Заказы выросли в 5 раз»</div>
+                <span class="source-tag">брифы/tapir_кейсы.md → Kitogo → Результат</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Кейс Technobiz: SEO окупается, конверсия 1.8–2%</div>
+                <div class="source-quote">«Трафик: 3 000 до 4 000 пользователей/мес. Заказы из SEO: 7–15 в месяц. SEO полностью окупается. Конверсия: 1.8–2%»</div>
+                <span class="source-tag">брифы/tapir_кейсы.md → Technobiz → Результат</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">УТП: рост конверсии, современный UX, интеграции</div>
+                <div class="source-quote">«УТП и выгоды: Рост конверсии. Современный UX. Интеграции с CRM/ERP»</div>
+                <span class="source-tag">брифы/tapir_устаревшие_бриф.md → УТП</span>
+                <div class="source-quote">«Настраиваем сквозную автоматизацию: от приема заказа и синхронизации с 1С и CRM до управления складом, расчета цен и интеграции с маркетплейсами. Это сокращает ошибки и ускоряет обработку заказов»</div>
+                <span class="source-tag">ecom.tapir.ws → Экспертиза</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">CTA: аудит потенциала трафика → номер телефона</div>
+                <div class="source-quote">«Первичная встреча + аудит потенциала трафика»</div>
+                <span class="source-tag">брифы/tapir_устаревшие_бриф.md → CTA</span>
+                <div class="source-quote">«Я думаю, нам получить нужен номер телефона. Типа, пришлите номер телефона, если стоят такие задачи, обсудим, подскажем»</div>
+                <span class="source-tag">Инструкции.docx → CTA</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Зашла на ваш сайт – заметила, что магазин работает на конструкторе. Решила написать.
+
+Частая ситуация: трафик есть, но конверсия низкая, SEO упирается в ограничения платформы, а доработки стоят дорого и делаются медленно.
+
+Наш клиент – магазин Kitogo (одежда) – столкнулся с тем же. Мы переработали UX и выстроили SEO с нуля. Результат за 3 месяца – глубина просмотра выросла на 70%, повторные визиты на 34%, заказы увеличились в 5 раз.
+
+Можем бесплатно сделать аудит вашего сайта и показать, где теряются заказы и сколько трафика можно добрать через SEO.
+
+Если актуально – напишите номер, наберу на 5 минут.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Возвращаюсь к прошлому письму – хотела поделиться ещё одним примером.
+
+Магазин Technobiz (электроника) – перешёл на современный стек. Что получилось:
+
+– 3 000–4 000 покупателей в месяц из поиска
+– конверсия выросла до 1.8–2%
+– 7–15 заказов из SEO ежемесячно
+– SEO полностью окупилось
+
+Ключевое – переход на Laravel снял ограничения по SEO и интеграциям, которые тормозили рост на старой CMS.
+
+Готова за 15 минут показать, какой потенциал у вашего магазина. Напишите номер – наберу в удобное время.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №3 -->
+        <div class="email-card">
+            <h2>Письмо №3</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Коротко: если чувствуете, что магазин недорабатывает по конверсии или SEO упирается в ограничения платформы – можем бесплатно сделать аудит и показать, где теряются заказы.
+
+Без обязательств, просто цифры. Напишите – скину пару вопросов для аудита.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyAll(btn) {
+            const cards = document.querySelectorAll('.email-card');
+            const parts = [];
+            cards.forEach((card) => {
+                const title = card.querySelector('h2').innerText;
+                const body = card.querySelector('.email-body').innerText;
+                parts.push(title + '\n\n' + body);
+            });
+            navigator.clipboard.writeText(parts.join('\n\n---\n\n')).then(() => {
+                btn.textContent = 'Скопировано!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

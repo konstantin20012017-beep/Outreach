@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тапир – Селлеры маркетплейсов – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тапир – Селлеры маркетплейсов</h1>
+        <div class="meta">
+            Сегмент: одежда, товары для дома, детские товары<br>
+            Менеджер: Надежда Хегай<br>
+            CTA: бесплатный расчёт потенциала (трафик, заказы, продажи) → номер телефона
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Айсбрекер: «Увидела ваш магазин на маркетплейсах»</div>
+                <div class="source-quote">«Почему мы им пишем (триггеры): Рост оборота на маркетплейсе, выход на плато, высокая комиссия»</div>
+                <span class="source-tag">брифы/tapir_селлеры_бриф.md → Триггеры</span>
+                <div class="source-quote">«Можно сказать там "О, мы увидели вас на маркетплейсах". То есть вот этот айсбрекер, он делает письмо более релевантным, как будто менеджер что-то посмотрел»</div>
+                <span class="source-tag">Инструкции.docx → Айсбрекер на основе триггера</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Боль: комиссии растут, маржа падает, нет своей базы</div>
+                <div class="source-quote">«Боли: Потеря маржи. Нет своей клиентской базы. Зависимость от WB/Ozon»</div>
+                <span class="source-tag">брифы/tapir_селлеры_бриф.md → Боли</span>
+                <div class="source-quote">«Сейчас слышал такую тему, что по маркетплейсам закручивают гайки по конверсиям. И как раз, возможно, это будет такой общий триггер, что логистика и комиссии выхлопа уже с маркетплейсов не то»</div>
+                <span class="source-tag">брифы/tapir_селлеры_бриф.md → Созвон с клиентом</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Кейс Kitogo: с 0 до 5 000 пользователей, заказы x5</div>
+                <div class="source-quote">«За 3 месяца: С 0 до 5 000+ органических пользователей в месяц. +268% среднемесячный рост трафика. Заказы выросли в 5 раз. SEO стало стабильным каналом продаж»</div>
+                <span class="source-tag">брифы/tapir_кейсы.md → Kitogo → Результат</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Кейс Waistline: переход с маркетплейса на свой магазин</div>
+                <div class="source-quote">«Вот как раз таки Waistline можно будет использовать как кейс перехода с Marketplace на собственный e-com. Это достаточно такой известный бренд среди селлеров, особенно среди селлеров одежды»</div>
+                <span class="source-tag">брифы/tapir_кейсы.md → Waistline (+ созвон с клиентом)</span>
+                <div class="source-quote">«Возможность работать с базой и управлять LTV; создавать отличный от МП функционал и собственные сервисы; разнообразнее каналы трафика; усиливать собственный бренд за счёт мультиканальности»</div>
+                <span class="source-tag">брифы/tapir_кейсы.md → Waistline → Эффект для бизнеса</span>
+                <div class="source-quote">«Удобный подбор размера... Каталог с фильтрацией... Бандлы... Личный кабинет с программой лояльности»</div>
+                <span class="source-tag">брифы/tapir_кейсы.md → Waistline → Что сделали</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">УТП: своя база, LTV, независимость от площадок</div>
+                <div class="source-quote">«УТП и выгоды: Собственный канал продаж. Рост LTV. Снижение зависимости от площадок. Кейсы перехода с МП на сайт»</div>
+                <span class="source-tag">брифы/tapir_селлеры_бриф.md → УТП и выгоды</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">CTA: бесплатный расчёт потенциала → номер телефона</div>
+                <div class="source-quote">«На какое действие закрываем клиента? Первичная встреча + расчет потенциала перехода с маркетплейсов. Сделать оценку трафику по SEO – прогноз по трафику, заказы и продаж»</div>
+                <span class="source-tag">брифы/tapir_селлеры_бриф.md → CTA</span>
+                <div class="source-quote">«Мы можем бесплатно рассчитать, сделать оценку по SEO-трафику, исходить из каталога, из наличия, из количества артикулов, в целом из ниши клиента»</div>
+                <span class="source-tag">брифы/tapir_селлеры_бриф.md → Созвон с клиентом</span>
+                <div class="source-quote">«Я думаю, нам получить нужен номер телефона. Типа, пришлите номер телефона, если стоят такие задачи, обсудим, подскажем»</div>
+                <span class="source-tag">Инструкции.docx → CTA</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Подход: продаём идею перехода, а не встречу</div>
+                <div class="source-quote">«Ключевая задача будет продать идею вообще перехода на интернет-магазин. А уже потом, когда он созреет, он придет на встречу»</div>
+                <span class="source-tag">брифы/tapir_селлеры_бриф.md → Созвон с клиентом</span>
+                <div class="source-quote">«Сравнить БЫЛО И СТАЛО в цифрах для ЛПР (упор не на клики)»</div>
+                <span class="source-tag">брифы/tapir_селлеры_бриф.md → Сравнить</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Увидела ваш магазин на маркетплейсах – решила написать.
+
+Сейчас у многих селлеров одна картина: комиссии растут, маржа падает, а клиентская база так и остаётся у площадки.
+
+Один из наших клиентов – магазин Kitogo (одежда, спорт) – запустил собственный интернет-магазин и подключил SEO. За 3 месяца с нуля – 5 000+ покупателей из поиска без рекламы, заказы выросли в 5 раз.
+
+Можем бесплатно рассчитать, сколько заказов и продаж может приносить ваш собственный магазин – по вашей нише и каталогу.
+
+Если актуально – напишите номер, наберу на 5 минут.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Возвращаюсь к прошлому письму – хотела поделиться ещё одним примером.
+
+Бренд Waistline – продавал через WB, запустил собственный интернет-магазин. Получил то, чего маркетплейс не даёт:
+
+– своя клиентская база и работа с повторными покупками
+– свой функционал: подбор размеров, программа лояльности, бандлы
+– независимость от площадок и полный контроль над маркетингом
+
+Это достаточно известный бренд среди селлеров одежды – можете посмотреть, как у них всё устроено.
+
+Готова за 15 минут показать, какой потенциал у вашего ассортимента. Напишите номер – наберу в удобное время.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №3 -->
+        <div class="email-card">
+            <h2>Письмо №3</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Коротко: если стоит вопрос, есть ли смысл запускать свой интернет-магазин параллельно с маркетплейсами – можем бесплатно рассчитать, сколько заказов реально получить в вашей нише через SEO.
+
+Без обязательств, просто цифры. Напишите – скину пару вопросов для расчёта.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyAll(btn) {
+            const cards = document.querySelectorAll('.email-card');
+            const parts = [];
+            cards.forEach((card, i) => {
+                const title = card.querySelector('h2').innerText;
+                const body = card.querySelector('.email-body').innerText;
+                parts.push(title + '\n\n' + body);
+            });
+            navigator.clipboard.writeText(parts.join('\n\n---\n\n')).then(() => {
+                btn.textContent = 'Скопировано!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
