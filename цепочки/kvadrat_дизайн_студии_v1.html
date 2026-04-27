@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квадрат – Дизайн-студии – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Квадрат – Дизайн-студии (архитектурные студии)</h1>
+        <div class="meta">
+            Сегмент: дизайн-студии и архитектурные бюро (ООО + ИП)<br>
+            Менеджер: Новак Кирилл<br>
+            CTA: первый проект со скидкой 20% / пакет РД за 624 ₽/м² (ниже рынка, экономия ~15 000 ₽ с объекта)
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Айсбрекер: «Нашёл студию, видно что работаете от концепции до реализации»</div>
+                <div class="source-quote">«Почему мы им пишем: HeadHunter, сайты и агрегаторы»</div>
+                <span class="source-tag">Бриф → Проспектинг</span>
+                <div class="source-quote">Контекст: студии типа Н-КУБ, MNR Design, N+N Design ведут проекты полного цикла (концепция → планировка → 3D → рабочая документация → стройка). Документация – этап между утверждённым дизайном и выходом на стройку.</div>
+                <span class="source-tag">Сайты клиентов → Процесс работы</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Боль: масштабирование упирается в штат чертёжников</div>
+                <div class="source-quote">«Сложно масштабироваться без увеличения штата»</div>
+                <span class="source-tag">Бриф → Боли</span>
+                <div class="source-quote">«Затраты на содержание чертёжников / технических специалистов в штате (и оргтехника)»</div>
+                <span class="source-tag">Бриф → Боли</span>
+                <div class="source-quote">«Экономьте на содержании штатных сотрудников, покупке мощных ПК, организации рабочих мест и оплате дорогих программных лицензий»</div>
+                <span class="source-tag">Сайт Квадрат → Главные выгоды</span>
+                <div class="source-quote">«Разгрузите себя или свой технический отдел, чтобы брать в работу больше дорогих проектов»</div>
+                <span class="source-tag">Сайт Квадрат → Главные выгоды</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Ценовое преимущество: 624 ₽/м², экономия ~15 000 ₽ с объекта</div>
+                <div class="source-quote">«Провели анализ рынка и даем хорошее предложение: пакет РД за 624 р/м² – это ниже рынка и дополнительная выгода ~15 000 ₽ с одного объекта»</div>
+                <span class="source-tag">Бриф → CTA</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Отзыв Ильи (арх. бюро): сделали раньше срока</div>
+                <div class="source-quote">«Сделали проект раньше чем договаривались. Для меня это сейчас главное. Будем сотрудничать!»</div>
+                <span class="source-tag">Сайт Квадрат → Отзывы → Илья, архитектурное бюро</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Боль: ошибки и переделки из-за спешки и усталости</div>
+                <div class="source-quote">«Ошибки и переделки в документации из-за спешки или усталости сотрудников»</div>
+                <span class="source-tag">Бриф → Боли</span>
+                <div class="source-quote">«Чертёж проверяется не только исполнителем, но и техническим директором по жёсткому внутреннему чек-листу»</div>
+                <span class="source-tag">Сайт Квадрат → Почему мы</span>
+                <div class="source-quote">«Наша экспертиза базируется на сотнях реально построенных объектов – это гарантирует абсолютную точность каждого разреза и выноски»</div>
+                <span class="source-tag">Сайт Квадрат → Почему мы</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Отзыв Алексея: полный пакет, минимум правок</div>
+                <div class="source-quote">«Заказывал полный пакет чертежей с развёртками. Сделали быстро, правок почти не было. Удобно, что спецификации сразу в экселе присылают, не надо самим сидеть перебивать всё вручную. Цена-качество вообще ок»</div>
+                <span class="source-tag">Сайт Квадрат → Отзывы → Алексей, руководитель студии</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Боль: документация тормозит выход на стройку</div>
+                <div class="source-quote">«При росте числа проектов узкое место – скорость подготовки документации»</div>
+                <span class="source-tag">Бриф → Боли</span>
+                <div class="source-quote">«Железобетонные сроки. Мы прописываем финансовую ответственность в договоре за каждый день просрочки»</div>
+                <span class="source-tag">Сайт Квадрат → Почему мы</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Удобная интеграция в процесс студии</div>
+                <div class="source-quote">«Работаем в вашем стиле и шаблонах. Мы адаптируемся под вашу стилистику оформления документации, а не наоборот»</div>
+                <span class="source-tag">Сайт Квадрат → Доп. преимущества</span>
+                <div class="source-quote">«Удобная передача задач. Процесс выстроен так, чтобы вам было максимально комфортно передавать нам информацию. Мы подстраиваемся под ваш рабочий процесс»</div>
+                <span class="source-tag">Сайт Квадрат → Доп. преимущества</span>
+                <div class="source-quote">«Ежедневная отчётность. Каждый день вы получаете результат за день – в общую папку или в чат»</div>
+                <span class="source-tag">Сайт Квадрат → Доп. преимущества</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Факт: основатели студии 9 лет в производственной компании, сотни реализаций</div>
+                <div class="source-quote">«Наш профессиональный путь начался в 2015 году в крупной производственной компании. За 9 лет мы прошли путь от рядовых чертёжников до руководителей техотдела. Мы знаем все "подводные камни" стройки, потому что участвовали в сотнях реализаций – от частных квартир до федеральных объектов»</div>
+                <span class="source-tag">Сайт Квадрат → О нас</span>
+                <div class="source-quote">«Увеличьте скорость выдачи готовых проектов клиентам без потери качества»</div>
+                <span class="source-tag">Сайт Квадрат → Главные выгоды</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">CTA: первый проект со скидкой 20%</div>
+                <div class="source-quote">«Заказать первый проект со скидкой 20%»</div>
+                <span class="source-tag">Бриф → CTA</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Нашёл вашу студию, посмотрел проекты – видно, что ведёте полный цикл от концепции до реализации. Пишу, потому что работаем с дизайн-студиями и часто слышу одну историю.
+
+Студия хочет брать больше проектов, но упирается в штат: нужен ещё один чертёжник – а это рабочее место, мощный ПК, лицензии на софт и управление. В итоге рост тормозится не из-за клиентов, а из-за ресурсов на документацию.
+
+Мы в «Квадрате» забираем рабочую документацию на себя. Полный пакет РД (планы + развёртки) – 624 ₽/м², это ниже рынка. На каждом объекте экономия порядка 15 000 ₽ – плюс вы не тратитесь на содержание штатного специалиста.
+
+Один из клиентов – архитектурное бюро – после первого проекта отметил: «Сделали раньше, чем договаривались. Для меня это сейчас главное».
+
+Если хотите попробовать – даём скидку 20% на первый проект. Напишите номер – наберу, расскажу детали за 5 минут.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Возвращаюсь к прошлому письму – хотел затронуть ещё один момент.
+
+Когда в студии параллельно идут несколько объектов, чертёжники работают в режиме спешки. Отсюда ошибки в документации, переделки, а потом вопросы от строителей на объекте. Знакомо?
+
+У нас это решается иначе: каждый чертёж проходит двойную проверку – сначала исполнитель, потом технический директор по внутреннему чек-листу. Наши специалисты работали на реальных стройках и видели, как документация воплощается монтажниками – на более чем 100 объектах. Поэтому точность разрезов и выносок – не обещание, а стандарт.
+
+Руководитель студии Алексей заказывал полный пакет с развёртками: «Правок почти не было. Спецификации сразу в экселе – не надо самим перебивать вручную».
+
+Если актуально – напишите, обсудим ваш ближайший объект.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №3 -->
+        <div class="email-card">
+            <h2>Письмо №3</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Последний раз напомню о себе – коротко.
+
+Если документация задерживает выход на стройку и заказчики ждут дольше, чем хотелось бы – можем это закрыть. В договоре прописываем финансовую ответственность за каждый день просрочки, так что по срокам всё жёстко.
+
+Немного о нас: основатели «Квадрата» 9 лет работали в крупной производственной компании – прошли путь от рядовых чертёжников до руководителей техотдела. За это время – сотни реализованных объектов, от частных квартир до федеральных. Работаем в вашем стиле и шаблонах, подстраиваемся под процесс студии, каждый день отправляем результат в общую папку.
+
+Первый проект – со скидкой 20%. Напишите номер, наберу в удобное время.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyAll(btn) {
+            const cards = document.querySelectorAll('.email-card');
+            const parts = [];
+            cards.forEach((card, i) => {
+                const title = card.querySelector('h2').innerText;
+                const body = card.querySelector('.email-body').innerText;
+                parts.push(title + '\n\n' + body);
+            });
+            navigator.clipboard.writeText(parts.join('\n\n---\n\n')).then(() => {
+                btn.textContent = 'Скопировано!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

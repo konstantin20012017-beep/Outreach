@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квадрат – Частные дизайнеры интерьера – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Квадрат – Частные дизайнеры интерьера</h1>
+        <div class="meta">
+            Сегмент: частные дизайнеры интерьера (Москва, СПб, вся Россия)<br>
+            Менеджер: Новак Кирилл<br>
+            CTA: примеры работ / первый проект со скидкой 20% / созвон 5 минут
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Айсбрекер: «Увидел ваши проекты / нашёл в интернете»</div>
+                <div class="source-quote">«Почему мы им пишем (триггеры): Нашли в интернете, видно что занимаются дизайном интерьера. Прокачанные инстаграмы»</div>
+                <span class="source-tag">Бриф → Триггеры</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Боль: рабочая документация съедает 50–60 часов на проект</div>
+                <div class="source-quote">«Разработка полной проектной документации занимает 50–60 часов на проект (всего 10 часов или 2–3 часа занять, без чертежа)»</div>
+                <span class="source-tag">Бриф → Боли</span>
+                <div class="source-quote">«Он только на чертежи этой рабочей документации может тратить 30, 40, 50, 60 часов. Если он это нам передает – часов 10 максимум, на самом деле может занять и 2–3 часа»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">УТП: аутсорс = ~10% от стоимости проекта</div>
+                <div class="source-quote">«Аутсорс в среднем – наверное, 10% от стоимости того, что дизайнер получает»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+                <div class="source-quote">«Всё сэкономленное время может пустить на развитие, продажи – сильно у него меняется его прибыль»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Тон: информировать, а не продавать</div>
+                <div class="source-quote">«Нам сейчас главная задача – это информировать, донести информацию, что вот мы появились на рынке»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+                <div class="source-quote">«По какой-то прогрев, что именно людей нужно убеждать – она не особо здесь работает»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">CTA: примеры работ (основной) + скидка 20% (дополнительный)</div>
+                <div class="source-quote">«Опытный дизайнер – ему достаточно просто ссылки на проект, он быстро пролистывает, смотрит все выносы, как всё сделано, и всё. Это занимает буквально 5 минут»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+                <div class="source-quote">«Если все понятно, то можем начать с небольшого проекта со скидкой 20%»</div>
+                <span class="source-tag">Бриф → CTA</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Квалификация: продать можно только когда есть активный проект</div>
+                <div class="source-quote">«Мы не можем продать им ничего, пока у них нет заказа»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+                <div class="source-quote">«Если нет явного триггера – сначала квалифицирующий вопрос: "У вас есть X?" / "Планируете ли Y?"»</div>
+                <span class="source-tag">CLAUDE.md → Стратегия</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Гарантии: договор, ежедневный отчёт, двойной контроль</div>
+                <div class="source-quote">«Минимум рисков: договор, ежедневный отчет, двойной контроль»</div>
+                <span class="source-tag">Бриф → УТП и выгоды</span>
+                <div class="source-quote">«В договоре прописываем все риски, что мы отвечаем за сроки и за качество»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Отзыв Ольги: лепнина, строители приняли без вопросов</div>
+                <div class="source-quote">«Не пришлось на пальцах объяснять, как лепнину стыковать с карнизами, вы этот момент даже лучше меня знаете) Строители проект приняли, вопросов минимум»</div>
+                <span class="source-tag">Сайт Квадрат → Отзывы → Ольга В., ведущий дизайнер</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Отзыв Алексея: полный пакет, минимум правок</div>
+                <div class="source-quote">«Заказывал полный пакет чертежей с развёртками. Сделали быстро, правок почти не было. Удобно, что спецификации сразу в экселе присылают»</div>
+                <span class="source-tag">Сайт Квадрат → Отзывы → Алексей, руководитель студии</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Квалифицирующий вопрос + примеры работ как CTA</div>
+                <div class="source-quote">«Мы не можем продать им ничего, пока у них нет заказа»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+                <div class="source-quote">«Опытный дизайнер – ему достаточно просто ссылки на проект, он быстро пролистывает»</div>
+                <span class="source-tag">Созвон с клиентом</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Увидел ваши проекты – видно, что работаете с интерьерами серьёзно. Решил написать, потому что мы недавно запустили студию чертежей «Квадрат» и работаем именно с дизайнерами интерьера.
+
+Если коротко: мы забираем на себя рабочую документацию. Полная РД на проект – это обычно 50–60 часов. Дизайнер тратит 2–3 часа на постановку задачи нам и получает готовый альбом. По стоимости это около 10% от проекта, а высвобождает десятки часов на клиентов, дизайн или просто на жизнь.
+
+Одна из наших клиенток, ведущий дизайнер Ольга, после первого проекта написала: «Строители приняли, вопросов минимум. Не пришлось объяснять, как стыковать лепнину с карнизами – вы этот момент лучше меня знаете».
+
+Могу прислать примеры наших чертежей, чтобы вы оценили уровень. А на первый проект дарим скидку 20%.
+
+Если актуально – напишите номер, наберу на 5 минут.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Возвращаюсь к прошлому письму – хотел добавить пару деталей, которые обычно снимают главные сомнения.
+
+Частый страх: «отдам чертежи на сторону, а потом буду переделывать и объяснять». У нас это решается так:
+
+– работаем в вашем стиле и шаблонах, не переделываем под свой формат
+– каждый день отправляем результат в общую папку или чат – вы всегда видите ход работы
+– чертёж проверяет не только исполнитель, но и технический директор по внутреннему чек-листу
+– в договоре прописана финансовая ответственность за каждый день просрочки
+
+Один из клиентов, руководитель студии Алексей, заказывал полный пакет с развёртками: «Сделали быстро, правок почти не было. Спецификации сразу в экселе – не надо самим перебивать вручную».
+
+Если хотите посмотреть примеры чертежей или обсудить ваш ближайший проект – напишите, наберу.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №3 -->
+        <div class="email-card">
+            <h2>Письмо №3</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Напишу в последний раз – коротко.
+
+Если сейчас есть проект в работе или планируется – можем забрать рабочую документацию на себя. Наши чертёжники работали на реальных стройках, на более чем 100 объектах, поэтому строители принимают чертежи без лишних вопросов.
+
+Могу прислать примеры работ – посмотрите за 5 минут и сами решите. Напишите номер или ответьте на письмо.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyAll(btn) {
+            const cards = document.querySelectorAll('.email-card');
+            const parts = [];
+            cards.forEach((card, i) => {
+                const title = card.querySelector('h2').innerText;
+                const body = card.querySelector('.email-body').innerText;
+                parts.push(title + '\n\n' + body);
+            });
+            navigator.clipboard.writeText(parts.join('\n\n---\n\n')).then(() => {
+                btn.textContent = 'Скопировано!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
