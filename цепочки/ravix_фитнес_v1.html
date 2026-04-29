@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravix Group – Фитнес-клубы – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ravix Group – Фитнес-клубы</h1>
+        <div class="meta">
+            Сегмент: фитнес-клубы с бассейном (разовые и сети), Москва + область, Питер + область, миллионники до Урала<br>
+            Продукты: SEO-продвижение, контекстная реклама, GEO-продвижение<br>
+            Целевая должность: руководитель / генеральный директор<br>
+            CTA: примеры работ / кейсы, номер для созвона
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Айсбрекер: сезонный триггер – лето, низкий сезон</div>
+                <div class="source-quote">«Лето – низкий сезон, клубы хотят увеличить поток»</div>
+                <span class="source-tag">Созвон с Максимом</span>
+                <div class="source-quote">«Лето – шикарная возможность запустить SEO, чтобы к сентябрю уже херачил трафик с органики»</div>
+                <span class="source-tag">Созвон с Максимом</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Боль: дорогой лид из Директа, конкуренция в контексте</div>
+                <div class="source-quote">«Стоимость привлечения клиента резко выросла. После ухода Google Ads "Яндекс Директ" стал единственным игроком»</div>
+                <span class="source-tag">Статья Pressfeed → Контекстная реклама</span>
+                <div class="source-quote">«На старте контекст давал лид по 2500–4000 руб в пике»</div>
+                <span class="source-tag">Выступление FitTech</span>
+                <div class="source-quote">«Бенчмарк: лид с контекста не должен стоить дороже 2000 руб»</div>
+                <span class="source-tag">Выступление FitTech</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Кейс Fitland: снизили лид с 2500 до 1400, лиды из Google по 300 руб</div>
+                <div class="source-quote">«Снизили стоимость лида с 2500 р. до 1400 р. в Яндекс Директе. Начали получать лиды из Яндекс и Google по 300 р. с помощью SEO-продвижения»</div>
+                <span class="source-tag">Ravix Fit → Кейс Fitland</span>
+                <div class="source-quote">«За менее чем год увеличили трафик, начали получать лиды по 300 рублей из поисковых систем Яндекс и Google»</div>
+                <span class="source-tag">Статья Pressfeed</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Боль: Google пустой, все сидят только в Яндексе</div>
+                <div class="source-quote">«В топе 3 Google нет сейчас рекламы. Если вы в топе 3 Google, это равносильно тому, что вы занимаете топ-3 рекламы в Яндекс.Директ»</div>
+                <span class="source-tag">Выступление FitTech</span>
+                <div class="source-quote">«SEO дополняет контекст, контекст дополняет SEO. Мы получаем трафик SEO и запускаем на это ретаргетинг контекста»</div>
+                <span class="source-tag">Выступление FitTech</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Кейс Дон Спорт: +82% трафика</div>
+                <div class="source-quote">«Увеличили трафик на 82% из поисковых систем Яндекс и Google. Количество позиций сайта в ТОП-3 Яндекс выросло на 52%»</div>
+                <span class="source-tag">Ravix Fit → Кейс Дон Спорт</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Регалии Максима</div>
+                <div class="source-quote">«Экс-директор по маркетингу в сети фитнес-клубов NeoFit. В маркетинге более 15 лет, в digital – 8 лет»</div>
+                <span class="source-tag">Ravix Fit → О Максиме</span>
+                <div class="source-quote">«Выступление для сообщества маркетологов фитнес-индустрии FitTech: "Как снизить стоимость лида для фитнес-клуба"»</div>
+                <span class="source-tag">Ravix Fit → Выступления</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – GEO: продвижение в нейросетях – новый тренд</div>
+                <div class="source-quote">«Сейчас появилась помимо SEO – Geo. По запросу у вас выходит выдача от нейросети. Нужно заботиться, чтобы писать контент и под оптимизацию под нейросети»</div>
+                <span class="source-tag">Выступление FitTech</span>
+                <div class="source-quote">«Аудит выдачи нейросетей – узнайте, как ваш бренд представлен в ChatGPT / нейросетях»</div>
+                <span class="source-tag">Созвон с Максимом</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Кейс NeoFit: +38% лидов, –65% стоимость</div>
+                <div class="source-quote">«Увеличили количество лидов с контекста на +38%. На 65% уменьшили стоимость лида с таргета. 50% запросов выведено в ТОП-5»</div>
+                <span class="source-tag">Ravix Fit → Кейс NeoFit</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Квалифицирующий вопрос: сезон</div>
+                <div class="source-quote">«В последнем письме цепочки – квалифицирующий вопрос особенно уместен. Фильтрует тех, кому сейчас не актуально, и снижает давление»</div>
+                <span class="source-tag">Стратегия аутрича → Правило №5</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Преимущества Ravix (для всех писем)</div>
+                <div class="source-quote">«Не ведем прямых конкурентов в одном гео»</div>
+                <span class="source-tag">Ravix Fit → Преимущества</span>
+                <div class="source-quote">«Переход от текущих подрядчиков – практически без потери трафика и заявок»</div>
+                <span class="source-tag">Ravix Fit → Преимущества</span>
+                <div class="source-quote">«Говорим на языке бизнеса. Понимаем специфику бизнеса и управления фитнес-клубами»</div>
+                <span class="source-tag">Ravix Fit → Преимущества</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Увидел ваш клуб. Мы продвигаем фитнес-клубы, и у одного из наших клиентов похожая ситуация была – лид из Директа стоил 2500, а из Google заявок вообще не было.
+
+Пишу от агентства Ravix Group. Наш основатель Максим Власов сам руководил маркетингом в сети NeoFit, в фитнесе больше 15 лет. Так что специфику понимаем изнутри.
+
+В Google сейчас пусто – рекламы нет, конкуренции почти нет. Если попасть в ТОП-3 через SEO, это по факту как первые позиции в Директе, только без оплаты за клик.
+
+Вот что получилось у сети Fitland. Лид из Директа снизили с 2500 до 1400. Параллельно запустили SEO, и через несколько месяцев пошли заявки из Google по 300 рублей.
+
+Могу прислать кейс подробнее. Посмотрите за 5 минут и сами решите, насколько это вам подходит. Напишите номер, наберу в удобное время.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Возвращаюсь к прошлому письму.
+
+У большинства клубов сейчас одна зависимость – контекст. Выключил рекламу, заявки встали. А SEO дает поток, который не зависит от бюджета на Директ. И еще хорошо работает в связке – мы догоняем посетителей сайта ретаргетингом, и это дает дополнительные заявки.
+
+У сети «Дон Спорт» мы подняли трафик из поисковых систем на 82%. Позиции в ТОП-3 Яндекса выросли на 52%.
+
+Максим Власов, наш основатель, сам выступает на FitTech и Россия Фитнес, преподает MBA для фитнес-индустрии. Мы принципиально не ведем прямых конкурентов в одном гео.
+
+Если актуально, напишите – пришлю примеры по вашей географии.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №3 -->
+        <div class="email-card">
+            <h2>Письмо №3</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Напомню о себе в последний раз, коротко.
+
+Сейчас кроме обычного SEO появилась еще одна штука – GEO-продвижение. Это когда ваш клуб начинает появляться в ответах нейросетей. Яндекс Нейро, ChatGPT – люди все чаще ищут именно там. Кто первый попадет, тот и заберет трафик.
+
+Для NeoFit мы подняли лиды с контекста на 38%, снизили стоимость лида с таргета на 65%. Половину запросов вывели в ТОП-5.
+
+Если планируете усилить digital к осени – лето для этого самое время. SEO начинает давать заявки через 6–8 месяцев. Запустить сейчас, и к сентябрю уже пойдет органика.
+
+Напишите номер, созвонимся на 10 минут. Расскажу, что конкретно можно сделать для вашего клуба.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyAll(btn) {
+            const cards = document.querySelectorAll('.email-card');
+            const parts = [];
+            cards.forEach((card, i) => {
+                const title = card.querySelector('h2').innerText;
+                const body = card.querySelector('.email-body').innerText;
+                parts.push(title + '\n\n' + body);
+            });
+            navigator.clipboard.writeText(parts.join('\n\n---\n\n')).then(() => {
+                btn.textContent = 'Скопировано!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
