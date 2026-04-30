@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DITEC – Линии ламинации (PUR Line) – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .distribution-card {
+            background: #f0f4ff; border: 1px solid #c8d8f0;
+            border-radius: 12px; padding: 20px 24px; margin-bottom: 28px;
+            font-size: 13px; line-height: 1.6;
+        }
+        .distribution-card h2 {
+            font-size: 14px; font-weight: 600; color: #1a4a8f; margin-bottom: 10px;
+        }
+        .distribution-card table {
+            width: 100%; border-collapse: collapse; margin-top: 8px;
+        }
+        .distribution-card th, .distribution-card td {
+            text-align: left; padding: 8px 10px; border-bottom: 1px solid #d0deef;
+            vertical-align: top; font-size: 13px;
+        }
+        .distribution-card th { font-weight: 600; color: #1a4a8f; background: #e8eef9; }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+        .warning-card {
+            background: #fff5f5; border: 1px solid #f0c0c0;
+            border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+            font-size: 13px; line-height: 1.6; color: #7a2020;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DITEC – Линии ламинации (PUR Line)</h1>
+        <div class="meta">
+            Сегмент: производства дверей, мебельных фасадов, погонажа (плинтус/наличник/вагонка), оконные заводы (ПВХ/алюминий), производство перил/лестниц, кабель-каналов<br>
+            Целевые должности: директор/владелец, технолог/главный инженер, рук. производства<br>
+            CTA: 1-е письмо – видео работы линии на материале клиента + каталог. 2-е – КП с расчетом. 3-е – квалифицирующий вопрос
+        </div>
+
+        <div class="warning-card">
+            <strong>Заметка по кейсам:</strong> конкретных кейсов с названиями заводов и цифрами результатов в источниках нет – на сайте только общие цифры (400+ фабрик, 30+ млрд оборот клиентов, 15+ лет). Используем эти цифры как регалии завода. Когда Евгений пришлет реальные кейсы – обновим до v2 с цифрами по конкретным заводам.<br><br>
+            <strong>Плейсхолдер в письме №1:</strong> в квадратных скобках через слеш перечислены все варианты подниш сегмента – оператор перед отправкой выбирает один подходящий под получателя и оставляет в письме.
+        </div>
+
+        <!-- Распределение болей и регалий -->
+        <div class="distribution-card">
+            <h2>Распределение по письмам (чтобы не дублировать)</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Боль</th>
+                    <th>Регалии завода</th>
+                    <th>УТП линии</th>
+                </tr>
+                <tr>
+                    <td><strong>№1</strong></td>
+                    <td>Качество: пузыри и отслоения пленки</td>
+                    <td>400+ фабрик в РФ и СНГ, Тольятти, 15+ лет</td>
+                    <td>Цельная сварная станина, работа с ПВХ/CPL/ПП/шпоном/финиш-пленкой</td>
+                </tr>
+                <tr>
+                    <td><strong>№2</strong></td>
+                    <td>Клиенты требуют PUR / пленка не держится на ПВХ-алюминии без праймера</td>
+                    <td>30+ млрд руб. оборот клиентов на нашем оборудовании, собственный конструкторский отдел</td>
+                    <td>Line 6000: PUR+EVA в одном станке + встроенная станция праймирования. Цена от 4 515 000 ₽, лизинг 0,1%</td>
+                </tr>
+                <tr>
+                    <td><strong>№3</strong></td>
+                    <td>Поломка старой линии / расширение / новый цех</td>
+                    <td>Производство 3500 м², склад запчастей в РФ, сервис 24/7</td>
+                    <td>Модернизация действующей линии (без покупки новой)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Айсбрекер: триггер – вид производства</div>
+                <div class="source-quote">«Триггеры: ОКВЭД + кейс + новый цех. По проблеме – поломка старого станка, рост заказов, клиенты требуют PUR (работают только на EVA), расширение ассортимента (ПВХ/алюминий), рекламации на пузыри и отслоения»</div>
+                <span class="source-tag">Бриф сегмент 1</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Боль: пузыри и отслоения</div>
+                <div class="source-quote">«Нестабильное качество покрытия – пузыри, отслоения»</div>
+                <span class="source-tag">Бриф сегмент 1 – боли</span>
+                <div class="source-quote">«Ровное и качественное покрытие исключает дефекты: пузыри, отслоения и дефекты окутки»</div>
+                <span class="source-tag">Сайт pur_line</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Регалии: 400+ фабрик, Тольятти, 15+ лет</div>
+                <div class="source-quote">«400+ фабрик по всей России и СНГ уже работают с нами. 15+ лет на рынке производства промышленного оборудования»</div>
+                <span class="source-tag">Сайт pur_line</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – УТП: сварная станина + разные пленки</div>
+                <div class="source-quote">«Цельная сварная станина обеспечивает жесткость конструкции и предотвращает вибрации. Работа с различными материалами: пленки ПВХ (PVC), CPL, ПП, рулонный шпон, финиш-пленка»</div>
+                <span class="source-tag">Сайт pur_line</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Мягкий CTA: видео работы линии на их материале</div>
+                <div class="source-quote">«Перезвоним и проконсультируем + покажем видео-обзор резки именно вашего материала»</div>
+                <span class="source-tag">Сайт DITEC – формат CTA</span>
+                <div class="source-quote">«Прислать видео станка на вашем материале – вариант мягкого CTA для холодного контакта»</div>
+                <span class="source-tag">Бриф сегмент 1 – CTA</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Боль: PUR vs EVA, праймер</div>
+                <div class="source-quote">«Клиенты требуют PUR, работают только на EVA. Пленка не держится на ПВХ/алюминии (нет праймера)»</div>
+                <span class="source-tag">Бриф сегмент 1 – боли</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Регалии: 30+ млрд оборот, конструкторский отдел</div>
+                <div class="source-quote">«30+ млрд рублей – оборот клиентов, работающих на нашем оборудовании. Собственный конструкторский отдел – постоянно улучшаем продукт до совершенства»</div>
+                <span class="source-tag">Сайт pur_line – про завод</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – УТП: Line 6000 PUR+EVA + станция праймирования + цена</div>
+                <div class="source-quote">«PUR и EVA клей в одном станке (Line 6000). Станция праймирования – работает с ПВХ и алюминием»</div>
+                <span class="source-tag">Бриф сегмент 1 – УТП</span>
+                <div class="source-quote">«Лизинг / рассрочка 0,1% – от 4 515 000 руб. Гарантия до 24 месяцев»</div>
+                <span class="source-tag">Бриф сегмент 1 + сайт</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Боль: поломки / расширение / новый цех</div>
+                <div class="source-quote">«Старый станок ломается, запчасти ждут месяцами. Рост заказов – линия не справляется. Расширение ассортимента»</div>
+                <span class="source-tag">Бриф сегмент 1 – триггеры по проблеме</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Регалии: 3500 м², склад в РФ, сервис 24/7</div>
+                <div class="source-quote">«3500 м² – площадь нашего производства. Склад запчастей в РФ – минимизируем простои клиентов. Сервисная поддержка 24/7»</div>
+                <span class="source-tag">Сайт pur_line</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – УТП: модернизация действующей линии</div>
+                <div class="source-quote">«Не хотите покупать новую линию? Поможем модернизировать действующую»</div>
+                <span class="source-tag">Сайт pur_line – модернизация</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Квалифицирующий вопрос</div>
+                <div class="source-quote">«В последнем письме цепочки – квалифицирующий вопрос особенно уместен. Фильтрует тех, кому сейчас не актуально, и снижает давление»</div>
+                <span class="source-tag">CLAUDE.md – правило №5</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Зашел на сайт, увидел, что у вас [производство ПВХ окон / дверной завод / производство мебельных фасадов / производство погонажа / производство алюминиевого профиля / производство перил и лестниц]. Пишу из DITEC – мы в Тольятти 15+ лет производим линии ламинации, сейчас на нашем оборудовании работают 400+ фабрик по РФ и СНГ.
+
+Самое частое, с чем к нам приходят – пленка дает пузыри или отслаивается. У нас цельная сварная станина без вибраций и автоматический контроль прижима, поэтому покрытие ровное даже на серийных партиях. Линия работает с пленками ПВХ, CPL, ПП, рулонным шпоном и финиш-пленкой – перенастройка под другую пленку без переборки узлов.
+
+Если интересно посмотреть, могу прислать короткое видео работы линии на вашем материале – ПВХ-профиль, МДФ или алюминий, в зависимости от того, что у вас в работе. Плюс каталог с ТТХ и ценами.
+
+Напишите, под какой материал делать видео и куда прислать – на email или в WhatsApp.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Возвращаюсь к прошлому письму.
+
+Часто слышим такую историю – заказчики начали просить ПВХ или алюминий с пленкой, а на EVA-клее она нормально не держится, нужен праймер и PUR. Перестраивать существующую линию долго и дорого, проще брать отдельный станок – но тогда у вас два разных оборудования под две задачи.
+
+У нас Line 6000 это закрывает в одном станке: PUR и EVA переключаются без переборки, станция праймирования встроенная – пленка держится и на ПВХ, и на алюминии. Линию проектировал наш собственный конструкторский отдел, доводили под разные материалы много лет – суммарный оборот заводов, которые сейчас на ней работают, больше 30 млрд рублей.
+
+По цене – линии от 4 515 000 руб., можно в лизинг или рассрочку под 0,1%, гарантия 24 месяца от завода.
+
+Если скинете, какой профиль и какие объемы в месяц – подготовим КП с расчетом под вашу задачу. Пришлем за 1-2 дня.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №3 -->
+        <div class="email-card">
+            <h2>Письмо №3</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Напомню о себе коротко – и больше не буду.
+
+Подскажите, у вас сейчас в планах есть обновление линии, новый цех или расширение ассортимента? Спрашиваю – потому что чаще всего к нам пишут именно с этим. И не всегда нужна новая линия. Если действующая в принципе работает, но просто узлы изношены или не хватает функций – мы делаем модернизацию. Меняем дюзу, ставим правильную станцию, обновляем узел нанесения клея – линия по факту получает второй ресурс, а вложения в разы меньше новой.
+
+По сервису – производство у нас 3500 м² в Тольятти, запчасти на свои узлы держим на складе в РФ. Если что выходит из строя – простой день-два, а не пара месяцев как с китайцами. Поддержка 24/7.
+
+Если что-то из этого попадает в ваши планы на ближайшие полгода – ответьте парой слов, какая задача, пришлю расчет. Если не актуально – ок, больше не пишу.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyAll(btn) {
+            const cards = document.querySelectorAll('.email-card');
+            const parts = [];
+            cards.forEach((card, i) => {
+                const title = card.querySelector('h2').innerText;
+                const body = card.querySelector('.email-body').innerText;
+                parts.push(title + '\n\n' + body);
+            });
+            navigator.clipboard.writeText(parts.join('\n\n---\n\n')).then(() => {
+                btn.textContent = 'Скопировано!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DITEC – Орбитальные упаковщики (Techpack) – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .distribution-card {
+            background: #f0f4ff; border: 1px solid #c8d8f0;
+            border-radius: 12px; padding: 20px 24px; margin-bottom: 28px;
+            font-size: 13px; line-height: 1.6;
+        }
+        .distribution-card h2 {
+            font-size: 14px; font-weight: 600; color: #1a4a8f; margin-bottom: 10px;
+        }
+        .distribution-card table {
+            width: 100%; border-collapse: collapse; margin-top: 8px;
+        }
+        .distribution-card th, .distribution-card td {
+            text-align: left; padding: 8px 10px; border-bottom: 1px solid #d0deef;
+            vertical-align: top; font-size: 13px;
+        }
+        .distribution-card th { font-weight: 600; color: #1a4a8f; background: #e8eef9; }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+        .warning-card {
+            background: #fff5f5; border: 1px solid #f0c0c0;
+            border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+            font-size: 13px; line-height: 1.6; color: #7a2020;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DITEC – Орбитальные упаковщики (Techpack)</h1>
+        <div class="meta">
+            Сегмент: производства погонажа (плинтус/наличник/вагонка), дверные заводы, оконные заводы (профиль перед отгрузкой), мебельные производства, производства алюминиевых конструкций<br>
+            Целевые должности: директор/владелец, технолог/главный инженер, рук. производства<br>
+            CTA: 1-е письмо – видео упаковки их изделий. 2-е – КП с расчетом окупаемости. 3-е – квалифицирующий вопрос
+        </div>
+
+        <div class="warning-card">
+            <strong>Заметка по кейсам:</strong> конкретных кейсов с цифрами по упаковке от клиента нет – используем общие регалии завода (400+ производств, 30+ млрд оборот клиентов, 15+ лет) и заявленные цифры экономии (50% пленки, окупаемость 6-12 мес – ориентир, требует подтверждения от Евгения).<br><br>
+            <strong>Плейсхолдер в письме №1:</strong> в квадратных скобках через слеш перечислены подниши – оператор перед отправкой выбирает один вариант под получателя.
+        </div>
+
+        <!-- Распределение болей и регалий -->
+        <div class="distribution-card">
+            <h2>Распределение по письмам (без дублирования между цепочками)</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Боль</th>
+                    <th>Регалии завода</th>
+                    <th>УТП станка</th>
+                </tr>
+                <tr>
+                    <td><strong>№1</strong></td>
+                    <td>Рекламации из-за повреждений при транспорте + паллетник не берет длинномеры / ручная обмотка дает неравномерное натяжение</td>
+                    <td>400+ производств в РФ и СНГ, Тольятти, 15+ лет</td>
+                    <td>Окно 300-1000 мм (любая длина и сечение) + автоматическая регулировка натяжения по всей пачке</td>
+                </tr>
+                <tr>
+                    <td><strong>№2</strong></td>
+                    <td>Большой расход стрейч-пленки при ручной упаковке + медленная неравномерная обмотка</td>
+                    <td>30+ млрд руб. оборот клиентов, собственный конструкторский отдел</td>
+                    <td>Экономия пленки до 50% (преднатяжитель + авто-натяжение) + перенастройка 15 сек через сенсорный пульт. Цена от 1 400 000 ₽, окупаемость 6-12 мес</td>
+                </tr>
+                <tr>
+                    <td><strong>№3</strong></td>
+                    <td>Зависимость от обученного персонала / товарный вид у дистрибьюторов и розницы</td>
+                    <td>3500 м², склад в РФ, сервис 24/7</td>
+                    <td>Полная автоматизация без оператора (подача → фиксация → обмотка → обрезка) + цельный подшипник (тихая работа, без частых регулировок)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Айсбрекер: триггер – вид производства длинномеров</div>
+                <div class="source-quote">«Триггеры: ОКВЭД + кейс + новый цех. По проблеме – рекламации из-за повреждений при транспортировке, рост объемов (ручная не справляется), паллетный упаковщик не берет длинномерные изделия»</div>
+                <span class="source-tag">Бриф сегмент 3</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Боль: рекламации + длинномеры</div>
+                <div class="source-quote">«Изделия повреждаются при транспортировке – рекламации. Паллетный упаковщик не подходит для длинномерных изделий. Ручная упаковка: медленно, неравномерно»</div>
+                <span class="source-tag">Бриф сегмент 3 – боли</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – УТП: окно 300-1000 мм + авто-натяжение по пачке</div>
+                <div class="source-quote">«Окно 300-1000 мм – подходит для любых длинномерных изделий»</div>
+                <span class="source-tag">Бриф сегмент 3 – УТП</span>
+                <div class="source-quote">«Равномерное натяжение пленки – исключает складки, провисания и повреждения упаковки. Автоматическая регулировка натяжения – точное подстраивание под форму изделия»</div>
+                <span class="source-tag">Сайт packaging_stretch</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – CTA: видео упаковки их изделий</div>
+                <div class="source-quote">«Запросить видео упаковки ваших изделий»</div>
+                <span class="source-tag">Бриф сегмент 3 – CTA</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Боль: расход стрейч-пленки + ручная неравномерная</div>
+                <div class="source-quote">«Большой расход стрейч-пленки – высокие затраты на расходники. Ручная упаковка: медленно, неравномерно, большой расход пленки»</div>
+                <span class="source-tag">Бриф сегмент 3 – боли</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Решение: экономия 50% + перенастройка 15 сек</div>
+                <div class="source-quote">«Экономия стрейч-пленки до 50% за счет авто-натяжения. Перенастройка за 15 секунд, сенсорный пульт с программами»</div>
+                <span class="source-tag">Бриф сегмент 3 – УТП</span>
+                <div class="source-quote">«Минимальный расход пленки – экономия упаковочного материала до 50%. Быстрая перенастройка под размеры изделий благодаря встроенным программам – смена параметров за 15 секунд»</div>
+                <span class="source-tag">Сайт packaging_stretch</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Цена и условия</div>
+                <div class="source-quote">«Лизинг / рассрочка 0,1%; Techpack 700 – от 1 400 000 руб. Гарантия до 24 месяцев»</div>
+                <span class="source-tag">Бриф сегмент 3 + сайт</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Боль: ручной узел / обученный персонал / товарный вид</div>
+                <div class="source-quote">«Нужен специально обученный персонал для упаковки. Непрезентабельный товарный вид – потеря клиентов. Расширение ассортимента – новые форматы изделий»</div>
+                <span class="source-tag">Бриф сегмент 3 – боли</span>
+                <div class="source-quote">«Интегрировать упаковку в конец производственной линии, убрав ручной узел»</div>
+                <span class="source-tag">Бриф сегмент 3 – JBTD</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Решение: полная автоматизация без оператора + цельный подшипник</div>
+                <div class="source-quote">«Автоматическая подача, фиксация, обертывание заготовки и обрезка пленки. Позволяет использовать всего одного оператора»</div>
+                <span class="source-tag">Сайт packaging_stretch</span>
+                <div class="source-quote">«Цельный подшипник – малошумная работа без частой регулировки»</div>
+                <span class="source-tag">Бриф сегмент 3 – УТП</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Регалии: 3500 м², склад, сервис 24/7</div>
+                <div class="source-quote">«3500 м² – площадь нашего производства. Склад запчастей в наличии – минимизируем простои клиентов. Сервисная поддержка 24/7»</div>
+                <span class="source-tag">Сайт packaging_stretch</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Квалифицирующий вопрос</div>
+                <div class="source-quote">«В последнем письме цепочки – квалифицирующий вопрос особенно уместен. Фильтрует тех, кому сейчас не актуально, и снижает давление»</div>
+                <span class="source-tag">CLAUDE.md – правило №5</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Посмотрел ваш сайт – выпускаете [плинтус и наличник / дверные коробки и доборы / оконный профиль / мебельные щиты / алюминиевый профиль]. Пишу из DITEC, в Тольятти производим орбитальные упаковщики Techpack – те, что стоят в конце линии и обматывают длинномеры стрейч-пленкой перед отгрузкой. Сейчас работают на 400+ заводах в РФ и СНГ, и стоим на рынке 15+ лет.
+
+Самая частая жалоба, с которой к нам приходят – рекламации после доставки. Углы примяты, поверхность поцарапана, клиент возвращает партию. На длинномерах это особенно больно: паллетный упаковщик их физически не берет, а ручная обмотка дает неравномерное натяжение – где-то перетянули, где-то слабина и пленка сползает по дороге.
+
+У наших Techpack окно от 300 до 1000 мм – подходит под любую длину и сечение. Автоматическая регулировка натяжения держит плотность ровной по всей пачке, без человеческого фактора.
+
+Если интересно посмотреть, как это работает на ваших изделиях – пришлю короткое видео упаковки. Напишите, какие размеры обычно идут на отгрузку, и сделаю под них.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Возвращаюсь к прошлому письму.
+
+Еще одна частая история – расход стрейч-пленки. При ручной обмотке оператор тянет интуитивно, тратит в 1,5-2 раза больше нормы. На больших объемах это десятки тысяч рублей в месяц только на расходниках, плюс зарплата упаковщиков, которые часто не успевают за линией.
+
+В Techpack стоит преднатяжитель и автоматическое натяжение – расход пленки реально падает до 50%. Перенастройка под другой размер изделия занимает 15 секунд через сенсорный пульт: есть готовые программы под разные сечения, оператор просто выбирает нужную.
+
+Линию проектировал наш собственный конструкторский отдел, дорабатывали ее много лет под разные форматы погонажа и профиля – суммарный оборот заводов, которые работают на этом оборудовании, больше 30 млрд рублей.
+
+По цене – Techpack 700 от 1 400 000 руб., есть лизинг и рассрочка под 0,1%. На большинстве заводов окупается за 6-12 месяцев только за счет экономии пленки и сокращения ручного труда.
+
+Скиньте, какие изделия упаковываете и какой объем уходит в смену – подготовим КП с расчетом окупаемости конкретно под ваш случай.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №3 -->
+        <div class="email-card">
+            <h2>Письмо №3</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Напомню о себе коротко – и больше не буду.
+
+Подскажите, у вас сейчас упаковка как организована – вручную, или какое-то решение уже стоит? Спрашиваю – потому что под две задачи мы чаще всего и заходим.
+
+Первая – убрать ручной узел в конце линии. Techpack делает все сам: подача изделия, фиксация, обмотка, обрезка пленки. Не «помощник оператору», а полностью без него – человек только задает программу с пульта в начале смены и потом следит. Один сотрудник на смену вместо трех-четырех упаковщиков.
+
+Вторая – товарный вид. Если изделия уходят дистрибьюторам или в розницу, ровная плотная обмотка работает не хуже бренда: клиент видит ее раньше самого продукта. На ручной упаковке этот эффект почти всегда теряется – складки, перекосы, обрывы.
+
+По надежности – производство 3500 м² в Тольятти, запчасти на свои узлы держим на складе в РФ, сервис круглосуточный. В каретке стоит цельный подшипник – работает тихо и без частых регулировок, в отличие от китайских аналогов с разборными узлами.
+
+Если что-то из этого попадает в задачи на ближайшие полгода – ответьте парой слов, какая ситуация, пришлю расчет. Если не актуально – ок, больше не пишу.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyAll(btn) {
+            const cards = document.querySelectorAll('.email-card');
+            const parts = [];
+            cards.forEach((card, i) => {
+                const title = card.querySelector('h2').innerText;
+                const body = card.querySelector('.email-body').innerText;
+                parts.push(title + '\n\n' + body);
+            });
+            navigator.clipboard.writeText(parts.join('\n\n---\n\n')).then(() => {
+                btn.textContent = 'Скопировано!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
