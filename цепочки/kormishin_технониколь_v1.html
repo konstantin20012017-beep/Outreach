@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кормишин – Бизнес-миссия Технониколь – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .distribution-card {
+            background: #f0f4ff; border: 1px solid #c8d8f0;
+            border-radius: 12px; padding: 20px 24px; margin-bottom: 28px;
+            font-size: 13px; line-height: 1.6;
+        }
+        .distribution-card h2 {
+            font-size: 14px; font-weight: 600; color: #1a4a8f; margin-bottom: 10px;
+        }
+        .distribution-card table {
+            width: 100%; border-collapse: collapse; margin-top: 8px;
+        }
+        .distribution-card th, .distribution-card td {
+            text-align: left; padding: 8px 10px; border-bottom: 1px solid #d0deef;
+            vertical-align: top; font-size: 13px;
+        }
+        .distribution-card th { font-weight: 600; color: #1a4a8f; background: #e8eef9; }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+        .warning-card {
+            background: #fff5f5; border: 1px solid #f0c0c0;
+            border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+            font-size: 13px; line-height: 1.6; color: #7a2020;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Кормишин – Бизнес-миссия Технониколь (Колесников)</h1>
+        <div class="meta">
+            Сегмент: производственный бизнес от 1 млрд руб. выручки – металлообработка, пищевое, стройматериалы, упаковка, мебель, химия<br>
+            Целевые должности: собственники, гендиректора, операционные директора<br>
+            Дата мероприятия: 3 апреля, Рязань (если переносится – оператор подставляет актуальную дату в письме №1)<br>
+            CTA: получить телефон/мессенджер, мотив клиента – узнать стоимость
+        </div>
+
+        <div class="warning-card">
+            <strong>Плейсхолдер в письме №1:</strong> в квадратных скобках через слеш перечислены варианты подниш производств – оператор перед отправкой выбирает один подходящий под получателя.<br><br>
+            <strong>Дата:</strong> в письмах указано «3 апреля». Если тур перенесен – заменить на актуальную дату.
+        </div>
+
+        <!-- Распределение болей и регалий -->
+        <div class="distribution-card">
+            <h2>Распределение по письмам (без дублирования)</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Боль</th>
+                    <th>Регалии / точка визита</th>
+                    <th>УТП поездки</th>
+                </tr>
+                <tr>
+                    <td><strong>№1</strong></td>
+                    <td>Производительность труда низкая, ручное управление съедает собственника, бенчмарка нет</td>
+                    <td>Колесников лично, 60 собственников в группе, Рязань 3 апреля</td>
+                    <td>Прямой диалог с управляющим партнером Технониколь о стратегии и масштабировании</td>
+                </tr>
+                <tr>
+                    <td><strong>№2</strong></td>
+                    <td>Растем по обороту, но прибыль не растет – издержки и качество вне контроля</td>
+                    <td>Смотровой мост над заводом PIR (единственный в РФ), распредцентр с беспилотными погрузчиками, отгрузка в 2 раза быстрее рынка</td>
+                    <td>Разбор инструментов бережливого производства с директором по развитию ПС – готовые кейсы автоматизации</td>
+                </tr>
+                <tr>
+                    <td><strong>№3</strong></td>
+                    <td>Сотрудники не вовлечены в улучшения, культура «как сказали – так и делаем», потери не ищут</td>
+                    <td>Лига Эффективности: 50+ миссий, 30+ компаний-лидеров, 500+ собственников в сообществе</td>
+                    <td>Культура непрерывных улучшений + закрытое сообщество для нетворкинга после миссии</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Факт о производительности</div>
+                <div class="source-quote">«Технониколь делает 104 млн руб выручки на сотрудника в год за счет классно отстроенного производства. Они мастера в оптимизации бизнес-процессов»</div>
+                <span class="source-tag">Бриф – факт</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Состав группы и формат</div>
+                <div class="source-quote">«3 апреля в составе 60 собственников производственного бизнеса, Рязань»</div>
+                <span class="source-tag">Бриф – пример цепочки</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Колесников как ключевой триггер</div>
+                <div class="source-quote">«Фишка программы – встреча с собственником Колесниковым»</div>
+                <span class="source-tag">Бриф – Технониколь</span>
+                <div class="source-quote">«Сооснователь корпорации, входящей в список крупнейших частных компаний. Идеолог системного подхода и непрерывного развития»</div>
+                <span class="source-tag">Сайт kormishin.ru – Технониколь</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Боль: рост оборота без роста прибыли</div>
+                <div class="source-quote">«Разберем, как масштабировать бизнес, сохраняя жесткий контроль качества и операционную маржинальность на каждом этапе»</div>
+                <span class="source-tag">Сайт – блок «Собственники и CEO»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Точки визита и автоматизация</div>
+                <div class="source-quote">«Смотровой мост над заводом PIR – единственная в России площадка непосредственно над производственной линией»</div>
+                <span class="source-tag">Сайт – маршрут визита</span>
+                <div class="source-quote">«Распределительный центр – беспилотные погрузчики, отгружают продукцию в два раза быстрее средних показателей по рынку»</div>
+                <span class="source-tag">Сайт – маршрут визита</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Кому это про маржу и операционку</div>
+                <div class="source-quote">«Операционные директора – практический разбор инструментов бережливого производства, готовые кейсы автоматизации, которые можно адаптировать уже на следующей неделе»</div>
+                <span class="source-tag">Сайт – ЦА</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Боль: невовлеченность команды в улучшения</div>
+                <div class="source-quote">«Погружение в культуру непрерывных улучшений. Как выстроить систему мотивации, при которой каждый сотрудник вовлечен в поиск потерь и внедрение инноваций»</div>
+                <span class="source-tag">Сайт – HR/развитие</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Регалии Лиги</div>
+                <div class="source-quote">«50+ проведенных бизнес-миссий, 500+ собственников и топ-менеджеров, 30+ компаний-лидеров в пуле»</div>
+                <span class="source-tag">Сайт – твердые цифры</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №3 – Квалифицирующий вопрос</div>
+                <div class="source-quote">«В последнем письме цепочки – квалифицирующий вопрос особенно уместен. Фильтрует тех, кому сейчас не актуально, и снижает давление»</div>
+                <span class="source-tag">CLAUDE.md – правило №5</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">CTA по всей цепочке</div>
+                <div class="source-quote">«Закрываем на телефон/мессенджер. Программу отправляем сразу. Мотив – получить цену»</div>
+                <span class="source-tag">Бриф – CTA</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Подпись</div>
+                <div class="source-quote">«Марат Баширов, менеджер проектов, +7 953 400 0667»</div>
+                <span class="source-tag">Бриф – контакт</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Зашел на сайт, увидел, что у вас [металлообработка / пищевое производство / производство стройматериалов / упаковка / мебельное производство / химическое производство]. Пишу из Лиги Эффективности – мы делаем закрытые бизнес-миссии в крупные производства, чтобы собственники могли вживую посмотреть, как у лидеров устроена операционка.
+
+3 апреля везем группу из 60 собственников в Технониколь, в Рязань. Главное там – личная встреча и диалог с Сергеем Колесниковым, управляющим партнером и сооснователем корпорации.
+
+Один факт, ради которого имеет смысл ехать – Технониколь делает 104 млн руб. выручки на сотрудника в год. Это не про «внедрили еще одну систему» – это про то, как у них в принципе устроена производственная система, как они отбирают людей и как считают эффективность. На своем опыте можно неделями искать, что менять – а тут за день видишь, к чему стремиться, и забираешь рабочие инструменты к себе.
+
+Если интересно – пришлите номер телефона или мессенджер, скину программу и варианты по стоимости.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Возвращаюсь к прошлому письму.
+
+Самое частое, с чем приходят на эту миссию – оборот растет, а прибыль не успевает: где-то теряется на качестве, где-то на издержках, и собственник видит это уже по итогам года, а не в моменте. Технониколь как раз про то, как этот разрыв закрыть на уровне системы, а не ручного контроля.
+
+В программе 3 апреля – смотровой мост прямо над производственной линией PIR (такая площадка одна в России), распределительный центр с беспилотными погрузчиками, который отгружает продукцию в 2 раза быстрее рынка, и отдельный блок – разбор инструментов бережливого производства с директором по развитию производственной системы. Это конкретные кейсы автоматизации и стандартизации, которые операционный директор может начать адаптировать на следующей неделе.
+
+В группе будут только собственники и топы производственных компаний от 1 млрд, формат закрытый – нетворкинг такого уровня сам по себе окупает поездку.
+
+Если хотите детали – пришлите телефон, отправлю полную программу и стоимость.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+
+        <!-- Письмо №3 -->
+        <div class="email-card">
+            <h2>Письмо №3</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body"><span class="placeholder">[приветствие]</span>
+
+Напомню о себе коротко – и больше не буду.
+
+Подскажите, у вас в ближайшие 3-6 месяцев в планах есть задача собрать команду вокруг идеи непрерывных улучшений? Спрашиваю не просто так – большинство, кто приходит к нам после Технониколя, едут именно за этим: показать своим людям, что система Lean – это не теория из книжки, а реальная рабочая среда, в которой 104 млн на человека в год получаются.
+
+Если сейчас не актуально – ок. Но даже если миссия в Технониколь не зайдет по датам, у нас за апрель, май и июнь – еще 6 поездок: Аскона, КФ Победа, Сима-ленд, Додо Пицца, менеджмент-тур в Новосибирске. Лига это уже 50+ проведенных миссий и закрытое сообщество из 500+ собственников – контакт точно лишним не будет.
+
+Напишите пару слов о ситуации – подберу подходящую миссию и пришлю программу.
+
+<span class="placeholder">[подпись]</span></div>
+        </div>
+    </div>
+
+    <script>
+        function copyAll(btn) {
+            const cards = document.querySelectorAll('.email-card');
+            const parts = [];
+            cards.forEach((card, i) => {
+                const title = card.querySelector('h2').innerText;
+                const body = card.querySelector('.email-body').innerText;
+                parts.push(title + '\n\n' + body);
+            });
+            navigator.clipboard.writeText(parts.join('\n\n---\n\n')).then(() => {
+                btn.textContent = 'Скопировано!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
