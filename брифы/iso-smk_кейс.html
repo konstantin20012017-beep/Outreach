@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>iso-smk (СМК Стандарт) — кейс-референс</title>
+<style>
+body{font-family:Arial,sans-serif;font-size:11pt;line-height:1.5;max-width:980px;margin:30px auto;padding:0 20px;color:#222}
+h1{font-size:22pt;border-bottom:2px solid #333;padding-bottom:8px}
+h2{font-size:16pt;margin-top:28px;color:#1a4480;border-bottom:1px solid #ccc;padding-bottom:4px}
+h3{font-size:13pt;margin-top:20px;color:#333}
+ul,ol{padding-left:22px}
+li{margin-bottom:4px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:10pt}
+th,td{border:1px solid #bbb;padding:6px 10px;text-align:left}
+th{background:#f0f4f8}
+td.num{text-align:right}
+.star{color:#d4a017;font-weight:bold}
+.warn{background:#fff8e1;border-left:4px solid #f0b400;padding:10px 14px;margin:14px 0}
+.info{background:#e8f4fd;border-left:4px solid #1a4480;padding:10px 14px;margin:14px 0}
+.win{background:#e8f7e8;border-left:4px solid #2a8a2a;padding:10px 14px;margin:14px 0}
+code{background:#f0f0f0;padding:1px 5px;border-radius:3px;font-size:10pt}
+strong{color:#000}
+</style>
+</head>
+<body>
+
+<h1>iso-smk (СМК Стандарт) — кейс-референс</h1>
+
+<div class="info">
+<strong>Что это:</strong> параллельный клиент в нише сертификация / декларирование / СРО / НОК / товарный знак. Есть отработавшие цепочки и отчёт по эффективности 5 кампаний.<br><br>
+<strong>Что переиспользуем:</strong> содержание (триггеры, формулировки болей, цифры регламентов, структура УТП).<br>
+<strong>Что НЕ переиспользуем:</strong> формат (темы, <code>{{доброгоВремениСуток}}</code>, 2 письма) — это формат iso-smk, не наш стандарт. Формат всегда из CLAUDE.md (3 письма, плейсхолдеры).
+</div>
+
+<h2>Сводная таблица результатов (отчёт СМК.xlsx)</h2>
+
+<table>
+<thead>
+<tr><th>#</th><th>Кампания</th><th class="num">Контактов</th><th class="num">Reply</th><th class="num">Лидов</th><th class="num">Reply %</th><th class="num">Lead %</th><th>Заметка</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td><strong>ФЗ-309 «На тех, кто уже в СРО»</strong></td><td class="num">3 355</td><td class="num">151</td><td class="num"><strong>29</strong></td><td class="num">4.5%</td><td class="num">0.86%</td><td><span class="star">★</span> лидер по абсолюту лидов</td></tr>
+<tr><td>2</td><td><strong>Регистрация товарного знака</strong></td><td class="num">748</td><td class="num">45</td><td class="num">21</td><td class="num">6.0%</td><td class="num">2.81%</td><td>сильный триггер «недавно зарегистрированы»</td></tr>
+<tr><td>3</td><td><strong>Сертификат соответствия (узкая)</strong></td><td class="num">54</td><td class="num">54</td><td class="num">18</td><td class="num">100%</td><td class="num"><strong>33.3%</strong></td><td><span class="star">★</span> узкая база с истекающими документами</td></tr>
+<tr><td>4</td><td><strong>СРО-71 проектирование</strong></td><td class="num">1 028</td><td class="num">95</td><td class="num">20</td><td class="num"><strong>9.2%</strong></td><td class="num">1.95%</td><td><span class="star">★</span> топ по reply — конкретные цифры УТП</td></tr>
+<tr><td>5</td><td>СРО-41 строительство</td><td class="num">4 013</td><td class="num">85</td><td class="num">19</td><td class="num">2.7%</td><td class="num">0.61%</td><td>в 3.4× хуже 71-й — нет конкретных цифр УТП</td></tr>
+<tr><td>6</td><td>НОК (сама по себе)</td><td class="num">1 698 / 1 958</td><td class="num">42 / 41</td><td class="num">4 / 5</td><td class="num">2.5% / 2.1%</td><td class="num">0.24% / 0.26%</td><td>слабая отдельно, сильная в связке с ФЗ-309</td></tr>
+<tr><td>7</td><td>Декларация ТР ЕАЭС</td><td class="num">4 791</td><td class="num">111</td><td class="num">33</td><td class="num">2.3%</td><td class="num">0.69%</td><td>средняя — широкая база, без узкого триггера</td></tr>
+<tr><td>8</td><td>Сертификат соответствия (массовый)</td><td class="num">1 907 / 2 316</td><td class="num">54 / 53</td><td class="num">17 / 16</td><td class="num">2.3-2.8%</td><td class="num">0.5-0.9%</td><td>в 30× хуже узкой</td></tr>
+<tr><td>9</td><td>Искавшие специалиста по ВЭД</td><td class="num">1 517</td><td class="num">61</td><td class="num">21</td><td class="num">4.0%</td><td class="num">1.38%</td><td>хороший триггер потребности</td></tr>
+</tbody>
+</table>
+
+<p><strong>Итого 08.05:</strong> 8 672 контакта → 430 ответов → 88 лидов → reply 5.5%, lead 1.13%.</p>
+
+<h2>Что работает в нише — выводы</h2>
+
+<div class="win">
+<strong>1. Регуляторный триггер с конкретной датой = бомба.</strong><br>
+ФЗ-309 (1 марта) — 29 лидов, лидер по абсолюту. 5 рисков с цифрами в письме №1, дедлайн в письме №3.
+</div>
+
+<div class="win">
+<strong>2. Триггер «дата окончания документа» = тёплый сегмент.</strong><br>
+54 контакта по узкому фильтру → 33% interest. Та же кампания по широкой базе — 0.5%. Разница в 30+ раз.
+</div>
+
+<div class="win">
+<strong>3. Цифры в УТП в первом письме = высокий reply.</strong><br>
+СРО-71 (5000 ₽ / 6 мес без взносов / своё СРО / ИСО 9001 бесплатно) → 9.2% reply. СРО-41 без таких цифр → 2.7%. Разница 3.4×.
+</div>
+
+<div class="win">
+<strong>4. Бесплатная проверка / pre-sale = низкий барьер CTA.</strong><br>
+«Бесплатно проверим уникальность» (товарный знак, 6% reply) / «бесплатно проверю всё ли по требованиям» (ФЗ-309, 4.5% reply).
+</div>
+
+<div class="win">
+<strong>5. Регламентный мотив срочности (не тайм-оффер).</strong><br>
+«Лучше начать за 2-3 месяца, оформление 10-15 дней» / «До 1 марта меньше 2 недель». Чисто по юридике.
+</div>
+
+<div class="win">
+<strong>6. Связки лучше отдельных продуктов.</strong><br>
+НОК отдельно — 4-5 лидов на 2000 контактов. НОК + ФЗ-309 (привязка НРС) — 29 лидов на 3355.
+</div>
+
+<div class="win">
+<strong>7. Квалифицирующий вопрос в конце письма №1.</strong><br>
+«Когда вам нужно?» / «С кем обсудить?» / «Передайте ответственному» — снимает давление, фильтрует нецелевых.
+</div>
+
+<h2>Содержание референсных цепочек iso-smk</h2>
+
+<h3>Цепочка А — Декларация ТР ЕАЭС (триггер: дата окончания)</h3>
+<ul>
+<li><strong>№1:</strong> «Информируем, что у вас до конца [месяц] заканчивается декларация ЕАЭС» → представление → «с кем обсудить продление?»</li>
+<li><strong>№2:</strong> «Писала ранее. Почему именно у нас?» → 4 буллета (лаборатории, под ключ, 10+ лет, выгодные условия)</li>
+<li><strong>№3:</strong> «Лучше начать за 2-3 месяца, оформление 10-15 дней» — регламентный мотив</li>
+</ul>
+
+<h3>Цепочка C — СРО проектирование (топ по reply 9.2%)</h3>
+<ul>
+<li><strong>№1:</strong> «Компания с 2025. Планируете СРО по проектированию?» → УТП в цифрах (своё СРО / 6 мес без взносов / 5000 ₽ / ИСО 9001 бесплатно / отсрочка НРС) → «с кем обсудить?»</li>
+<li><strong>№2:</strong> «Без СРО только до 3-10 млн или субподряд» → 3 буллета что даёт СРО → запрос контакта</li>
+<li><strong>№3:</strong> «Почему мы?» — 5 буллетов УТП → «Актуально?»</li>
+</ul>
+
+<h3>Цепочка E — ФЗ-309 «На тех, кто уже в СРО» (топ по абсолюту 29 лидов)</h3>
+<ul>
+<li><strong>№1:</strong> «С 1 марта — НРС-специалисты должны быть привязаны через единую базу. 5 рисков: потеря СРО, проверки, штрафы, в декабре 2024 НОСТРОЙ исключил 2265, повтор через 2 года» → CTA «контакт главного инженера?»</li>
+<li><strong>№2:</strong> «Не получила ответа. Подробнее» → что делаем → бесплатная проверка → «Да, пришлю детали»</li>
+<li><strong>№3:</strong> «Пишу в последний раз. До 1 марта меньше 2 недель. Не актуально — скажите. Актуально — телефон, 10 минут»</li>
+</ul>
+
+<h3>Цепочка G — Регистрация товарного знака</h3>
+<ul>
+<li><strong>№1:</strong> «Нашли как недавно зарегистрированную → проверили уникальность?» → риски (иск, ребрендинг) → бесплатная проверка → номер</li>
+<li><strong>№2:</strong> «Зачем бизнесу товарный знак?» → 4 пункта (монополия, защита 10 000 - 5 000 000 ₽, коммерциализация, актив)</li>
+<li><strong>№3:</strong> Кросс-сейл патент (изобретение / полезная модель / промобразец)</li>
+</ul>
+
+<h3>Цепочки D, F — слабые, не повторяем</h3>
+<ul>
+<li><strong>СРО-41 строительство</strong> — без конкретных цифр УТП. Reply 2.7% (vs 9.2% у 71). Урок: всегда давать цифры в первом письме.</li>
+<li><strong>НОК отдельно</strong> — 2-3% reply. Только в связке с регуляторным триггером (ФЗ-309).</li>
+</ul>
+
+<h2>Формат iso-smk vs наш стандарт</h2>
+<table>
+<thead><tr><th>Что</th><th>iso-smk</th><th>Наш стандарт CLAUDE.md</th></tr></thead>
+<tbody>
+<tr><td>Число писем</td><td>3 (иногда 2 сокращённо)</td><td><strong>3 всегда</strong></td></tr>
+<tr><td>Тема</td><td>в теле «Тема: {Компания} х ...»</td><td><strong>Не пишем</strong></td></tr>
+<tr><td>Приветствие</td><td><code>{{доброгоВремениСуток}}, [Имя]</code></td><td><code>[приветствие]</code></td></tr>
+<tr><td>Подпись</td><td>«Евгения Карпова, руководитель... СМК СТАНДАРТ» в теле</td><td><code>[подпись]</code></td></tr>
+<tr><td>Плейсхолдер компании</td><td><code>{Компания}</code></td><td>при необходимости</td></tr>
+</tbody>
+</table>
+
+<div class="warn"><strong>Из референса берём:</strong> триггеры, факты, цифры УТП, формулировки болей, структуру (айсбрекер → боль → УТП → CTA), цифры регламентов.<br>
+<strong>В формат CLAUDE.md переводим:</strong> убираем темы, заменяем приветствия и подписи на плейсхолдеры, сохраняем 3 письма.</div>
+
+</body>
+</html>
