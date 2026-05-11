@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ExportBase – Агентства маркетплейсов – v1</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; max-width: 860px; margin: 30px auto; padding: 0 20px; color: #1a1a1a; }
+  h1 { font-family: Arial, sans-serif; font-size: 20pt; margin: 0 0 6px; }
+  h2 { font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold; margin: 26px 0 10px; }
+  h3.chain { font-family: Arial, sans-serif; font-size: 20pt; font-weight: bold; margin: 36px 0 6px; padding-top: 18px; border-top: 3px solid #1a73e8; }
+  .meta { color: #666; font-size: 10pt; margin-bottom: 18px; }
+  .chain-meta { color: #444; font-size: 11pt; margin: 0 0 14px; font-style: italic; }
+  .warning { background: #fff4d6; border-left: 4px solid #e0a800; padding: 10px 14px; margin: 14px 0; font-size: 10pt; }
+  .src { background: #f3f4f6; padding: 12px 16px; margin: 10px 0 18px; font-size: 10pt; line-height: 1.35; }
+  .src b { display: block; margin-bottom: 4px; }
+  table.dist { border-collapse: collapse; width: 100%; margin: 8px 0 20px; font-size: 10pt; }
+  table.dist th, table.dist td { border: 1px solid #d0d0d0; padding: 8px 10px; text-align: left; vertical-align: top; }
+  table.dist th { background: #f3f4f6; font-weight: bold; }
+  .letter { border: 1px solid #e1e1e1; border-radius: 6px; padding: 18px 22px; margin: 6px 0 18px; background: #fafafa; }
+  .letter p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 0 0 10px; }
+  .letter ul { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 6px 0 12px 0; padding-left: 0; list-style: none; }
+  .letter ul li { padding-left: 0; margin-bottom: 4px; }
+  .copy-btn { font-family: Arial, sans-serif; font-size: 10pt; background: #1a73e8; color: #fff; border: 0; padding: 8px 14px; border-radius: 4px; cursor: pointer; margin: 0 6px 12px 0; }
+  .copy-btn:hover { background: #1558b8; }
+  .copy-all { font-size: 11pt; padding: 10px 18px; background: #0b5cb8; }
+</style>
+</head>
+<body>
+
+<h1>ExportBase – Агентства маркетплейсов</h1>
+<div class="meta">Гипотеза 4 (по стратегии консультанта). ЦА: агентства, работающие с продавцами Wildberries и Ozon. v1, 2026-05-12.</div>
+
+<div class="warning">
+  <b>А/B-тест из 3 цепочек на одной ЦА.</b> Заходы разные, ядро УТП общее (фильтр WB/Ozon + состав записи). Запускать параллельно, через 3-4 недели мерить Open / Reply / PRR.<br><br>
+  <b>Открытые поля:</b><br>
+  – Подпись (ФИО, телефон, email менеджера) – клиент пришлет.<br>
+  – Скриншот формата записи МП-базы – пригодится для письма №2 как артефакт; запросить у клиента.<br>
+  – Есть ли ограничения по категориям МП в кабинете (вся ли разнесенность по нишам товара доступна) – уточнить у клиента, чтобы не обещать лишнего.<br>
+  – «50 контактов в тесте» – число взято из паттерна документа консультанта (Гипотеза 1 и Гипотеза 4). У клиента прямого подтверждения объема бесплатного теста нет – согласовать.<br>
+  – <b>Конкретных кейсов агентств маркетплейсов от клиента нет.</b> Обновим до v2 после получения. Запросить у клиента: 1-2 успешных кейса агентств, работавших с МП-базами, с метриками если есть.
+</div>
+
+<button class="copy-btn copy-all" onclick="copyEverything()" style="font-size: 12pt; padding: 12px 22px; background: #0a4a8c;">Копировать все 3 цепочки целиком (9 писем)</button>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Источники</h2>
+<div class="src">
+  <b>Бриф клиента:</b>
+  – Продукт «базы контактов потенциальных клиентов».<br>
+  – УТП «1 копейка за контакт» – все письма №2.<br>
+  – «Опыт сотрудничества с маркетинговыми агентствами с 2014 года» – цепочка Б №1.<br>
+  – CTA «связь с персональным менеджером / ознакомление с сайтом» – финальные письма.
+</div>
+<div class="src">
+  <b>Анализ консультанта (документ, апрель 2026):</b>
+  – Карточка фич: «фильтр по маркетплейсам (WB/Ozon)» – ядро цепочек.<br>
+  – Уникальная фича: «бренд + ИНН + ФИО директора в одной записи» – состав записи в письмах №2.<br>
+  – Фильтры: ОКВЭД, регион, размер – письма №2.<br>
+  – Сайт export-base.ru: с 2013 года, 50 000+ клиентов, готовая база продавцов WB+Ozon+ЯМ как отдельный продукт в Магазине, 37 открытых гос. источников, 6 мес бесплатных обновлений – регалии и УТП для всех писем.<br>
+  – Прямая цитата с созвона: «дата слоны – маркетплейсы, этого нигде нету в общем доступе» – основа УТП всех цепочек.<br>
+  – Идеи трех заходов (А – уникальность, Б – квалифицирующий вопрос, В – как дотянуться) – блок 5 гипотезы 4.
+</div>
+
+<!-- ====== ЦЕПОЧКА А ====== -->
+
+<h3 class="chain">Цепочка А – Уникальная база WB/Ozon</h3>
+<div class="chain-meta">Заход: «такой базы в открытом доступе нет». Ядро – уникальность фильтра + бесплатный тест по ОКВЭД.</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('A')">Копировать все 3 письма цепочки А</button>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Распределение – цепочка А</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Готовой базы продавцов МП в открытом доступе нет</td><td>С 2013 на рынке, 50 000+ клиентов</td><td>Уникальный фильтр WB/Ozon + бесплатный тест 50 контактов</td></tr>
+  <tr><td><b>№2</b></td><td>Тест – одно, но непонятна стоимость промышленного заказа</td><td>–</td><td>Расчет стоимости под объем, скейл-логика (больше выборка – дешевле контакт)</td></tr>
+  <tr><td><b>№3</b></td><td>Возможно, задача неактуальна – не давить</td><td>–</td><td>Контакт менеджера на потом</td></tr>
+</table>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №1 (А)</h2>
+<button class="copy-btn" onclick="copyLetter('A1')">Копировать письмо №1</button>
+<div class="letter" id="A1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Пишу из ExportBase. Работаем с 2013 года, среди клиентов более 50 000 компаний и агентств.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">У нас есть готовая база продавцов Wildberries, Ozon и Яндекс.Маркет – в открытом доступе такой выгрузки нет.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если ваше агентство работает с продавцами WB или Ozon – могу собрать бесплатно тестовую выборку 50 контактов под нужные параметры. Напишите ОКВЭД или опишите задачу – соберу.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №2 (А)</h2>
+<button class="copy-btn" onclick="copyLetter('A2')">Копировать письмо №2</button>
+<div class="letter" id="A2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Возвращаюсь к прошлому письму.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Тестовая выборка 50 контактов – это чтобы посмотреть формат. Если в работе есть реальная задача под промышленный объем базы – готов посчитать стоимость под ваш заказ. Цена считается под объем, чем больше выборка – тем дешевле каждый контакт. После покупки база обновляется бесплатно 6 месяцев.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Для расчета нужны: ОКВЭД селлеров, регион, ориентировочный объем базы (500, 5 000, 50 000 записей). Соберу пример формата и пришлю предложение.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №3 (А)</h2>
+<button class="copy-btn" onclick="copyLetter('A3')">Копировать письмо №3</button>
+<div class="letter" id="A3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Напомню о себе коротко – и больше не буду.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если задача по продавцам маркетплейсов сейчас не стоит – подскажите, кому в команде это можно адресовать. Если позже появится – напишите, соберу под вас.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<!-- ====== ЦЕПОЧКА Б ====== -->
+
+<h3 class="chain">Цепочка Б – Вопрос-крючок про текущий способ</h3>
+<div class="chain-meta">Заход: квалифицирующий вопрос «как сейчас собираете контакты селлеров?». В №1 – регалии + ядро УТП.</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('B')">Копировать все 3 письма цепочки Б</button>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Распределение – цепочка Б</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Сбор контактов селлеров – задача, под которую нет очевидного готового решения</td><td>С 2013 на рынке, 50 000+ клиентов</td><td>Фильтр WB/Ozon + бесплатный тест 50 продавцов</td></tr>
+  <tr><td><b>№2</b></td><td>Непонятна сопоставимость нашей базы с текущим способом сбора</td><td>–</td><td>Пример выгрузки – состав полей и формат записей, 1 копейка/контакт</td></tr>
+  <tr><td><b>№3</b></td><td>Задача может оказаться неактуальной – не давить</td><td>–</td><td>Контакт на будущее</td></tr>
+</table>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №1 (Б)</h2>
+<button class="copy-btn" onclick="copyLetter('B1')">Копировать письмо №1</button>
+<div class="letter" id="B1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Пишу из ExportBase. Короткий вопрос по работе вашего агентства.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Как сейчас собираете контакты продавцов Wildberries и Ozon для своих кампаний?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Спрашиваю, потому что у нас есть готовая база продавцов WB, Ozon и Яндекс.Маркет – такой выгрузки в открытом доступе нигде нет. На рынке с 2013 года, среди клиентов более 50 000 компаний.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если интересно сравнить с тем, что есть у вас – соберу бесплатно тестовую выборку 50 продавцов под нужные параметры. Напишите ОКВЭД или опишите задачу.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №2 (Б)</h2>
+<button class="copy-btn" onclick="copyLetter('B2')">Копировать письмо №2</button>
+<div class="letter" id="B2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Возвращаюсь к прошлому письму.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Чтобы было что сравнить с тем, как сейчас собираете контакты – готов прислать пример выгрузки. Увидите формат записей (бренд, ИНН, ФИО директора, email, телефон), состав полей и поймете, отличается ли по точности от вашего текущего источника.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Источники у нас полностью открытые – ФНС, Росстат, Федресурс, ФССП и еще 33 гос. реестра. Цена – от 1 копейки за контакт. Для подбора нужны: ОКВЭД селлеров и регион.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №3 (Б)</h2>
+<button class="copy-btn" onclick="copyLetter('B3')">Копировать письмо №3</button>
+<div class="letter" id="B3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Напомню о себе коротко.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если задача по продавцам маркетплейсов не стоит – все понял. Если позже появится – напишите, соберу под вас. Контакты ниже.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<!-- ====== ЦЕПОЧКА В ====== -->
+
+<h3 class="chain">Цепочка В – Как дотянуться до новых селлеров</h3>
+<div class="chain-meta">Заход: открытый вопрос про каналы выхода на новых продавцов. №2 – база как решение.</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('V')">Копировать все 3 письма цепочки В</button>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Распределение – цепочка В</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Каналы выхода на новых продавцов МП – нестандартная задача</td><td>С 2013 на рынке, 50 000+ клиентов</td><td>Готовая база селлеров с контактами + бесплатный тест 50 продавцов</td></tr>
+  <tr><td><b>№2</b></td><td>Под кампанию нужны селлеры в нужном объеме, не разрозненные контакты</td><td>–</td><td>Выгрузка под объем кампании, скейл-логика (больше выборка – дешевле)</td></tr>
+  <tr><td><b>№3</b></td><td>Возможно, задача неактуальна</td><td>–</td><td>Контакт на будущее</td></tr>
+</table>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №1 (В)</h2>
+<button class="copy-btn" onclick="copyLetter('V1')">Копировать письмо №1</button>
+<div class="letter" id="V1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Пишу из ExportBase.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Хочу спросить – через какие каналы вы сейчас доходите до новых продавцов на Wildberries и Ozon с вашими услугами?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если в работе нужна готовая база селлеров с контактами – такая есть у нас, в открытом доступе такой выгрузки нет. На рынке с 2013 года, среди клиентов более 50 000 компаний и агентств.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если интересно – соберу бесплатно 50 продавцов под нужные параметры. Напишите ОКВЭД или опишите задачу.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №2 (В)</h2>
+<button class="copy-btn" onclick="copyLetter('V2')">Копировать письмо №2</button>
+<div class="letter" id="V2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Возвращаюсь к прошлому письму.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если задача – дотянуться до новых селлеров под конкретную услугу, то под объем кампании можем собрать выборку под нужный сегмент. По каждой записи – бренд продавца, ИНН, ФИО директора, email, телефон.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Нужны вводные: ОКВЭД селлеров под услугу, регион, ориентировочный объем (500, 5 000, 50 000 записей). Цена считается под объем – чем больше выборка, тем дешевле каждый контакт. После покупки база обновляется бесплатно 6 месяцев.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №3 (В)</h2>
+<button class="copy-btn" onclick="copyLetter('V3')">Копировать письмо №3</button>
+<div class="letter" id="V3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Напомню о себе коротко – и больше не буду.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если задача по выходу на продавцов маркетплейсов не стоит – подскажите, кому в команде это можно адресовать. Или напишите, когда задача появится – соберу под вас.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<script>
+function cloneClean(id) {
+  var src = document.getElementById(id).cloneNode(true);
+  src.querySelectorAll('.copy-btn').forEach(function(n){ n.remove(); });
+  return src;
+}
+function copyLetter(id) {
+  var node = cloneClean(id);
+  var html = node.innerHTML;
+  var text = node.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+function copyChain(prefix) {
+  var container = document.createElement('div');
+  ['1','2','3'].forEach(function(i){
+    var h = document.createElement('h2');
+    h.style.cssText = 'font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;';
+    h.innerText = 'Письмо №' + i;
+    container.appendChild(h);
+    container.appendChild(cloneClean(prefix + i));
+  });
+  var html = container.innerHTML;
+  var text = container.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+function copyEverything() {
+  var chains = [
+    {prefix: 'A', title: 'Цепочка А – Уникальная база WB/Ozon'},
+    {prefix: 'B', title: 'Цепочка Б – Вопрос-крючок про текущий способ'},
+    {prefix: 'V', title: 'Цепочка В – Как дотянуться до новых селлеров'}
+  ];
+  var container = document.createElement('div');
+  chains.forEach(function(ch){
+    var hc = document.createElement('h1');
+    hc.style.cssText = 'font-family: Arial, sans-serif; font-size: 20pt; font-weight: bold;';
+    hc.innerText = ch.title;
+    container.appendChild(hc);
+    ['1','2','3'].forEach(function(i){
+      var h = document.createElement('h2');
+      h.style.cssText = 'font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;';
+      h.innerText = 'Письмо №' + i;
+      container.appendChild(h);
+      container.appendChild(cloneClean(ch.prefix + i));
+    });
+  });
+  var html = container.innerHTML;
+  var text = container.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+</script>
+
+</body>
+</html>

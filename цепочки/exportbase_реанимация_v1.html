@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ExportBase – Реанимация своей базы – v1</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; max-width: 860px; margin: 30px auto; padding: 0 20px; color: #1a1a1a; }
+  h1 { font-family: Arial, sans-serif; font-size: 20pt; margin: 0 0 6px; }
+  h2 { font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold; margin: 26px 0 10px; }
+  h3.chain { font-family: Arial, sans-serif; font-size: 20pt; font-weight: bold; margin: 36px 0 6px; padding-top: 18px; border-top: 3px solid #1a73e8; }
+  .meta { color: #666; font-size: 10pt; margin-bottom: 18px; }
+  .chain-meta { color: #444; font-size: 11pt; margin: 0 0 14px; font-style: italic; }
+  .warning { background: #fff4d6; border-left: 4px solid #e0a800; padding: 10px 14px; margin: 14px 0; font-size: 10pt; }
+  .src { background: #f3f4f6; padding: 12px 16px; margin: 10px 0 18px; font-size: 10pt; line-height: 1.35; }
+  .src b { display: block; margin-bottom: 4px; }
+  table.dist { border-collapse: collapse; width: 100%; margin: 8px 0 20px; font-size: 10pt; }
+  table.dist th, table.dist td { border: 1px solid #d0d0d0; padding: 8px 10px; text-align: left; vertical-align: top; }
+  table.dist th { background: #f3f4f6; font-weight: bold; }
+  .letter { border: 1px solid #e1e1e1; border-radius: 6px; padding: 18px 22px; margin: 6px 0 18px; background: #fafafa; }
+  .letter p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 0 0 10px; }
+  .letter ul { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 6px 0 12px 0; padding-left: 0; list-style: none; }
+  .letter ul li { padding-left: 0; margin-bottom: 4px; }
+  .copy-btn { font-family: Arial, sans-serif; font-size: 10pt; background: #1a73e8; color: #fff; border: 0; padding: 8px 14px; border-radius: 4px; cursor: pointer; margin: 0 6px 12px 0; }
+  .copy-btn:hover { background: #1558b8; }
+  .copy-all { font-size: 11pt; padding: 10px 18px; background: #0b5cb8; }
+</style>
+</head>
+<body>
+
+<h1>ExportBase – Реанимация своей базы</h1>
+<div class="meta">Сегмент 5 (по стратегии консультанта). База ~4500 компаний: (а) зарегались без оплаты, (б) выгружали год+ назад. Активных не трогаем. v1, 2026-05-12.</div>
+
+<div class="warning">
+  <b>А/B-тест из 3 цепочек на одной ЦА.</b> Каждая цепочка – свой угол захода, боли и УТП между цепочками не пересекаются. Запускать параллельно по равным долям базы, через 3-4 недели мерить Open Rate / Reply Rate / PRR.<br><br>
+  <b>Открытые поля перед отправкой:</b><br>
+  – Подпись (ФИО менеджера, телефон, email) – клиент пришлет.<br>
+  – Сегментация базы реанимации: разделить на «зарегались без оплаты» и «выгружали год+ назад». Формулировки цепочек А и В подходят обоим сегментам; цепочка Б («что не понравилось») сильнее работает на сегмент (б) – тех, кто реально пробовал.<br>
+  – Скидка 30% в цепочке А – подтвердить с клиентом.
+</div>
+
+<button class="copy-btn copy-all" onclick="copyEverything()" style="font-size: 12pt; padding: 12px 22px; background: #0a4a8c;">Копировать все 3 цепочки целиком (9 писем)</button>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Источники</h2>
+<div class="src">
+  <b>Бриф клиента:</b>
+  – Продукт «Базы контактов потенциальных клиентов (компаний/юр.лиц)».<br>
+  – УТП цены «низкая удельная стоимость контакта 1 копейка и даже меньше копейки» – цепочки А №2, В №2.<br>
+  – Регалии «опыт сотрудничества с маркетинговыми агентствами с 2014 года».<br>
+  – Боли «устаревание информации в текущих БД клиентов», «низкая точность нацеливания в рекламных кампаниях» – цепочка А №2.<br>
+  – CTA «ознакомление с сайтом / связь с персональным менеджером» – все финальные письма.
+</div>
+<div class="src">
+  <b>Анализ консультанта (документ, апрель 2026):</b>
+  – «Своя клиентская база ~4500 компаний» – определение сегмента.<br>
+  – Уникальная фича из созвона: «бренд + ИНН + ФИО директора в одной записи» – цепочка А №1, Б №2, В №1.<br>
+  – Дополнительные фичи: «фильтр по маркетплейсам (WB/Ozon), наличие лицензий, зарегистрированные товарные знаки» – цепочка А №1.<br>
+  – Сайт export-base.ru: с 2013 года, 50 000+ клиентов, 140 000+ покупок, ежедневное обновление базы, 6 месяцев бесплатных обновлений после покупки – регалии для всех №1 и №2.<br>
+  – Погрешность баз ~5% (гипотеза 3) – цепочка А №2, Б №2.<br>
+  – Трипваер «Скидка 30% на первую выгрузку для вернувшихся клиентов» – цепочка А №2.<br>
+  – Сегментация базы: «1) Зарегались, но не пополнили баланс; 2) Когда-то выгружали, год+ не активны; 3) Активные – НЕ трогать».<br>
+  – Идея цепочки Б («Помните, пробовали ExportBase? Что не понравилось тогда – готовы обсудить и исправить») и цепочки В (заход через альтернативу ручному сбору) – из блока 5 гипотезы 5.
+</div>
+
+<!-- ====== ЦЕПОЧКА А ====== -->
+
+<h3 class="chain">Цепочка А – Новизна + скидка</h3>
+<div class="chain-meta">Заход: «давно не виделись, в кабинете появились новые фильтры». Закрытие через тестовую выборку + скидку 30% на первую выгрузку после паузы.</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('A')">Копировать все 3 письма цепочки А</button>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Распределение – цепочка А</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Контакт прерван, не знают, что обновилось в кабинете</td><td>С 2013, 50 000+ клиентов, ежедневное обновление</td><td>Новые фильтры: бренд+ИНН+ФИО, продавцы WB/Ozon/ЯМ, лицензии, товарные знаки</td></tr>
+  <tr><td><b>№2</b></td><td>Устаревание базы клиентов, рост bounce</td><td>Ежедневное обновление, 6 мес бесплатных обновлений после покупки</td><td>От 1 копейки за контакт, скидка 30% на первую выгрузку после паузы</td></tr>
+  <tr><td><b>№3</b></td><td>Возможно, задача неактуальна – не давить</td><td>–</td><td>Самостоятельный сбор выборки в кабинете</td></tr>
+</table>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №1 (А)</h2>
+<button class="copy-btn" onclick="copyLetter('A1')">Копировать письмо №1</button>
+<div class="letter" id="A1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Пишу из ExportBase – давно не виделись.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">За это время в кабинете появились фильтры, которых раньше не было:</p>
+  <ul style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">
+    <li style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">– бренд + ИНН + ФИО директора одной строкой</li>
+    <li style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">– продавцы Wildberries, Ozon и Яндекс.Маркет с контактами</li>
+    <li style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">– компании с лицензиями и зарегистрированными товарными знаками</li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Сейчас среди клиентов более 50 000 компаний, база обновляется ежедневно.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если в работе появилась задача собрать базу под новый проект – могу прислать бесплатно тестовую выборку 50 контактов по интересующей нише. Напишите ОКВЭД или нишу – соберу.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №2 (А)</h2>
+<button class="copy-btn" onclick="copyLetter('A2')">Копировать письмо №2</button>
+<div class="letter" id="A2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Возвращаюсь к прошлому письму.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">База клиентов, выгруженная год-два назад, к этому моменту обычно частично устаревает – компании закрываются, директора меняются, email перестают работать.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">В кабинете данные обновляются ежедневно. Стоимость – от 1 копейки за контакт.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если пришлете нишу или ОКВЭД, по которому выгружали раньше – соберу свежую выборку для сравнения со старой. На первую выгрузку после паузы держим скидку 30%.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №3 (А)</h2>
+<button class="copy-btn" onclick="copyLetter('A3')">Копировать письмо №3</button>
+<div class="letter" id="A3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Напомню о себе коротко – и больше не буду.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если задача по базам сейчас не стоит – подскажите, кому в команде это можно адресовать. Если позже появится – напишите, соберу под вас. Или зайдите на export-base.ru.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<!-- ====== ЦЕПОЧКА Б ====== -->
+
+<h3 class="chain">Цепочка Б – Разбор прошлого опыта</h3>
+<div class="chain-meta">Заход: «помните, пробовали – что не зашло?». Без оффера в №1, разбор обновлений в №2, в №3 – созвон на 15 минут под текущую задачу.</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('B')">Копировать все 3 письма цепочки Б</button>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Распределение – цепочка Б</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Прошлый опыт оказался незавершенным – непонятно, почему</td><td>–</td><td>Готовность открыто разобрать причину, без давления</td></tr>
+  <tr><td><b>№2</b></td><td>Старые сложности с качеством email и нехваткой ЛПР</td><td>Погрешность по email ~5%</td><td>Бренд+ИНН+ФИО в одной записи, разовая выгрузка от 1 копейки</td></tr>
+  <tr><td><b>№3</b></td><td>Задачу проще понять в разговоре, чем перепиской</td><td>–</td><td>Созвон 15 минут с менеджером под конкретный кейс</td></tr>
+</table>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №1 (Б)</h2>
+<button class="copy-btn" onclick="copyLetter('B1')">Копировать письмо №1</button>
+<div class="letter" id="B1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Пишу из ExportBase. Вы когда-то пробовали наш сервис, но дальше дело не пошло.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Хочу спросить напрямую – что тогда не зашло? База не подошла по качеству, не хватило фильтров, цена смутила, что-то еще?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Отвечу честно по каждому пункту и подскажу, что у нас за это время изменилось. Без оффера – просто хочу разобраться.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №2 (Б)</h2>
+<button class="copy-btn" onclick="copyLetter('B2')">Копировать письмо №2</button>
+<div class="letter" id="B2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Возвращаюсь к прошлому письму.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">За это время в кабинете обновили:</p>
+  <ul style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">
+    <li style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">– в записи теперь сразу бренд + ИНН + ФИО директора, не нужно отдельно искать ЛПР</li>
+    <li style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">– данные обновляются ежедневно, после покупки 6 месяцев бесплатных обновлений</li>
+    <li style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">– цена от 1 копейки за контакт</li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если хотите – соберу свежую выборку по нише, в которой раньше работали, чтобы сравнить с прошлой. Напишите нишу или ОКВЭД.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №3 (Б)</h2>
+<button class="copy-btn" onclick="copyLetter('B3')">Копировать письмо №3</button>
+<div class="letter" id="B3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Напомню о себе коротко.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если интересно – могу за 15 минут на звонке разобрать конкретный кейс: под какую задачу сейчас нужна база, что у нас сейчас в кабинете и можем ли мы ее закрыть. Пришлите удобное время или номер.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если задача не стоит – оставлю ссылку export-base.ru, зайдите, когда появится.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<!-- ====== ЦЕПОЧКА В ====== -->
+
+<h3 class="chain">Цепочка В – Альтернатива ручному сбору</h3>
+<div class="chain-meta">Заход: квалифицирующий вопрос про текущий способ сбора базы. №2 – сравнение по времени и цене. №3 – обнуляющий follow-up.</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('V')">Копировать все 3 письма цепочки В</button>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Распределение – цепочка В</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Ручной сбор баз съедает время менеджеров</td><td>С 2013, 50 000+ клиентов</td><td>Готовая выгрузка по ОКВЭД/региону/размеру с ФИО директора</td></tr>
+  <tr><td><b>№2</b></td><td>Нужно понять, как именно работает наш кабинет vs текущий способ</td><td>6 мес бесплатных обновлений</td><td>От 1 копейки за контакт, ежедневное обновление, ЛПР в каждой записи</td></tr>
+  <tr><td><b>№3</b></td><td>Возможно, текущий способ устраивает – не давить</td><td>–</td><td>Самостоятельный сбор выборки на сайте</td></tr>
+</table>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №1 (В)</h2>
+<button class="copy-btn" onclick="copyLetter('V1')">Копировать письмо №1</button>
+<div class="letter" id="V1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Пишу из ExportBase. Короткий вопрос по вашей работе.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Как сейчас собираете базу под новые проекты?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Спрашиваю, потому что у нас в кабинете эта задача решается за несколько минут: выборка по ОКВЭД, региону, размеру и ключевым словам, с email, телефоном и ФИО директора в одной записи. На рынке с 2013 года, среди клиентов более 50 000 компаний.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если интересно сравнить – напишите нишу, соберу бесплатно тестовые 50 контактов.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №2 (В)</h2>
+<button class="copy-btn" onclick="copyLetter('V2')">Копировать письмо №2</button>
+<div class="letter" id="V2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Возвращаюсь к прошлому письму.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Через наш кабинет выборка собирается за несколько минут: ОКВЭД, регион, размер, ключевые слова. ЛПР сразу в записи – бренд, ИНН и ФИО директора одной строкой. Цена от 1 копейки за контакт. После покупки 6 месяцев бесплатных обновлений базы.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если пришлете нишу или ОКВЭД – покажу разницу на конкретной выборке по вашей задаче.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2 style="font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;">Письмо №3 (В)</h2>
+<button class="copy-btn" onclick="copyLetter('V3')">Копировать письмо №3</button>
+<div class="letter" id="V3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Напомню о себе коротко – и больше не буду.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если текущий способ сбора баз закрывает задачи – все понял. Если появится проект, где нужна готовая выборка с email и ЛПР, зайдите на export-base.ru или напишите, соберу под вас.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<script>
+function cloneClean(id) {
+  var src = document.getElementById(id).cloneNode(true);
+  src.querySelectorAll('.copy-btn').forEach(function(n){ n.remove(); });
+  return src;
+}
+function copyLetter(id) {
+  var node = cloneClean(id);
+  var html = node.innerHTML;
+  var text = node.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+function copyEverything() {
+  var chains = [
+    {prefix: 'A', title: 'Цепочка А – Новизна + скидка'},
+    {prefix: 'B', title: 'Цепочка Б – Разбор прошлого опыта'},
+    {prefix: 'V', title: 'Цепочка В – Альтернатива ручному сбору'}
+  ];
+  var container = document.createElement('div');
+  chains.forEach(function(ch){
+    var hc = document.createElement('h1');
+    hc.style.cssText = 'font-family: Arial, sans-serif; font-size: 20pt; font-weight: bold;';
+    hc.innerText = ch.title;
+    container.appendChild(hc);
+    ['1','2','3'].forEach(function(i){
+      var h = document.createElement('h2');
+      h.style.cssText = 'font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;';
+      h.innerText = 'Письмо №' + i;
+      container.appendChild(h);
+      container.appendChild(cloneClean(ch.prefix + i));
+    });
+  });
+  var html = container.innerHTML;
+  var text = container.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+function copyChain(prefix) {
+  var container = document.createElement('div');
+  ['1','2','3'].forEach(function(i){
+    var h = document.createElement('h2');
+    h.style.cssText = 'font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;';
+    h.innerText = 'Письмо №' + i;
+    container.appendChild(h);
+    container.appendChild(cloneClean(prefix + i));
+  });
+  var html = container.innerHTML;
+  var text = container.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+</script>
+
+</body>
+</html>
