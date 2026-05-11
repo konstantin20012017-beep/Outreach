@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кормишин – Новосибирск Бирюза (25-27 мая) – Цепочка v2</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .distribution-card {
+            background: #f0f4ff; border: 1px solid #c8d8f0;
+            border-radius: 12px; padding: 20px 24px; margin-bottom: 28px;
+            font-size: 13px; line-height: 1.6;
+        }
+        .distribution-card h2 {
+            font-size: 14px; font-weight: 600; color: #1a4a8f; margin-bottom: 10px;
+        }
+        .distribution-card table {
+            width: 100%; border-collapse: collapse; margin-top: 8px;
+        }
+        .distribution-card th, .distribution-card td {
+            text-align: left; padding: 8px 10px; border-bottom: 1px solid #d0deef;
+            vertical-align: top; font-size: 13px;
+        }
+        .distribution-card th { font-weight: 600; color: #1a4a8f; background: #e8eef9; }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+        .warning-card {
+            background: #fff5f5; border: 1px solid #f0c0c0;
+            border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+            font-size: 13px; line-height: 1.6; color: #7a2020;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Кормишин – Бизнес-тур-погружение Новосибирск Бирюза (25-27 мая)</h1>
+        <div class="meta">
+            Сегмент: производства, торговля, услуги от 300 млн выручки, от 50 сотрудников<br>
+            Целевые должности: собственники, CEO, HR<br>
+            Дата мероприятия: 25-27 мая 2026, Новосибирск, 3-дневная программа<br>
+            Даты рассылки: 7 мая – 22 мая 2026<br>
+            Триггер: экономическая ситуация + усталость собственника «заставлять работать»<br>
+            CTA: получить телефон/мессенджер – отправляем программу и стоимость
+        </div>
+
+        <div class="warning-card">
+            <strong>Формат – по референсу отработавших цепочек 02.04 (Аскона / Победа / Технониколь):</strong> 2 письма, с темой в теле, плейсхолдеры <code>{{доброгоВремениСуток}}</code> / <code>{Компания}</code> / <code>[Имя]</code> / <code>Подпись</code>. Структура письма №1: Дата + Место → Факты → Зачем ехать → Результат → Программа → CTA. Письмо №2: «Не получили ответа» + ссылка + дожим через двоеточие.<br><br>
+            <strong>Открытое поле:</strong> ссылка на лендинг тура – уточнить у Марата (предположительно <code>kormishin.ru/biryuza/</code> или <code>kormishin.ru/novosibirsk/</code>). До получения URL во 2-м письме стоит плейсхолдер <code>[URL лендинга]</code>.<br><br>
+            <strong>Кейсов с цифрами от участников нет</strong> – опираемся на регалии 4 компаний-площадок (VIRTEX-FOOD, КОТЭС, SMART, Ваш Инвестор) и регалии Сергея Бехтерева как ведущего тура.
+        </div>
+
+        <!-- Распределение -->
+        <div class="distribution-card">
+            <h2>Распределение по письмам (без дублирования)</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Боль / задача</th>
+                    <th>Регалии / точки визита</th>
+                    <th>УТП поездки</th>
+                </tr>
+                <tr>
+                    <td><strong>№1</strong></td>
+                    <td>Собственник устал заставлять работать, бизнес держится на ручном управлении при росте 300 млн+</td>
+                    <td>VIRTEX-FOOD (8 млрд, 4 года без CEO, x2), КОТЭС (+70%, 9 БЕ, 1100 проектов), SMART (36 кризисов), Сергей Бехтерев (19+ лет, 400+ проектов)</td>
+                    <td>3 дня внутри 4 компаний на #ТВОЯкратии, прямой доступ к собственникам, личный план оргразвития</td>
+                </tr>
+                <tr>
+                    <td><strong>№2</strong></td>
+                    <td>Дожим – без новой боли (по стандарту 2-письменной цепочки клиента)</td>
+                    <td>Лига Эффективности: ближайший пул миссий (Сима-ленд, Додо/Ракета, КФ Победа)</td>
+                    <td>Ссылка на программу + пакет документов тура (шаблоны, путеводитель, план адаптации)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Сегмент и ЦА</div>
+                <div class="source-quote">«Производства, торговля, услуги от 300 млн, от 50 сотрудников. Собственники, HR. Триггер: экономическая ситуация, нужно оптимизироваться. Боли: собственник устал заставлять работать, хочет построить сильную команду»</div>
+                <span class="source-tag">Бриф сегмента 7 (Дополнение от 2026-05-08)</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Цифры VIRTEX-FOOD</div>
+                <div class="source-quote">«VIRTEX-FOOD. 8 млрд ₽ оборот компании, 4 года работают без CEO, x2 рост с 2021 года. 23 года на рынке. Компания управляется на базе гибкой VIRTEX-кратии. Взрывной рост после отказа от классической иерархии»</div>
+                <span class="source-tag">Лендинг тура – блок «Участники тура»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Цифры КОТЭС</div>
+                <div class="source-quote">«КОТЭС Инжиниринг. +70% рост выручки, 9 бизнес-единиц, 1100 успешных проектов. 31 год на рынке. Сократили согласования и перешли на распределенную систему управления: КОТЭСкратия»</div>
+                <span class="source-tag">Лендинг тура – блок «Участники тура»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – SMART и Ваш Инвестор</div>
+                <div class="source-quote">«SMART Consulting. 36 кризисов пройдено, 100% самоуправление. ИТ-компания, успешно пережившая масштабные кибератаки с помощью устойчивой системы самоуправления – СМАРТОкратии. Ваш Инвестор: 0 микроменеджмента, 100% фокус на стратегии. Финтех-проект, где руководитель стал инвестором и полностью вышел из операционки благодаря принципам ИНВЕСТОкратии»</div>
+                <span class="source-tag">Лендинг тура – блок «Участники тура»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Сергей Бехтерев</div>
+                <div class="source-quote">«Эволюционный консультант. Соавтор книг-бестселлеров «Лидер будущего» и «Спиральная динамика для бизнеса». Соавтор интегральной операционной системы управления #ТВОЯкратия. 19+ лет практикующий бизнес-консультант. 600+ корпоративных и открытых тренингов, 100 000+ участников. 400+ реализованных проектов развития систем управления»</div>
+                <span class="source-tag">Лендинг тура – блок «Кто будет сопровождать»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Программа тезисно</div>
+                <div class="source-quote">«День 1 – Погружение в VIRTEX-кратию: визит в VIRTEX-FOOD (антихрупкость, путь в VIRTEX-кратию, экономика живой клетки, мотивация и геймификация на производстве). День 2 – Погружение в КОТЭСкратию. День 3 – Погружение в СМАРТократию и ИНВЕСТОкратию»</div>
+                <span class="source-tag">Лендинг тура – «Программа тура»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Что увезут</div>
+                <div class="source-quote">«Инструменты для немедленного применения и подробные материалы от каждой компании: системы управления (политика, кодекс), система мотивации сотрудников, история и анализ внедрения, управление изменениями, шаблоны протоколов совещаний, план адаптации нового сотрудника, путеводитель по культуре, управление эффективностью»</div>
+                <span class="source-tag">Лендинг тура – «Что вы увезете с собой»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – Группа</div>
+                <div class="source-quote">«Группа лидеров: нетворкинг и обмен опытом с 30 единомышленниками. Всего 30 мест в группе»</div>
+                <span class="source-tag">Лендинг тура – «Условия участия»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Структура письма (формат от клиента)</div>
+                <div class="source-quote">«Дата + Место → Факты → Зачем ехать → Результат от поездки → Программа → CTA "пришлите номер телефона". Письмо №2: Не получили ответа. Прикрепляю ссылку – [URL]. Буду рад, если напишете/позвоните»</div>
+                <span class="source-tag">Цепочки 02.04 (Аскона / Победа / Технониколь)</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Стилевые правки</div>
+                <div class="source-quote">«Программу мероприятия в письме давать тезисно – одна строка на блок. Дожимы формулировать через двоеточие: "останется контакт: в [месяц] еще N миссий". Без оборота "проводим миссии в N бизнесов"»</div>
+                <span class="source-tag">Бриф – правки от 2026-05-05</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">CTA – без цен в письме</div>
+                <div class="source-quote">«Никаких оферт, скидок, тайм-офферов, конкретных цен в письме. CTA: пришлите номер телефона – отправлю варианты по стоимости»</div>
+                <span class="source-tag">Бриф – юридика и CTA</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – Календарь ближайших миссий</div>
+                <div class="source-quote">«3 июня – Сима-ленд: масштаб и культура. 18-19 июня – Додо Пицца и Ракета (Самара): масштаб франчайзи. 23-24 июня – КФ Победа: непрерывные улучшения»</div>
+                <span class="source-tag">kormishin.ru – ближайший каталог миссий</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body">Тема: {Компания} х Новосибирск Бирюза 25-27 мая
+
+{{доброгоВремениСуток}}, [Имя]
+
+Приглашаю собственников, топ-менеджмент {Компания} на закрытый бизнес-тур-погружение в Новосибирск – 3 дня в 4 компаниях, которые перешли на распределенное управление и продолжают расти без операционного присутствия собственника.
+
+Дата: 25-27 мая 2026 (3 дня)
+Место: Новосибирск
+Группа: до 30 человек
+
+Факты:
+– VIRTEX-FOOD: 8 млрд оборот, 23 года на рынке, 4 года работают без CEO, x2 рост с 2021 года.
+– КОТЭС Инжиниринг: 31 год, 9 бизнес-единиц, 1100 проектов, +70% выручки после перехода на распределенную систему управления.
+– SMART Consulting: 100% самоуправление, выстояли в 36 кризисах. Ваш Инвестор: основатель полностью вышел из операционки.
+– Сопровождает все 3 дня лично Сергей Бехтерев – соавтор #ТВОЯкратии, 19+ лет практики, 400+ проектов настройки систем управления.
+
+Зачем ехать:
+– Посмотреть на практике, как работает интегральная система управления #ТВОЯкратия в производстве, инжиниринге, IT и финтехе. Прямой доступ к собственникам и лидерам систем управления каждой из 4 компаний.
+
+Результат от поездки:
+– Вы и команда увезете личный план оргразвития под свой бизнес, собранный за 3 дня визитов и совместных ужинов с собственниками компаний-участников. Плюс пакет рабочих документов: шаблоны конституций, оргструктур, протоколов совещаний, систем мотивации, путеводитель по культуре, план адаптации сотрудника.
+
+Программа на 3 дня:
+1. День 1, VIRTEX-FOOD – антихрупкость и переход к распределенной ответственности: модель «Цитономика», экономика живой клетки, мотивация «Будь с нами», геймификация на производстве.
+2. День 2, КОТЭС Инжиниринг – КОТЭСкратия: как сократили согласования и выросли на 70% выручки.
+3. День 3, SMART Consulting и Ваш Инвестор – СМАРТОкратия и ИНВЕСТОкратия: самоуправление в IT-интеграторе и полный выход собственника из операционки в финтехе.
+
+Если есть интерес, пришлите номер телефона или мессенджер – отправлю программу и варианты по стоимости. Или направьте письмо руководству.
+
+Подпись</div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body">Тема: {Компания} х Новосибирск Бирюза 25-27 мая
+
+{{доброгоВремениСуток}}, [Имя]
+
+Не получили ответа.
+
+Прикрепляю ссылку:
+– 25-27 мая, Новосибирск. Бизнес-тур-погружение в 4 бирюзовые компании. По вопросу выхода собственника из операционки и построения сильной команды – [URL лендинга]
+
+Буду рад, если напишете/позвоните – познакомимся: даже если сейчас не актуально, останется контакт – 3 июня Сима-ленд (масштаб и культура), 18-19 июня Додо Пицца и Ракета в Самаре, 23-24 июня КФ Победа (непрерывные улучшения).
+
+Если есть интерес, пришлите номер телефона или мессенджер – отправлю программу и варианты по стоимости. Или направьте письмо руководству.
+
+Подпись</div>
+        </div>
+    </div>
+
+    <script>
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 1800);
+            });
+        }
+        function copyAll(btn) {
+            const bodies = document.querySelectorAll('.email-body');
+            const all = Array.from(bodies).map((b, i) => `=== Письмо №${i+1} ===\n\n${b.innerText}`).join('\n\n\n');
+            navigator.clipboard.writeText(all).then(() => {
+                btn.textContent = 'Все скопированы';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 1800);
+            });
+        }
+    </script>
+</body>
+</html>

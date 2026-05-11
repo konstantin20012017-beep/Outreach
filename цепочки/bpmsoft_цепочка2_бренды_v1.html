@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>BPMSoft – Цепочка №2 (бренды и регалии) v1</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 900px; margin: 30px auto; padding: 0 20px; color: #222; background: #fafafa; }
+  .header { background: #2a5db0; color: #fff; padding: 20px 25px; border-radius: 8px; margin-bottom: 25px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; opacity: 0.92; font-size: 11pt; }
+  .info-card { background: #e8f3ff; border-left: 4px solid #2a5db0; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .warn-card { background: #fff8e1; border-left: 4px solid #f5a623; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .copy-all { background: #2a5db0; color: #fff; border: none; padding: 12px 22px; font-size: 11pt; border-radius: 6px; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
+  .copy-all:hover { background: #1f4a92; }
+  .seg-divider { border: 0; border-top: 2px dashed #ccc; margin: 35px 0; }
+  .email-block { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; position: relative; }
+  .copy-btn { position: absolute; top: 18px; right: 18px; background: #f0f4fa; color: #2a5db0; border: 1px solid #2a5db0; padding: 6px 14px; font-size: 10pt; border-radius: 5px; cursor: pointer; }
+  .copy-btn:hover { background: #2a5db0; color: #fff; }
+  table.dist { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 10.5pt; }
+  table.dist th, table.dist td { border: 1px solid #bbb; padding: 8px 12px; text-align: left; vertical-align: top; }
+  table.dist th { background: #f0f4fa; }
+  .src-block { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 6px; padding: 16px 20px; margin: 12px 0; font-size: 10pt; }
+  .src-block strong { color: #2a5db0; }
+  h2.email-title { font-family: Arial; font-size: 18pt; font-weight: bold; margin: 0 0 12px 0; color: #222; }
+  h2.section { font-size: 16pt; color: #2a5db0; margin-top: 35px; }
+  h2.segment { font-family: Arial; font-size: 18pt; font-weight: bold; margin: 30px 0 18px 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>BPMSoft – Цепочка №2 (бренды и регалии)</h1>
+  <p>Вебинар 26 мая 2026 • A/B-тест заходов • Версия v1</p>
+</div>
+
+<div class="info-card">
+  <strong>Формат:</strong> 3 письма по стандарту проекта. Ссылка на регистрацию указана прямо в письмах. Заход через регалии BPMSoft и узнаваемые бренды клиентов. Боли разные в №1 (зоопарк) и №2 (скорость БП и закупок); №3 – короткий follow-up.
+</div>
+
+<div class="warn-card">
+  <strong>Открытые поля:</strong> ФИО менеджера для подписи, телефон/почта/TG. UTM-ссылка на регистрацию подставляется вместо <code>[ссылка]</code> – клиент пришлет с таймметкой.
+</div>
+
+<button class="copy-all" onclick="copyAll()">📋 Копировать все письма цепочки</button>
+
+<h2 class="segment">Цепочка №2 – заход через бренды и регалии</h2>
+
+<!-- ============ ПИСЬМО №1 ============ -->
+<div class="email-block" id="email1">
+  <button class="copy-btn" onclick="copyEmail('email1')">Копировать</button>
+  <h2 class="email-title">Письмо №1</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Меня зовут [имя]. Пишу как маркетинговый партнер BPMSoft – low-code платформы №1 в РФ по рейтингам TAdviser, CNews и Фонда «Сколково» (CRM, BPM, low-code – во всех трех).</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">26 мая в 11:00 мск BPMSoft проводит бесплатный онлайн-вебинар «Как автоматизировать развитие бизнеса без зоопарка систем». Подумал, может быть полезно.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Сегодня на BPMSoft работают ГАЗ, Норильский Никель, ВОЛМА, Ашан, АСКОНА, Ситилинк, Лента, ЦУМ, VK, Билайн, Газпромнефть, MR Group, Технологии Доверия (ex-PwC), Группа Б1 (ex-EY). На вебинаре разберем, как одна платформа закрывает маркетинг, продажи, закупки и сервис в едином контуре – вместо отдельных CRM, BPM и SRM-систем.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Регистрация: [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<!-- ============ ПИСЬМО №2 ============ -->
+<div class="email-block" id="email2">
+  <button class="copy-btn" onclick="copyEmail('email2')">Копировать</button>
+  <h2 class="email-title">Письмо №2</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Возвращаюсь к прошлому письму. Добавлю конкретики – на вебинаре 26 мая выступят два кейс-спикера от клиентов BPMSoft с цифрами, которые получили у себя:</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 8px 0;">– <strong>Максим Пономарев</strong>, директор по цифровой трансформации компании ВОЛМА. Расскажет, как ВОЛМА ускорила ключевые бизнес-процессы в 5 раз, скорость работы с лидами – на 40%, сроки закупок – на 10-20%. ВОЛМА – бренд №1 в РФ на сухих стройсмесях, гипсокартоне, пазогребневых плитах.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">– <strong>Оксана Репина</strong>, руководитель отдела автоматизации бизнес-процессов Группы СЕБ-ВОСТОК (российское подразделение Groupe SEB – Tefal, Moulinex, Krups, Rowenta). Расскажет, как повысили эффективность процессов на 30% и убрали рутину у сотрудников.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Если в компании сейчас есть задача ускорить продажи, маркетинг или закупки – на вебинаре будут практические сценарии под эти задачи.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">26 мая, 11:00 мск, онлайн, бесплатно. Регистрация: [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<!-- ============ ПИСЬМО №3 ============ -->
+<div class="email-block" id="email3">
+  <button class="copy-btn" onclick="copyEmail('email3')">Копировать</button>
+  <h2 class="email-title">Письмо №3</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Напомню коротко – и больше не беспокою.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Вебинар BPMSoft «Как автоматизировать развитие бизнеса без зоопарка систем» – уже 26 мая в 11:00 мск. Практики от ВОЛМА и Группы СЕБ-ВОСТОК поделятся реальными цифрами по продажам, маркетингу и закупкам.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Если тема актуальна – ссылка на регистрацию: [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">PS – пишу на несколько почт. Если попал не по адресу, перешлите коллеге, который отвечает за CRM или цифровизацию, буду благодарен)</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<hr class="seg-divider">
+
+<h2 class="section">Распределение боли / регалии / УТП</h2>
+<table class="dist">
+  <tr><th>Письмо</th><th>Боль</th><th>Регалии / факты</th><th>УТП</th></tr>
+  <tr>
+    <td><strong>№1</strong></td>
+    <td>Зоопарк систем (отдельные CRM, BPM, SRM)</td>
+    <td>1 место TAdviser/CNews/Сколково по CRM, BPM, low-code. Клиенты: ГАЗ, Норильский Никель, ВОЛМА, Ашан, АСКОНА, Ситилинк, Лента, ЦУМ, VK, Билайн, Газпромнефть, MR Group, ТеДо, Б1</td>
+    <td>Единый контур: маркетинг + продажи + закупки + сервис</td>
+  </tr>
+  <tr>
+    <td><strong>№2</strong></td>
+    <td>Скорость бизнес-процессов и сроки закупок</td>
+    <td>Кейс-спикеры с цифрами: ВОЛМА (БП x5, лиды +40%, закупки -10-20%), Groupe SEB (эффективность +30%)</td>
+    <td>Готовые отраслевые сценарии и измеримый эффект в первые месяцы</td>
+  </tr>
+  <tr>
+    <td><strong>№3</strong></td>
+    <td>Короткий follow-up (без новой боли)</td>
+    <td>Повтор спикеров кратко</td>
+    <td>Напоминание + PS «перешлите коллеге»</td>
+  </tr>
+</table>
+
+<h2 class="section">Источники (что и откуда)</h2>
+
+<div class="src-block">
+  <strong>Регалии в письме №1:</strong>
+  бриф клиента, раздел «Преимущество 3 / Профессиональные Рейтинги»: 1 место в рейтингах CRM (ТеДо, CNews), low-code (Фонд Сколково), BPM (TAdviser, CNews) за 2025. + раздел «Факты о BPMSoft» с лендинга bpmsoft.ru.
+</div>
+
+<div class="src-block">
+  <strong>Список клиентов в письме №1:</strong>
+  бриф клиента, раздел «Примеры компаний / Некоторые клиенты BPMSoft» – все названия взяты оттуда (ГАЗ, ВОЛМА, Ашан, АСКОНА, Ситилинк, Лента, ЦУМ, VK, Билайн, Газпромнефть, MR Group, Технологии Доверия, Группа Б1).
+</div>
+
+<div class="src-block">
+  <strong>Кейс ВОЛМА (письмо №2):</strong>
+  пресс-релиз BPMSoft от 09.07.2025 «ВОЛМА в пять раз ускорила бизнес-процессы»: «Автоматизация продаж и маркетинга увеличила скорость обработки лидов на 40%, а создание единой SRM-системы обеспечило прозрачность закупок и сократило сроки закупочных процессов на 10-20%». Спикер – Максим Пономарев, директор по цифровой трансформации.
+</div>
+
+<div class="src-block">
+  <strong>Кейс Groupe SEB (письмо №2):</strong>
+  лендинг вебинара: «Кейс Groupe SEB: Повысили эффективность на 30% и избавились от рутины». Спикер – Оксана Репина, руководитель отдела автоматизации БП Группы СЕБ-ВОСТОК.
+</div>
+
+<div class="src-block">
+  <strong>«Маркетинговый партнер»:</strong>
+  транскрибация созвона с Андреем Кучеровым [10:13]: «коммуникация происходит от вашего имени, как от нашего маркетингового партнера. Приглашаете на наш вебинар, являясь маркетинговым партнером».
+</div>
+
+<div class="src-block">
+  <strong>Тема и формулировка «без зоопарка систем»:</strong>
+  лендинг вебинара https://webinar.bpmsoft.ru/26-05-2026 – дословно тема «BPMSoft: как автоматизировать развитие бизнеса без зоопарка систем».
+</div>
+
+<div class="src-block">
+  <strong>PS «пишу на несколько почт» (письмо №3):</strong>
+  правило проекта из CLAUDE.md (раздел «Роли писем в цепочке»): уместен в №2 или №3, снимает неловкость и открывает форвард внутри компании.
+</div>
+
+<script>
+function copyEmail(id) {
+  const node = document.getElementById(id).cloneNode(true);
+  node.querySelectorAll('.copy-btn').forEach(b => b.remove());
+  const html = node.innerHTML;
+  const text = node.innerText;
+  const data = new ClipboardItem({
+    'text/html': new Blob([html], {type: 'text/html'}),
+    'text/plain': new Blob([text], {type: 'text/plain'})
+  });
+  navigator.clipboard.write([data]);
+  const btn = document.querySelector('#' + id + ' .copy-btn');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Скопировано';
+  setTimeout(() => btn.textContent = orig, 1500);
+}
+
+function copyAll() {
+  const wrapper = document.createElement('div');
+  document.querySelectorAll('.email-block').forEach(b => {
+    const clone = b.cloneNode(true);
+    clone.querySelectorAll('.copy-btn').forEach(x => x.remove());
+    wrapper.appendChild(clone);
+    const hr = document.createElement('hr');
+    wrapper.appendChild(hr);
+  });
+  const html = wrapper.innerHTML;
+  const text = wrapper.innerText;
+  const data = new ClipboardItem({
+    'text/html': new Blob([html], {type: 'text/html'}),
+    'text/plain': new Blob([text], {type: 'text/plain'})
+  });
+  navigator.clipboard.write([data]);
+  const btn = document.querySelector('.copy-all');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Скопировано';
+  setTimeout(() => btn.textContent = orig, 1500);
+}
+</script>
+
+</body>
+</html>

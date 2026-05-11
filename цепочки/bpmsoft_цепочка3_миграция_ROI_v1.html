@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>BPMSoft – Цепочка №3 (миграция и ROI) v1</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 900px; margin: 30px auto; padding: 0 20px; color: #222; background: #fafafa; }
+  .header { background: #2a5db0; color: #fff; padding: 20px 25px; border-radius: 8px; margin-bottom: 25px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; opacity: 0.92; font-size: 11pt; }
+  .info-card { background: #e8f3ff; border-left: 4px solid #2a5db0; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .warn-card { background: #fff8e1; border-left: 4px solid #f5a623; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .copy-all { background: #2a5db0; color: #fff; border: none; padding: 12px 22px; font-size: 11pt; border-radius: 6px; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
+  .copy-all:hover { background: #1f4a92; }
+  .seg-divider { border: 0; border-top: 2px dashed #ccc; margin: 35px 0; }
+  .email-block { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; position: relative; }
+  .copy-btn { position: absolute; top: 18px; right: 18px; background: #f0f4fa; color: #2a5db0; border: 1px solid #2a5db0; padding: 6px 14px; font-size: 10pt; border-radius: 5px; cursor: pointer; }
+  .copy-btn:hover { background: #2a5db0; color: #fff; }
+  table.dist { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 10.5pt; }
+  table.dist th, table.dist td { border: 1px solid #bbb; padding: 8px 12px; text-align: left; vertical-align: top; }
+  table.dist th { background: #f0f4fa; }
+  .src-block { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 6px; padding: 16px 20px; margin: 12px 0; font-size: 10pt; }
+  .src-block strong { color: #2a5db0; }
+  h2.email-title { font-family: Arial; font-size: 18pt; font-weight: bold; margin: 0 0 12px 0; color: #222; }
+  h2.section { font-size: 16pt; color: #2a5db0; margin-top: 35px; }
+  h2.segment { font-family: Arial; font-size: 18pt; font-weight: bold; margin: 30px 0 18px 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>BPMSoft – Цепочка №3 (миграция и ROI/финансы)</h1>
+  <p>Вебинар 26 мая 2026 • A/B-тест заходов • Версия v1</p>
+</div>
+
+<div class="info-card">
+  <strong>Формат:</strong> 3 письма по стандарту проекта. Ссылка на регистрацию в письмах. Заход через миграцию с зарубежного ПО (импортозамещение, Salesforce → BPMSoft за 2 недели, ФСТЭК) и через ROI/финансы. Боли разные в №1 (импортозамещение) и №2 (окупаемость и финансы), №3 – короткий follow-up.
+</div>
+
+<div class="warn-card">
+  <strong>Открытые поля:</strong> ФИО менеджера для подписи, телефон/почта/TG. UTM-ссылка вместо <code>[ссылка]</code> – клиент пришлет с таймметкой.
+</div>
+
+<button class="copy-all" onclick="copyAll()">📋 Копировать все письма цепочки</button>
+
+<h2 class="segment">Цепочка №3 – заход через миграцию и ROI</h2>
+
+<!-- ============ ПИСЬМО №1 ============ -->
+<div class="email-block" id="email1">
+  <button class="copy-btn" onclick="copyEmail('email1')">Копировать</button>
+  <h2 class="email-title">Письмо №1</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Меня зовут [имя]. Пишу как маркетинговый партнер BPMSoft – российской low-code платформы для автоматизации продаж, маркетинга, закупок и сервиса. По итогам 2025 BPMSoft заняла 1 место в рейтингах TAdviser, CNews и Фонда «Сколково» по CRM, BPM и low-code.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Сейчас многие компании сталкиваются с одной общей проблемой: зарубежные CRM и BPM-системы (Salesforce, MS Dynamics, SAP, Oracle) ушли с российского рынка – нет официальной поддержки и обновлений, лицензии в валюте, плюс требования по информационному суверенитету и закону о КИИ. В итоге переход на отечественную платформу из «когда-нибудь» превратился в задачу со сроком.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">На BPMSoft за последние два года перешли ЦУМ (с Salesforce за 2 недели), Технологии Доверия (ex-PwC), Группа Б1 (ex-EY), Биокодекс, СберФакторинг и GEFCO Россия. У платформы сертификат ФСТЭК 4-го уровня доверия и запись в Реестре отечественного ПО – она подходит и для объектов критической инфраструктуры.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">26 мая в 11:00 мск BPMSoft проводит бесплатный онлайн-вебинар «Как автоматизировать развитие бизнеса без зоопарка систем». Среди тем – сценарии быстрой миграции с зарубежного ПО: что переносится, как сохраняются исторические данные клиентов и сделок, сколько реально занимает переход и за какой срок система выходит на окупаемость.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Регистрация: [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<!-- ============ ПИСЬМО №2 ============ -->
+<div class="email-block" id="email2">
+  <button class="copy-btn" onclick="copyEmail('email2')">Копировать</button>
+  <h2 class="email-title">Письмо №2</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Возвращаюсь к прошлому письму – про вебинар BPMSoft 26 мая «Как автоматизировать развитие бизнеса без зоопарка систем». Если коротко – BPMSoft это российская low-code платформа, которая закрывает маркетинг, продажи, закупки и сервис в одном контуре, без нескольких отдельных CRM/BPM/SRM-систем.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">У многих компаний при выборе такого решения главный вопрос – окупаемость и стоимость владения. Поэтому добавлю конкретики по цифрам, которые BPMSoft дает на реальных внедрениях:</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– конверсия продаж в 1,5-2 раза</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– цикл сделки в 2-3 раза короче</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– маркетинговые расходы – минус 50% без потери количества лидов</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– стоимость владения IT-инфраструктурой – минус 40%</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">– полная самостоятельная настройка нового бизнес-процесса – 3 часа (low-code, без программистов)</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">На вебинаре 26 мая разберут эти сценарии два кейс-спикера: директор по цифровой трансформации компании ВОЛМА (бренд №1 в РФ на стройсмесях; БП ускорены в 5 раз, лиды – на 40%) и руководитель автоматизации БП Группы СЕБ-ВОСТОК (Tefal, Moulinex; эффективность процессов – на 30%).</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">26 мая, 11:00 мск, онлайн, бесплатно. Регистрация: [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<!-- ============ ПИСЬМО №3 ============ -->
+<div class="email-block" id="email3">
+  <button class="copy-btn" onclick="copyEmail('email3')">Копировать</button>
+  <h2 class="email-title">Письмо №3</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Напомню коротко – и больше не беспокою.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">26 мая в 11:00 мск онлайн-вебинар BPMSoft – про автоматизацию маркетинга, продаж, закупок и сервиса в едином контуре. Среди тем – быстрая миграция с зарубежных систем и реальные цифры по эффективности от ВОЛМА и Группы СЕБ-ВОСТОК. Бесплатно.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Если тема актуальна – ссылка на регистрацию: [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">PS – пишу на несколько почт. Если попал не по адресу, перешлите коллеге, который отвечает за CRM или импортозамещение, буду благодарен)</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<hr class="seg-divider">
+
+<h2 class="section">Распределение боли / регалии / УТП</h2>
+<table class="dist">
+  <tr><th>Письмо</th><th>Боль</th><th>Регалии / факты</th><th>УТП</th></tr>
+  <tr>
+    <td><strong>№1</strong></td>
+    <td>Миграция с зарубежного ПО / импортозамещение / информационный суверенитет</td>
+    <td>ЦУМ – миграция с Salesforce за 2 недели. Аналогично: Технологии Доверия (ex-PwC), Группа Б1 (ex-EY), Биокодекс, СберФакторинг, GEFCO. Сертификат ФСТЭК 4-го уровня</td>
+    <td>Бесшовная миграция с зарубежных CRM/BPM в короткие сроки</td>
+  </tr>
+  <tr>
+    <td><strong>№2</strong></td>
+    <td>ROI/финансы – окупаемость и стоимость владения</td>
+    <td>Цифры из брифа: конверсия x1,5-2, цикл -2-3 раза, маркетинг -50%, IT-инфраструктура -40%, low-code 3 часа на новый БП. Спикеры ВОЛМА и SEB как доказательство</td>
+    <td>Измеримый ROI на конкретных проектах + low-code (без затрат на интеграторов)</td>
+  </tr>
+  <tr>
+    <td><strong>№3</strong></td>
+    <td>Короткий follow-up (без новой боли)</td>
+    <td>Краткий повтор миграции и кейсов</td>
+    <td>Напоминание + PS «перешлите коллеге»</td>
+  </tr>
+</table>
+
+<h2 class="section">Источники (что и откуда)</h2>
+
+<div class="src-block">
+  <strong>Кейс ЦУМа (письмо №1):</strong>
+  пресс-релиз BPMSoft от 26.05.2025: «ЦУМ за две недели перешел с Salesforce на BPMSoft. ЦУМ (г. Москва) завершил миграцию с Salesforce на российскую low-code платформу BPMSoft».
+</div>
+
+<div class="src-block">
+  <strong>Список миграций (письмо №1):</strong>
+  Технологии Доверия (ex-PwC) – «Технологии доверия (ТеДо) перешла на CRM BPMSoft. Компания завершила миграцию с Salesforce на российскую low-code платформу со встроенными ИИ-инструментами BPMSoft» (раздел Кейсы на сайте). Группа Б1 (ex-EY) – из брифа клиента, раздел «Профессиональные услуги». Биокодекс – пресс-релиз 11.12.2025: «Biocodex Россия завершила миграцию на российскую CRM-систему BPMSoft». СберФакторинг – пресс-релиз 16.06.2025: «СберФакторинг перешел на low-code платформу BPMSoft». GEFCO Россия – пресс-релиз 11.04.2024: «GEFCO Россия автоматизирует продажи на CRM BPMSoft».
+</div>
+
+<div class="src-block">
+  <strong>ФСТЭК и информационный суверенитет (письмо №1):</strong>
+  бриф клиента, «Преимущество 5»: «Сертификат ФСТЭК 4-го уровня доверия №4790 подтверждает, что система BPMSoft может быть использована для обработки и хранения информации, содержащую сведения, составляющие государственную тайну, и может применяться на объектах критической информационной инфраструктуры 1-й категории».
+</div>
+
+<div class="src-block">
+  <strong>Цифры ROI (письмо №2):</strong>
+  текстовый бриф клиента (передан в чате), раздел «ИНФОРМАЦИЯ О КОМПАНИИ → Главный результат → Некоторые метрики повышения эффективности управления бизнесом после внедрения BPMSoft (на основе реальных проектов)». В PDF из папки `#Материалы для подрядчиков` именно этих цифр нет — там презентация в другом формате: «Повышение конверсии продаж в 1,5-2 раза. Сокращение циклов сделки в 2-3 раза. Сокращение маркетинговых расходов на 50% без уменьшения количества лидов. Сокращение на 40% стоимости владения и обслуживания ИТ-инфраструктурой. 3 часа на полную самостоятельную настройку управления новым бизнес-процессом».
+</div>
+
+<div class="src-block">
+  <strong>Кейсы спикеров (письмо №2):</strong>
+  ВОЛМА – пресс-релиз BPMSoft 09.07.2025: «ВОЛМА в пять раз ускорила бизнес-процессы», скорость лидов +40%. Groupe SEB – лендинг вебинара: «Кейс Groupe SEB: Повысили эффективность на 30% и избавились от рутины».
+</div>
+
+<div class="src-block">
+  <strong>Тема «без зоопарка систем» (письмо №3):</strong>
+  лендинг вебинара https://webinar.bpmsoft.ru/26-05-2026 – дословно тема.
+</div>
+
+<div class="src-block">
+  <strong>«Маркетинговый партнер»:</strong>
+  транскрибация созвона с Андреем Кучеровым [10:13]: «коммуникация происходит от вашего имени, как от нашего маркетингового партнера».
+</div>
+
+<script>
+function copyEmail(id) {
+  const node = document.getElementById(id).cloneNode(true);
+  node.querySelectorAll('.copy-btn').forEach(b => b.remove());
+  const html = node.innerHTML;
+  const text = node.innerText;
+  const data = new ClipboardItem({
+    'text/html': new Blob([html], {type: 'text/html'}),
+    'text/plain': new Blob([text], {type: 'text/plain'})
+  });
+  navigator.clipboard.write([data]);
+  const btn = document.querySelector('#' + id + ' .copy-btn');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Скопировано';
+  setTimeout(() => btn.textContent = orig, 1500);
+}
+
+function copyAll() {
+  const wrapper = document.createElement('div');
+  document.querySelectorAll('.email-block').forEach(b => {
+    const clone = b.cloneNode(true);
+    clone.querySelectorAll('.copy-btn').forEach(x => x.remove());
+    wrapper.appendChild(clone);
+    const hr = document.createElement('hr');
+    wrapper.appendChild(hr);
+  });
+  const html = wrapper.innerHTML;
+  const text = wrapper.innerText;
+  const data = new ClipboardItem({
+    'text/html': new Blob([html], {type: 'text/html'}),
+    'text/plain': new Blob([text], {type: 'text/plain'})
+  });
+  navigator.clipboard.write([data]);
+  const btn = document.querySelector('.copy-all');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Скопировано';
+  setTimeout(() => btn.textContent = orig, 1500);
+}
+</script>
+
+</body>
+</html>

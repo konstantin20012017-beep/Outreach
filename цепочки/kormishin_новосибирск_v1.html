@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Цепочка Новосибирск Бирюза – Кормишин / Лига Эффективности v1</title>
+<style>
+  body { background: #f5f5f5; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; color: #1a1a1a; }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }
+  .top h1 { font-size: 20px; font-weight: 600; margin: 0; }
+  .meta { color: #666; font-size: 13px; margin-bottom: 18px; }
+  .copy-all { padding: 10px 18px; background: #1a73e8; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; }
+  .copy-all:hover { background: #1557b0; }
+  .copy-all.ok { background: #16a34a; }
+  .card { background: white; padding: 28px 32px; margin-bottom: 14px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); position: relative; }
+  .copy-btn { position: absolute; top: 14px; right: 14px; padding: 6px 14px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 12px; }
+  .copy-btn:hover { background: #e0e0e0; }
+  .copy-btn.ok { background: #d4edda; border-color: #c3e6cb; }
+  .h2 { font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold; margin: 0 0 12pt 0; line-height: 1.15; color: #000; }
+  .p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 0 0 11pt 0; color: #000; }
+  .p:last-child { margin-bottom: 0; }
+  .info { background: #e8f0fe; border-left: 4px solid #2a4d8f; padding: 12px 16px; margin: 12px 0 18px; border-radius: 6px; font-size: 13px; }
+  .warn { background: #fff8d4; border-left: 4px solid #d4a017; padding: 12px 16px; margin: 12px 0 18px; border-radius: 6px; font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; background: white; }
+  th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; vertical-align: top; font-size: 13px; }
+  th { background: #f3f3f3; }
+  details { background: white; padding: 12px 18px; margin: 8px 0; border-radius: 6px; border: 1px solid #e3e3e3; }
+  summary { cursor: pointer; font-weight: 600; color: #2a4d8f; }
+  .src { background: #f7f7f7; border-left: 3px solid #999; padding: 8px 12px; margin: 8px 0; font-size: 12.5px; color: #444; }
+  code { background: #f0f0f0; padding: 1px 4px; border-radius: 3px; font-size: 12.5px; }
+  h3.section { margin: 26px 0 10px; font-size: 16px; color: #2a4d8f; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <h1>Кормишин · Новосибирск Бирюза 25-27 мая · v1</h1>
+    <button class="copy-all" onclick="copyBlock('all', this)">Копировать все письма</button>
+  </div>
+
+  <div class="meta">Сегмент 7 · Бизнес-тур-погружение «Сильная компания несмотря ни на что» · Окно рассылки 7-22 мая 2026 · Бриф: <code>брифы/kormishin_бриф.md</code></div>
+
+  <div class="info"><b>Формат:</b> 3 письма, стандарт проекта. Тема не пишем. Плейсхолдеры <code>[приветствие]</code> и <code>[подпись]</code>. Переменная <code>{Компания}</code> в теле. Подпись – Марат Баширов, +7 953 400 0667. Каждый текст согласовывается с Маратом отдельно.</div>
+
+  <div class="warn"><b>Открытое поле для подстановки:</b> ссылка на лендинг тура (предположительно <code>kormishin.ru/biryuza/</code> или <code>kormishin.ru/novosibirsk/</code>) – уточнить у Марата перед запуском.</div>
+
+  <div id="all">
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('l1', this)">Копировать</button>
+      <div id="l1">
+        <p class="h2">Письмо №1</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">Приглашаем собственников и первых лиц {Компания} на закрытый бизнес-тур-погружение в Новосибирск, 25-27 мая. Три дня в 4 компаниях, которые продолжают расти в текущей экономической ситуации и при этом ушли от ручного управления собственника.</p>
+        <p class="p">Самое частое, с чем приходят на этот тур – собственник устал заставлять работать. Команда тянет ровно столько, сколько он лично в нее вкладывает, и стоит уехать на неделю – встанет половина процессов.</p>
+        <p class="p">Тур про то, как из этого выйти на практике. Например, VIRTEX-FOOD – производство с оборотом 8 млрд, 23 года на рынке. Уже 4 года работают без CEO, и с 2021 года выросли в 2 раза.</p>
+        <p class="p">Программа тезисно:</p>
+        <p class="p">– День 1, VIRTEX-FOOD: антихрупкость и переход к распределенной ответственности.<br>– День 2, КОТЭС Инжиниринг: как сократили согласования и выросли на 70%.<br>– День 3, SMART Consulting и Ваш Инвестор: самоуправление и выход собственника из операционки.</p>
+        <p class="p">Группа закрытая, до 30 мест. Сопровождает все три дня лично Сергей Бехтерев – 19+ лет практики, 400+ проектов настройки систем управления в крупных компаниях.</p>
+        <p class="p">Если интересно, пришлите номер телефона или мессенджер – отправлю программу и стоимость.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('l2', this)">Копировать</button>
+      <div id="l2">
+        <p class="h2">Письмо №2</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">Возвращаюсь к прошлому письму – тур в Новосибирск 25-27 мая. До старта осталось чуть больше двух недель, и хочу коротко рассказать, ради чего собственники едут именно за этим: построить команду, которая принимает решения сама и не дергает собственника по каждой мелочи.</p>
+        <p class="p">В программе есть кейс КОТЭС Инжиниринг – 31 год на рынке, 9 бизнес-единиц, 1100 проектов. Когда перешли на распределенное управление и сократили цепочки согласований, выручка выросла на 70%. На туре они открыто показывают, как это делалось: со всеми ошибками и сроками.</p>
+        <p class="p">Что увозят с собой участники:</p>
+        <p class="p">– Шаблоны оргструктур, протоколов совещаний, систем мотивации.<br>– План адаптации сотрудника, путеводитель по культуре, систему управления изменениями.<br>– Личный план оргразвития под свой бизнес, собранный за три дня визитов и ужинов с собственниками.</p>
+        <p class="p">Группа до 30 человек, места еще есть. Если интересно, пришлите номер телефона или мессенджер – отправлю программу и контакты пары собственников с прошлых туров, чтобы можно было спросить у них напрямую, как это было.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('l3', this)">Копировать</button>
+      <div id="l3">
+        <p class="h2">Письмо №3</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">Подскажите, по бизнес-туру в Новосибирск 25-27 мая я в {Компания} пишу или не туда? Если не к вам – буду благодарен, если перешлете тому, кто занимается развитием команды и систем управления.</p>
+        <p class="p">Если эта тема сейчас не актуальна – больше не беспокою. Если ситуация в команде такая, что собственник тянет все на себе и в этом году хотите ее поменять – напишите номер телефона или мессенджер, отправлю программу.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 class="section">Распределение содержания по письмам</h3>
+  <table>
+    <tr>
+      <th></th><th>Боль</th><th>Кейс</th><th>Регалии</th><th>УТП тура</th><th>CTA (лестница)</th>
+    </tr>
+    <tr>
+      <td><b>№1</b></td>
+      <td>Собственник устал заставлять, бизнес стоит на ручном управлении</td>
+      <td>VIRTEX-FOOD: 8 млрд, 23 года, 4 года без CEO, x2 с 2021</td>
+      <td>Сергей Бехтерев: 19+ лет, 400+ проектов</td>
+      <td>Программа тезисно по 3 дням + закрытая группа до 30 мест</td>
+      <td>Телефон/мессенджер → программа и стоимость</td>
+    </tr>
+    <tr>
+      <td><b>№2</b></td>
+      <td>Хочется команды, которая принимает решения сама</td>
+      <td>КОТЭС Инжиниринг: 31 год, 9 БЕ, 1100 проектов, +70% выручки</td>
+      <td>Материалы тура: шаблоны, путеводитель, план адаптации</td>
+      <td>Личный план оргразвития + ужины с собственниками</td>
+      <td>Телефон/мессенджер → программа + контакты участников прошлых туров</td>
+    </tr>
+    <tr>
+      <td><b>№3</b></td>
+      <td>Квалифицирующий вопрос, без отдельной боли</td>
+      <td>Не дублируем</td>
+      <td>Не дублируем</td>
+      <td>Не дублируем</td>
+      <td>«Туда ли пишу» + квалификация на горизонт «в этом году хотите менять»</td>
+    </tr>
+  </table>
+
+  <h3 class="section">Источники (откуда взято)</h3>
+
+  <details open>
+    <summary>Лендинг тура «Сильная компания несмотря ни на что»</summary>
+    <div class="src">«3 дня в жизни 4-х новосибирских компаний, которые успешно развиваются, опираясь на принципы интегральной системы управления и самоуправления #ТВОЯкратия». Даты 25-27 мая 2026, Новосибирск. Формат – собственники и CEO. Группа до 30 мест.</div>
+    <div class="src">VIRTEX-FOOD: 8 млрд оборот, 23 года на рынке, 4 года без CEO, x2 рост с 2021 года. «Взрывной рост после отказа от классической иерархии».</div>
+    <div class="src">КОТЭС Инжиниринг: 31 год, 9 бизнес-единиц, 1100 проектов, +70% выручки после перехода на распределенную систему управления (КОТЭСкратия).</div>
+    <div class="src">SMART Consulting: 36 кризисов, 100% самоуправление, выстояли при кибератаках (СМАРТОкратия). Ваш Инвестор: 0 микроменеджмента, основатель полностью вышел из операционки (ИНВЕСТОкратия).</div>
+    <div class="src">Сергей Бехтерев: 19+ лет практики, 600+ корпоративных и открытых тренингов, 100 000+ участников, 400+ реализованных проектов настройки систем управления, 40+ внедрений #ТВОЯкратия. Соавтор «Лидер будущего», «Спиральная динамика для бизнеса».</div>
+    <div class="src">Что увозят: шаблоны конституций, оргструктур, протоколов, описание систем мотивации, история и анализ внедрения, план адаптации сотрудника, путеводитель по культуре, управление эффективностью, описание системы управления изменениями.</div>
+  </details>
+
+  <details>
+    <summary>Бриф сегмента 7 – Новосибирск Бирюза</summary>
+    <div class="src"><b>ЦА:</b> Производства, торговля, услуги от 300 млн выручки и от 50 сотрудников. Должности: собственники, CEO, HR.</div>
+    <div class="src"><b>Триггеры:</b> экономическая ситуация (нужно оптимизироваться), усталость собственника «заставлять работать», желание построить сильную команду в кризис, близкая дата тура.</div>
+    <div class="src"><b>«Почему именно вам»:</b> собственники компаний от 300 млн, упершиеся в потолок ручного управления – тур показывает, как 4 компании выросли, освободив собственника от операционки.</div>
+    <div class="src"><b>CTA:</b> телефон или мессенджер. Программа отправляется сразу. Цены в письме НЕ указываем (публичная оферта).</div>
+  </details>
+
+  <details>
+    <summary>Стилевые правила (CLAUDE.md + правки от 2026-05-05)</summary>
+    <div class="src">Без темы, без приветствий и подписей в теле – только плейсхолдеры <code>[приветствие]</code> / <code>[подпись]</code>.</div>
+    <div class="src">Программа тезисно – одна строка на день. Дожимы через двоеточие, без оборота «проводим миссии в N бизнесов».</div>
+    <div class="src">Никаких антитез «не X, а Y» / «вместо X – Y». Только прямое утверждение.</div>
+    <div class="src">Лестница CTA: №1 – легкий (стандарт Кормишина), №2 – расширенный артефакт (программа + контакты участников прошлых туров), №3 – обнуляющий follow-up + квалифицирующий вопрос на горизонт.</div>
+    <div class="src">Разные боли, кейсы и регалии в каждом письме. Кейсы по письмам: №1 VIRTEX-FOOD, №2 КОТЭС Инжиниринг.</div>
+  </details>
+
+</div>
+
+<script>
+async function copyBlock(id, btn) {
+  const el = document.getElementById(id);
+  const clone = el.cloneNode(true);
+  clone.querySelectorAll('.copy-btn, .seg-divider').forEach(n => n.remove());
+  const temp = document.createElement('div');
+  temp.style.cssText = 'position:fixed;left:-9999px;top:0;';
+  temp.appendChild(clone);
+  document.body.appendChild(temp);
+  const html = clone.innerHTML;
+  const text = clone.innerText;
+  document.body.removeChild(temp);
+  try {
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], {type: 'text/html'}),
+        'text/plain': new Blob([text], {type: 'text/plain'})
+      })
+    ]);
+    const orig = btn.textContent;
+    btn.textContent = 'Скопировано';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('ok'); }, 1500);
+  } catch (e) {
+    alert('Не удалось скопировать: ' + e.message);
+  }
+}
+</script>
+</body>
+</html>

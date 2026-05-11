@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кормишин – Кадровое агентство (HR-продукт) – Цепочка v1</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+            padding: 40px 20px;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        h1 { font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+        .meta {
+            font-size: 14px; color: #666; margin-bottom: 32px; line-height: 1.6;
+        }
+        .sources-card {
+            background: #fffbe6;
+            border: 1px solid #f0e6b0;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .sources-card h2 {
+            font-size: 15px; font-weight: 600; color: #8a7a00;
+            margin-bottom: 14px; letter-spacing: 0.3px;
+        }
+        .source-group { margin-bottom: 16px; }
+        .source-group:last-child { margin-bottom: 0; }
+        .source-label {
+            font-size: 13px; font-weight: 600; color: #555; margin-bottom: 4px;
+        }
+        .source-quote {
+            font-size: 13px; line-height: 1.6; color: #444;
+            border-left: 3px solid #e0d080; padding-left: 12px;
+            margin-top: 4px; margin-bottom: 6px;
+        }
+        .source-tag {
+            display: inline-block; font-size: 11px; color: #888;
+            background: #f5f0d0; border-radius: 4px; padding: 2px 8px;
+            margin-top: 2px;
+        }
+        .distribution-card {
+            background: #f0f4ff; border: 1px solid #c8d8f0;
+            border-radius: 12px; padding: 20px 24px; margin-bottom: 28px;
+            font-size: 13px; line-height: 1.6;
+        }
+        .distribution-card h2 {
+            font-size: 14px; font-weight: 600; color: #1a4a8f; margin-bottom: 10px;
+        }
+        .distribution-card table {
+            width: 100%; border-collapse: collapse; margin-top: 8px;
+        }
+        .distribution-card th, .distribution-card td {
+            text-align: left; padding: 8px 10px; border-bottom: 1px solid #d0deef;
+            vertical-align: top; font-size: 13px;
+        }
+        .distribution-card th { font-weight: 600; color: #1a4a8f; background: #e8eef9; }
+        .email-card {
+            background: #fff; border-radius: 12px; padding: 28px 32px;
+            margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .email-card h2 {
+            font-size: 15px; font-weight: 600; color: #555;
+            margin-bottom: 16px; letter-spacing: 0.3px;
+        }
+        .email-body {
+            font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; white-space: pre-wrap; color: #1a1a1a;
+        }
+        .email-body .placeholder { color: #999; font-style: italic; }
+        .copy-btn {
+            position: absolute; top: 24px; right: 28px;
+            background: #1a1a1a; color: #fff; border: none;
+            padding: 8px 18px; border-radius: 8px; font-size: 13px;
+            font-weight: 500; cursor: pointer; transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #333; }
+        .copy-btn.copied { background: #22c55e; }
+        .copy-all-btn {
+            display: block; width: 100%; background: #1a1a1a; color: #fff;
+            border: none; padding: 14px 24px; border-radius: 12px;
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: all 0.2s; margin-bottom: 28px;
+        }
+        .copy-all-btn:hover { background: #333; }
+        .copy-all-btn.copied { background: #22c55e; }
+        .warning-card {
+            background: #fff5f5; border: 1px solid #f0c0c0;
+            border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+            font-size: 13px; line-height: 1.6; color: #7a2020;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Кормишин – Кадровое агентство (подбор на производство)</h1>
+        <div class="meta">
+            Сегмент: производственные предприятия 300-600 млн выручки, 50-150 сотрудников<br>
+            Целевые должности: собственники, директора, начальники производства, кадровая служба<br>
+            Продукт: подбор сотрудников на производственные предприятия по РФ (постоянный поток заявок, не мероприятие)<br>
+            Триггер: у любого производства почти всегда нужны сотрудники<br>
+            CTA: получить телефон/мессенджер – обсуждение конкретной роли
+        </div>
+
+        <div class="warning-card">
+            <strong>Особенности этой цепочки – отличается от всех предыдущих:</strong><br>
+            • <b>Это не мероприятие.</b> Нет даты, места, программы. Структура «Приглашаю → Дата → Программа» не подходит. Заходим через квалифицирующий вопрос (правило №5 проекта – когда нет явного триггера, спрашиваем).<br>
+            • <b>Постоянный поток.</b> Рассылка идет непрерывно, без окна.<br>
+            • <b>Риск.</b> По созвону предыдущий продукт «аутсорс HR-отдела» дал конверсию 0.1 vs 1 у миссий. Поэтому в письме №1 жесткий фокус на конкретной роли через плейсхолдер подниш <code>[сборщик / оператор ЧПУ / контролер ОТК / инженер / технолог]</code> – оператор перед отправкой выбирает роль исходя из реальных вакансий компании. «Найдем любого» – запрещено.<br>
+            • <b>Тон.</b> Производственники 300-600 млн – проще и прямее, без интеллигентских конструкций. Информационный, не «я знаю вашу проблему».<br><br>
+            <strong>Открытые поля – уточнить у Марата перед запуском:</strong><br>
+            • <b>Сайт продукта</b> – не дан. В письме №1 пока нет ссылки, во №2 поставлен плейсхолдер <code>[URL сайта]</code>.<br>
+            • <b>География</b> – «РФ либо только Москва и область» (формулировка из брифа). В письме сейчас стоит «по РФ». Если только Мск+обл – заменить.<br>
+            • <b>Регалии HR-направления</b> – нет цифр (закрыто N вакансий, средний срок, % успеха). Сейчас опираемся только на регалии Лиги Эффективности (500+ собственников, 50+ миссий, разобранный опыт Асконы / Технониколь / КФ Победа / iSpring). Если у Марата есть конкретные цифры по агентству – подставить.<br>
+            • <b>Бренд агентства</b> – подается как направление Лиги Эффективности. Если есть отдельный бренд – заменить.<br><br>
+            <strong>По созвону:</strong> для этого сегмента особенно подходит Telegram-аутрич (есть автоматизация). Email-рассылка – дополнительный канал.
+        </div>
+
+        <!-- Распределение -->
+        <div class="distribution-card">
+            <h2>Распределение по письмам (без дублирования)</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Боль / задача</th>
+                    <th>Регалии</th>
+                    <th>Угол</th>
+                </tr>
+                <tr>
+                    <td><strong>№1</strong></td>
+                    <td>Не закрывают конкретную производственную вакансию (плейсхолдер подниш – оператор подставляет реальную роль)</td>
+                    <td>Лига Эффективности: 500+ собственников, 50+ миссий, разобранный изнутри опыт найма у Асконы, Технониколь, КФ Победа, iSpring</td>
+                    <td>Квалифицирующий вопрос про конкретную вакансию + краткий оффер «специализируемся на производстве 300-600 млн»</td>
+                </tr>
+                <tr>
+                    <td><strong>№2</strong></td>
+                    <td>Часть сотрудников вытягивает функцию на 60-70% – контролеры, бригадиры, технологи, мастера. Менять страшно, оставлять накладно</td>
+                    <td>Не дублируем – фокус на конкретике подхода</td>
+                    <td>Дожим через вторую боль (неэффективные сотрудники) + кросс-сейл на ближайшие миссии июня</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Источники -->
+        <div class="sources-card">
+            <h2>Источники – откуда что взято</h2>
+
+            <div class="source-group">
+                <div class="source-label">Сегмент, ЦА, боли</div>
+                <div class="source-quote">«Производственные предприятия от 300 млн до 600 млн, от 50 до 150 сотрудников. Должности: собственники, директора, начальник производства, кадровая служба. Триггер: у любого производства почти всегда нужны сотрудники. Боли: не могут закрыть какие-то должности, какие-то сотрудники неэффективны»</div>
+                <span class="source-tag">Бриф сегмента HR от пользователя</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – фокус на конкретной роли</div>
+                <div class="source-quote">«Кадровое агентство – новый продукт. Прецедент по аутсорсу HR-отдела давал конверсию 0.1 vs 1 у миссий – нужен четкий оффер на конкретную роль (сборщик, контролер ОТК, инженер) – не "найдем любого"»</div>
+                <span class="source-tag">Транскрибация созвона Марат × Константин</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №1 – опора на регалии Лиги</div>
+                <div class="source-quote">«50+ проведенных бизнес-миссий, 500+ собственников и топ-менеджеров в сообществе. Разбор систем управления Аскона, Технониколь, КФ Победа, iSpring изнутри»</div>
+                <span class="source-tag">Лендинг kormishin.ru + бриф Лиги</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Стиль для производственников</div>
+                <div class="source-quote">«В некоторых нишах – чем проще и "деревяннее", тем лучше. Подстраиваться под аудиторию: для "гаражников" – максимально просто. Для новых компаний/продуктов – информационный тон ("мы запустили / пишу от агентства") вместо "я знаю вашу проблему"»</div>
+                <span class="source-tag">CLAUDE.md правила 6 + общий стиль проекта</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – вторая боль</div>
+                <div class="source-quote">«Какие-то сотрудники неэффективны» – формулировка из брифа. Раскрываем как «60-70% от функции» – та боль, которую собственники узнают в текстах с конкретными цифрами</div>
+                <span class="source-tag">Бриф + опыт по другим производственным сегментам</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Плейсхолдер подниш в письме №1</div>
+                <div class="source-quote">«Если сегмент покрывает несколько подниш и у каждого получателя своя – использовать формат [вариант 1 / вариант 2 / вариант 3] в квадратных скобках через слеш. Все варианты – реальные роли из брифа»</div>
+                <span class="source-tag">CLAUDE.md – «Плейсхолдеры подниш»</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">CTA – без цен в письме</div>
+                <div class="source-quote">«Никаких оферт, скидок, тайм-офферов, конкретных цен в письме. CTA: пришлите номер телефона или мессенджер»</div>
+                <span class="source-tag">Бриф – юридика и CTA</span>
+            </div>
+
+            <div class="source-group">
+                <div class="source-label">Письмо №2 – кросс-сейл на миссии</div>
+                <div class="source-quote">«3 июня – Сима-ленд. 11-13 июня – Аскона: Человеческий фактор. 18-19 июня – Додо Пицца и Ракета (Самара). 23-24 июня – КФ Победа: непрерывные улучшения»</div>
+                <span class="source-tag">kormishin.ru – ближайший каталог</span>
+            </div>
+        </div>
+
+        <button class="copy-all-btn" onclick="copyAll(this)">Копировать все письма</button>
+
+        <!-- Письмо №1 -->
+        <div class="email-card">
+            <h2>Письмо №1</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body">Тема: {Компания} – подбор сотрудников на производство
+
+{{доброгоВремениСуток}}, [Имя]
+
+Пишу в {Компания} по поводу подбора персонала на производство.
+
+Подскажите, у вас сейчас открыта вакансия [сборщика / оператора ЧПУ / контролера ОТК / инженера / технолога] или другой производственной роли? Уточняю, потому что мы как раз закрываем такие позиции – специализируемся на найме под производственные предприятия 300-600 млн рублей выручки по РФ.
+
+Меня зовут Марат, агентство Лиги Эффективности. Лига – сообщество из 500+ собственников и 50+ проведенных бизнес-миссий, в которых мы изнутри разобрали системы найма ведущих производителей страны: Аскона, Технониколь, КФ Победа, iSpring. Этот опыт мы переложили в собственный сервис подбора – знаем, какие роли как искать, по каким каналам, как удерживать в первые 30/60/90 дней.
+
+Можем закрывать как линейный персонал (сборщики, операторы линий, контролеры ОТК), так и специализированные роли (инженеры, технологи, начальники смен, кадровые специалисты).
+
+Если есть открытая вакансия или висит нерешенный кадровый вопрос – пришлите номер телефона или мессенджер, обсудим конкретную роль и сроки. Или перешлите письмо тому, кто в {Компания} занимается наймом, буду благодарен.
+
+Подпись</div>
+        </div>
+
+        <!-- Письмо №2 -->
+        <div class="email-card">
+            <h2>Письмо №2</h2>
+            <button class="copy-btn" onclick="copyEmail(this)">Копировать</button>
+            <div class="email-body">Тема: {Компания} – подбор сотрудников на производство
+
+{{доброгоВремениСуток}}, [Имя]
+
+Не получили ответа.
+
+Возможно, прямо сейчас открытых вакансий нет. Бывает другая ситуация – часть текущих сотрудников работает слабее, чем требуется бизнесу, и появляется вопрос замены или усиления команды. Это мы тоже закрываем подбором.
+
+Что делаем коротко:
+– Подбираем под конкретную роль из вашей заявки – сборщики, контролеры ОТК, инженеры и другие производственные позиции.
+– Работаем с производствами 300-600 млн выручки по РФ.
+– Сайт направления: [URL сайта]
+
+Если есть открытая вакансия или вопрос с заменой сотрудника – пришлите номер телефона или мессенджер, обсудим. Или перешлите письмо в кадровую службу.
+
+Подпись</div>
+        </div>
+    </div>
+
+    <script>
+        function copyEmail(btn) {
+            const card = btn.closest('.email-card');
+            const body = card.querySelector('.email-body');
+            const text = body.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.textContent = 'Скопировано';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать';
+                    btn.classList.remove('copied');
+                }, 1800);
+            });
+        }
+        function copyAll(btn) {
+            const bodies = document.querySelectorAll('.email-body');
+            const all = Array.from(bodies).map((b, i) => `=== Письмо №${i+1} ===\n\n${b.innerText}`).join('\n\n\n');
+            navigator.clipboard.writeText(all).then(() => {
+                btn.textContent = 'Все скопированы';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Копировать все письма';
+                    btn.classList.remove('copied');
+                }, 1800);
+            });
+        }
+    </script>
+</body>
+</html>
