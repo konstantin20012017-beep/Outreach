@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ECS24 – Сертификат соответствия ТР ЕАЭС – Цепочка v4</title>
+<style>
+  body { background: #f5f5f5; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .top h1 { font-size: 20px; font-weight: 600; margin: 0; }
+  .copy-all { padding: 10px 18px; background: #1a73e8; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; }
+  .copy-all:hover { background: #1557b0; }
+  .card { background: white; padding: 32px; margin-bottom: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); position: relative; }
+  .copy-btn { position: absolute; top: 16px; right: 16px; padding: 6px 14px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 12px; }
+  .copy-btn:hover { background: #e0e0e0; }
+  .copy-btn.ok { background: #d4edda; border-color: #c3e6cb; }
+  .h2 { font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold; margin: 0 0 12pt 0; line-height: 1.15; color: #000; }
+  .p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 0 0 11pt 0; color: #000; }
+  .p:last-child { margin-bottom: 0; }
+  .meta { background: #fff8e1; padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; font-size: 13px; line-height: 1.5; }
+  .meta h3 { margin: 0 0 8px 0; font-size: 14px; }
+  .meta ul { margin: 6px 0 12px 18px; padding: 0; }
+  .meta li { margin-bottom: 4px; }
+  .grid { width: 100%; border-collapse: collapse; margin: 8px 0 0 0; font-size: 12px; }
+  .grid th, .grid td { border: 1px solid #d0d0d0; padding: 8px 10px; text-align: left; vertical-align: top; }
+  .grid th { background: #f0f0f0; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <h1>ECS24 · Сертификат соответствия ТР ЕАЭС · v4</h1>
+    <button class="copy-all" onclick="copyBlock('all', this)">Копировать все письма</button>
+  </div>
+
+  <div class="meta">
+    <h3>Угол v4 (сертификат)</h3>
+    <p style="margin:6px 0 12px 0;">Заход через страх штрафов (до 600 000 ₽ по техрегламентам). Структура каждого письма: приветствие → боль (штраф) → представление + регалия → призыв. Сертификатная цепочка отличается от декларационной по 4 осям: категории продукции в №1, регалия в №1 (собственный орган сертификации vs аккред. лаборатории), боль в №2 (без серта продукция вообще не выходит на рынок), срок в №3 (протоколы + согласование с органом – дольше декларации).</p>
+
+    <h3>Распределение регалий по письмам</h3>
+    <table class="grid">
+      <tr><th></th><th>Регалия</th></tr>
+      <tr><td><b>№1</b></td><td>12 лет на рынке + собственный орган сертификации (без посредников)</td></tr>
+      <tr><td><b>№2</b></td><td>5000+ оформленных документов + гарантия на весь срок действия</td></tr>
+      <tr><td><b>№3</b></td><td>3200+ организаций выбрали + помощь с разъяснениями таможне</td></tr>
+    </table>
+
+    <h3>Источники</h3>
+    <ul>
+      <li><b>Штраф 600 000 ₽</b> – сайт ECS24, раздел «Что будет, если не оформить разрешительную документацию».</li>
+      <li><b>Категории «одежда и обувь / оборудование / электротехника / игрушки / детская продукция до 3 лет»</b> – бриф ECS24, целевые отрасли сегмента 2.</li>
+      <li><b>12 лет / собственный орган сертификации / 5000+ документов / 3200+ организаций / гарантия / разъяснения таможне</b> – блок «Сертификационный центр Единый Центр Сертификации» на сайте.</li>
+      <li><b>«Подлежит обязательной сертификации – не выходит на рынок»</b> – бриф ECS24, УТП «может зайти в крупные сети, обязательный документ безопасности».</li>
+      <li><b>«Оформление через протоколы испытаний и согласование с органом»</b> – сайт ECS24, раздел «Как происходит процедура».</li>
+    </ul>
+  </div>
+
+  <div id="all">
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('seg', this)">Копировать</button>
+      <div id="seg">
+        <p class="h2">Сегмент №2 – Сертификат соответствия ТР ЕАЭС</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('s1', this)">Копировать</button>
+      <div id="s1">
+        <p class="h2">Письмо №1</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">У вас в ближайший месяц заканчивается сертификат соответствия ТР ЕАЭС – обязательный документ безопасности для [одежды и обуви / оборудования / электротехники / игрушек / детской продукции до 3 лет].</p>
+        <p class="p">Если продолжите выпуск без действующего сертификата – штраф по техрегламентам до 600 000 ₽.</p>
+        <p class="p">Меня зовут Екатерина, компания ЕЦС 24. На рынке 12 лет, у нас собственный орган сертификации – оформляем без посредников.</p>
+        <p class="p">Пришлите название юрлица или ИП – проверим вашу документацию и подскажем, что и когда продлевать.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('s2', this)">Копировать</button>
+      <div id="s2">
+        <p class="h2">Письмо №2</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">Писала ранее про сертификат ТР ЕАЭС, не получила ответа.</p>
+        <p class="p">Если сертификат закончится, а отгрузки продолжатся – проверка и штраф до 600 000 ₽ по техрегламентам. Главное: продукция, которая подлежит обязательной сертификации, без действующего документа на рынок не выходит – ни в розничные сети, ни на маркетплейсы в обязательных категориях, ни через таможню.</p>
+        <p class="p">Компания ЕЦС 24, оформили 5000+ документов. На весь срок действия документа даем гарантию.</p>
+        <p class="p">Пришлите название юрлица или ИП – посмотрим вашу документацию и подскажем, что нужно продлевать.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('s3', this)">Копировать</button>
+      <div id="s3">
+        <p class="h2">Письмо №3</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">Напомню про сертификат ТР ЕАЭС.</p>
+        <p class="p">Если планируете продлевать – лучше начать за 2-3 месяца до окончания. Оформление сертификата идет через протоколы испытаний и согласование с аккредитованным органом – пара дней тут не пройдет. Опоздаете и продолжите выпуск без действующего документа – штраф до 600 000 ₽.</p>
+        <p class="p">Компания ЕЦС 24, нас выбрали 3200+ организаций. Если у таможни возникают вопросы по нашим документам – даем официальные разъяснения.</p>
+        <p class="p">Если решение принимает кто-то еще в компании – подскажите, к кому передать, буду благодарна.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+async function copyBlock(id, btn) {
+  const el = document.getElementById(id);
+  const clone = el.cloneNode(true);
+  clone.querySelectorAll('.copy-btn, .seg-divider').forEach(n => n.remove());
+  const temp = document.createElement('div');
+  temp.style.cssText = 'position:fixed;left:-9999px;top:0;';
+  temp.appendChild(clone);
+  document.body.appendChild(temp);
+  const html = clone.innerHTML;
+  const text = clone.innerText;
+  document.body.removeChild(temp);
+  try {
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], {type: 'text/html'}),
+        'text/plain': new Blob([text], {type: 'text/plain'})
+      })
+    ]);
+    const orig = btn.textContent;
+    btn.textContent = 'Скопировано';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('ok'); }, 1500);
+  } catch (e) {
+    alert('Не удалось скопировать: ' + e.message);
+  }
+}
+</script>
+</body>
+</html>
