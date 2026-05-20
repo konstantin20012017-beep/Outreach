@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>BPMSoft – Цепочка №4 v1 (pain-first, Problem Aware)</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 900px; margin: 30px auto; padding: 0 20px; color: #222; background: #fafafa; }
+  .header { background: #2a5db0; color: #fff; padding: 20px 25px; border-radius: 8px; margin-bottom: 25px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; opacity: 0.92; font-size: 11pt; }
+  .info-card { background: #e8f3ff; border-left: 4px solid #2a5db0; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .warn-card { background: #fff8e1; border-left: 4px solid #f5a623; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .copy-all { background: #2a5db0; color: #fff; border: none; padding: 12px 22px; font-size: 11pt; border-radius: 6px; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
+  .copy-all:hover { background: #1f4a92; }
+  .email-block { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; position: relative; }
+  .copy-btn { position: absolute; top: 18px; right: 18px; background: #f0f4fa; color: #2a5db0; border: 1px solid #2a5db0; padding: 6px 14px; font-size: 10pt; border-radius: 5px; cursor: pointer; }
+  .copy-btn:hover { background: #2a5db0; color: #fff; }
+  h2.email-title { font-family: Arial; font-size: 18pt; font-weight: bold; margin: 0 0 12px 0; color: #222; }
+  h2.section { font-size: 16pt; color: #2a5db0; margin-top: 35px; }
+  table.dist { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 10.5pt; }
+  table.dist th, table.dist td { border: 1px solid #bbb; padding: 8px 12px; text-align: left; vertical-align: top; }
+  table.dist th { background: #f0f4fa; }
+  .src-block { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 6px; padding: 16px 20px; margin: 12px 0; font-size: 10pt; }
+  .src-block strong { color: #2a5db0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>BPMSoft – Цепочка №4 v1 (pain-first, Problem Aware)</h1>
+  <p>Заход с боли, не с вебинара • Уровни Ханта: Problem Aware (2) + примесь Unaware (1) • Вебинар 26 мая 2026</p>
+</div>
+
+<div class="info-card">
+  <strong>Логика цепочки:</strong> предыдущие три цепочки за 5 дней дали 0 регистраций – открывались с «приглашаю на вебинар», что для уровня Solution Aware (3). ЦА сидит ниже – на Problem Aware (2). В новой цепочке каждое письмо открывается с проблемы (разрозненные системы), а вебинар упоминается нативно как место, где это разбирают.<br><br>
+  <strong>Версия v1.1:</strong> убраны выдуманные конкретные детали (планерки, Excel, UTM, 1С, цены/скидки/шаблоны, почта/мессенджер) – оставлены только формулировки, которые прямо выводятся из лендинга (заголовок «зоопарк систем» + описание «маркетинг, продажи, закупки, сервис в едином контуре» + 5 пунктов программы) или подтверждены кейсами из PDF «Истории Успеха» (ВОЛМА: КП с нескольких дней до 2 часов, закупки -20%, лиды +40%; Аскона: онлайн x1,5; Билайн: +24% чек; СЕБ: +30%).
+</div>
+
+<div class="warn-card">
+  <strong>Открытые поля:</strong> ФИО менеджера, телефон/почта/TG для подписи. UTM-ссылка вместо <code>[ссылка]</code>.
+</div>
+
+<button class="copy-all" onclick="copyAll()">Копировать все письма цепочки</button>
+
+<!-- ============ ПИСЬМО №1 ============ -->
+<div class="email-block" id="email1">
+  <button class="copy-btn" onclick="copyEmail('email1')">Копировать</button>
+  <h2 class="email-title">Письмо №1 – непрозрачность бизнеса в моменте</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Меня зовут [имя], пишу как маркетинговый партнер BPMSoft. Замечаю у компаний вашего масштаба типовую ситуацию – маркетинг, продажи, закупки и сервис работают в отдельных информационных системах. Данные между ними сшиваются вручную. У руководителя нет оперативной картины бизнеса в моменте – аналитика приходит с задержкой.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Это типовая боль крупного бизнеса – компании уходят от разрозненных систем к единому цифровому контуру.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">26 мая в 11:00 мск BPMSoft проводит онлайн-вебинар «Как автоматизировать развитие бизнеса без зоопарка систем» – практики из компаний ВОЛМА и Группы СЕБ-ВОСТОК (Tefal, Krups, Rowenta, Moulinex) разбирают, как объединили работу в одном контуре. ВОЛМА расскажет, как ускорили ключевые бизнес-процессы в 5 раз. СЕБ – как повысили эффективность процессов на 30%.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Бесплатно, онлайн. Если тема актуальна – ссылка: [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<!-- ============ ПИСЬМО №2 ============ -->
+<div class="email-block" id="email2">
+  <button class="copy-btn" onclick="copyEmail('email2')">Копировать</button>
+  <h2 class="email-title">Письмо №2 – скорость работы с лидами и возврат маркетингового бюджета</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Возвращаюсь с другой стороны. Распространенная ситуация в крупном бизнесе – компания вкладывает в маркетинг, но часть лидов теряется по дороге к продаже. Обработка входящих заявок идет медленнее, чем приходят сами заявки, к моменту первого контакта интерес остывает. Конверсия в сделку проседает, маркетинговый бюджет окупается не полностью.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Корень обычно в том, что маркетинг и продажи работают в отдельных системах. История лида – откуда пришел, что смотрел, чем интересовался – не доезжает до менеджера продаж в момент звонка. Каждый отдел действует по своим данным.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 8px 0;">Эта тема – одна из ключевых на вебинаре BPMSoft 26 мая. Конкретика из кейсов:</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– ВОЛМА: скорость работы с лидами выросла на 40%</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– Аскона: рост конверсии онлайн-продаж в 1,5 раза</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">– Билайн: средний чек по сделкам +24%, экономия 4 000 чел.-часов за 5 месяцев</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Онлайн, бесплатно, 11:00 мск. Регистрация: [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<!-- ============ ПИСЬМО №3 ============ -->
+<div class="email-block" id="email3">
+  <button class="copy-btn" onclick="copyEmail('email3')">Копировать</button>
+  <h2 class="email-title">Письмо №3 – сроки согласований (КП, закупки)</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Последнее короткое письмо – и больше не беспокою.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Еще одна типичная история крупного бизнеса – простые согласования занимают дни и недели. Подготовить и согласовать КП клиенту, провести закупку у поставщика, утвердить условия по сделке. Каждая операция замирает между отделами и системами – в крупных объемах это превращается в постоянное отставание операций.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">В большинстве случаев причина одна – согласования и данные живут в разных системах, статус операции непрозрачен, ответственность размыта. На вебинаре BPMSoft 26 мая разбирают, как это сжимается – у ВОЛМА сроки закупок сократились на 20%, подготовка и согласование КП – с нескольких дней до 2 часов. У Группы СЕБ-ВОСТОК эффективность процессов в целом выросла на 30%.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">11:00 мск, онлайн, бесплатно. Если тема актуальна – [ссылка]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">PS – пишу на несколько почт. Если попал не по адресу, перешлите коллеге, который отвечает за коммерческий блок или цифровизацию, буду благодарен)</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<h2 class="section">Распределение боли / регалии / УТП</h2>
+<table class="dist">
+  <tr><th>Письмо</th><th>Боль (Problem Aware)</th><th>Объяснение причины (Unaware → Problem)</th><th>Цифры кейсов</th></tr>
+  <tr>
+    <td><strong>№1</strong></td>
+    <td>Маркетинг, продажи, закупки и сервис в отдельных системах; у руководителя нет оперативной картины бизнеса в моменте</td>
+    <td>Данные сшиваются вручную (зоопарк систем)</td>
+    <td>ВОЛМА БП x5 (как речь спикера), СЕБ +30%</td>
+  </tr>
+  <tr>
+    <td><strong>№2</strong></td>
+    <td>Часть лидов теряется по дороге к продаже, обработка медленнее потока заявок, конверсия проседает, маркетинговый бюджет окупается не полностью</td>
+    <td>Маркетинг и продажи в отдельных системах – история лида не доезжает до менеджера</td>
+    <td>ВОЛМА лиды +40%, Аскона x1,5 онлайн, Билайн +24% чек / 4 000 чел.-часов</td>
+  </tr>
+  <tr>
+    <td><strong>№3</strong></td>
+    <td>Простые согласования (КП, закупки) занимают дни и недели – в крупных объемах это постоянное отставание операций</td>
+    <td>Согласования и данные в разных системах, статус непрозрачен</td>
+    <td>ВОЛМА закупки -20% / КП с дней до 2 часов, СЕБ +30%</td>
+  </tr>
+</table>
+
+<h2 class="section">CTA-лестница</h2>
+<table class="dist">
+  <tr><th>Письмо</th><th>Сила CTA</th><th>Формулировка</th></tr>
+  <tr><td><strong>№1</strong></td><td>Легкий</td><td>«Если тема актуальна – ссылка: [ссылка]». Одной строкой, без давления.</td></tr>
+  <tr><td><strong>№2</strong></td><td>Средний</td><td>Цифры кейсов → «Регистрация: [ссылка]». Закрываем интерес через конкретику.</td></tr>
+  <tr><td><strong>№3</strong></td><td>Тяжелый / обнуляющий</td><td>«Последнее короткое письмо – и больше не беспокою» + PS «перешлите коллеге».</td></tr>
+</table>
+
+<h2 class="section">Разводка по уровням лестницы Ханта</h2>
+<table class="dist">
+  <tr><th>Письмо</th><th>Уровень</th><th>Ракурс</th><th>Кому в первую очередь резонирует</th></tr>
+  <tr><td><strong>№1</strong></td><td>Problem Aware с заходом из Unaware</td><td>Через картину бизнеса для первого лица</td><td>Собственник, CEO, COO</td></tr>
+  <tr><td><strong>№2</strong></td><td>Problem Aware</td><td>Через спор маркетинга и продаж + бюджет</td><td>CMO, коммерческий директор, директор по продажам</td></tr>
+  <tr><td><strong>№3</strong></td><td>Problem Aware</td><td>Через скорость рутины – универсально</td><td>Любой ЛПР (операционная боль чувствуется всеми)</td></tr>
+</table>
+
+<h2 class="section">Источники (что и откуда)</h2>
+
+<div class="src-block">
+  <strong>Боли в письме №1:</strong>
+  <br>«маркетинг, продажи, закупки и сервис работают в отдельных информационных системах» – прямой обратный вывод из описания лендинга https://webinar.bpmsoft.ru/26-05-2026: «одна платформа способна объединить управление маркетингом, продажами, закупками и сервисом в едином цифровом контуре».
+  <br>«данные сшиваются вручную» – обратный вывод из заголовка лендинга «без зоопарка систем».
+  <br>«у руководителя нет оперативной картины бизнеса – аналитика приходит с задержкой» – обратный вывод из программы лендинга, пункт «Обеспечиваем прозрачность бизнес-процессов».
+</div>
+
+<div class="src-block">
+  <strong>Боли в письме №2 (угол: скорость работы с лидами):</strong>
+  <br>«часть лидов теряется по дороге к продаже, обработка идет медленнее, чем приходят заявки, конверсия проседает» – обратный вывод из программы лендинга, пункт «Увеличиваем скорость работы с лидами на 40%».
+  <br>«маркетинговый бюджет окупается не полностью» – категория из брифа: «Маркетинг расходует бюджет неэффективно, нет точной аналитики возврата».
+  <br>«маркетинг и продажи работают в отдельных системах – история лида не доезжает до менеджера» – обратный вывод из описания лендинга про «единый цифровой контур маркетинг + продажи + закупки + сервис».
+  <br>Цифры кейсов: ВОЛМА +40% (PDF Истории Успеха), Аскона x1,5 онлайн (PDF), Билайн +24% чек / 4 000 чел.-часов (PDF).
+</div>
+
+<div class="src-block">
+  <strong>Боли в письме №3 (угол: сроки согласований):</strong>
+  <br>«простые согласования занимают дни и недели» – программа лендинга, пункт «Сокращаем затраты и сроки закупок на 20%», плюс кейс ВОЛМА (PDF): «подготовка и согласование КП сокращены с нескольких дней до 2 часов» – значит до внедрения было «несколько дней».
+  <br>«согласовать КП клиенту, провести закупку у поставщика, утвердить условия по сделке» – КП и закупки прямо в материалах (PDF + лендинг); «утвердить условия по сделке» – обобщение того же класса операций.
+  <br>«каждая операция замирает между отделами и системами – постоянное отставание операций» – обратный вывод из заголовка «без зоопарка систем».
+  <br>«статус операции непрозрачен» – программа лендинга, пункт «Обеспечиваем прозрачность бизнес-процессов».
+  <br>Цифры кейсов: ВОЛМА закупки -20%, КП с дней до 2 часов (PDF + лендинг); СЕБ +30% (лендинг + PDF).
+</div>
+
+<div class="src-block">
+  <strong>ВОЛМА в письме №1 (БП x5):</strong>
+  лендинг вебинара https://webinar.bpmsoft.ru/26-05-2026: «Кейс ВОЛМА: Как мы ускорили ключевые бизнес-процессы в 5 раз». В PDF «Истории Успеха 2026» этой конкретной формулировки нет, поэтому подаем как речь спикера: «ВОЛМА расскажет, как ускорили ключевые бизнес-процессы в 5 раз».
+</div>
+
+<div class="src-block">
+  <strong>Groupe SEB в письме №1 и №3 (+30%):</strong>
+  лендинг вебинара: «Кейс Groupe SEB: Повысили эффективность на 30% и избавились от рутины».
+</div>
+
+<div class="src-block">
+  <strong>Аскона в письме №2 (x1,5 онлайн):</strong>
+  PDF «BPMSoft-Истории Успеха_2026», раздел АСКОНА: «Отмечен рост конверсии онлайн продаж в 1,5 раза», 4 000+ рабочих мест.
+</div>
+
+<div class="src-block">
+  <strong>Билайн в письме №2 (+24% чек, 4 000 ч.-часов):</strong>
+  PDF «Истории Успеха», раздел Билайн (ПАО «Вымпелком»): «средний чек сделки вырос на 24%», «экономия трудозатрат составила 4 000 чел.-часов за 5 месяцев».
+</div>
+
+<div class="src-block">
+  <strong>ВОЛМА в письме №2 (лиды +40%) и №3 (закупки -20%, КП с дней до 2 часов):</strong>
+  PDF «Истории Успеха», раздел ВОЛМА: «Сокращены сроки обработки лидов на 40%», «Сроки подготовки и согласования КП сокращены с нескольких дней до 2 часов», «сокращение сроков закупочных процессов на 20%».
+</div>
+
+<div class="src-block">
+  <strong>«Маркетинговый партнер» в письме №1:</strong>
+  транскрибация созвона с Андреем Кучеровым (см. <code>bpmsoft_исходники.md</code>): «коммуникация происходит от вашего имени, как от нашего маркетингового партнера».
+</div>
+
+<script>
+function copyEmail(id) {
+  const el = document.getElementById(id);
+  const range = document.createRange();
+  range.selectNode(el);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+}
+function copyAll() {
+  const blocks = document.querySelectorAll('.email-block');
+  let html = '';
+  blocks.forEach(b => html += b.innerHTML + '<br><br>');
+  const blob = new Blob([html], {type: 'text/html'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob})]);
+}
+</script>
+<!-- PREFLIGHT-OK -->
+</body>
+</html>

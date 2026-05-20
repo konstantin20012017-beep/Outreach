@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- PREFLIGHT-OK -->
+<meta charset="UTF-8">
+<title>RefExpress – Конечники (БУ-контейнеры) – v1</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; max-width: 880px; margin: 30px auto; padding: 0 20px; color: #1a1a1a; }
+  h1 { font-family: Arial, sans-serif; font-size: 20pt; margin: 0 0 6px; }
+  h2 { font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold; margin: 26px 0 10px; }
+  h3.chain { font-family: Arial, sans-serif; font-size: 20pt; font-weight: bold; margin: 36px 0 6px; padding-top: 18px; border-top: 3px solid #1a73e8; }
+  .meta { color: #666; font-size: 10pt; margin-bottom: 18px; }
+  .chain-meta { color: #444; font-size: 11pt; margin: 0 0 14px; font-style: italic; }
+  .warning { background: #fff4d6; border-left: 4px solid #e0a800; padding: 10px 14px; margin: 14px 0; font-size: 10pt; }
+  .src { background: #f3f4f6; padding: 12px 16px; margin: 10px 0 18px; font-size: 10pt; line-height: 1.35; }
+  .src b { display: block; margin-bottom: 4px; }
+  table.dist { border-collapse: collapse; width: 100%; margin: 8px 0 20px; font-size: 10pt; }
+  table.dist th, table.dist td { border: 1px solid #d0d0d0; padding: 8px 10px; text-align: left; vertical-align: top; }
+  table.dist th { background: #f3f4f6; font-weight: bold; }
+  .letter { border: 1px solid #e1e1e1; border-radius: 6px; padding: 18px 22px; margin: 6px 0 18px; background: #fafafa; }
+  .letter p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 0 0 10px; }
+  .letter ul { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 6px 0 12px 0; padding-left: 0; list-style: none; }
+  .letter ul li { padding-left: 0; margin-bottom: 4px; }
+  .copy-btn { font-family: Arial, sans-serif; font-size: 10pt; background: #1a73e8; color: #fff; border: 0; padding: 8px 14px; border-radius: 4px; cursor: pointer; margin: 0 6px 12px 0; }
+  .copy-btn:hover { background: #1558b8; }
+  .copy-all { font-size: 11pt; padding: 10px 18px; background: #0b5cb8; }
+</style>
+</head>
+<body>
+
+<h1>RefExpress – Конечники (БУ-контейнеры) – v1</h1>
+<div class="meta">Сегмент 1 – конечники-производители. A/B-тест из 3 цепочек на одной аудитории, разные углы заходов. Подпись: Алексей Пасюта. v1, 2026-05-19.</div>
+
+<div class="warning">
+  <b>A/B-тест из 3 цепочек на одной ЦА</b> – пищевая, рыбохозяйственная, молочная, мясо-птица, заморозка, овощи-фрукты-ягоды. Запускать параллельно, через 3-4 недели мерить Open / Reply / PRR.<br><br>
+  <b>Применена методология глубокой персонализации</b> (см. <code>справочники/глубокая_персонализация_и_фолоуапы.md</code>): свежий угол в №2 без callback, «last one from me» формат в №3, hand-off запрос вместо повторного CTA, микроусилие в №1.<br><br>
+  <b>Открытые поля:</b><br>
+  – Подпись Алексея Пасюты (телефон/email/TG/должность) – запросить у клиента.<br>
+  – Кейсы клиентов с цифрами – Алексей обещал поспрашивать, на момент v1 не добавлены.<br>
+  – Что именно под «моторами» в сообщении клиента (генераторы или рефрижераторные агрегаты/компрессоры) – уточнить до v2.<br>
+  – Полный список 12 городов-миллионников – на сайте только 6 собственных терминалов. Расхождение не подтверждено.<br>
+  – Содержание файла Я.Диск <a href="https://disk.yandex.ru/i/bTIwopaULJlo6w">https://disk.yandex.ru/i/bTIwopaULJlo6w</a> – попросить продублировать текстом.
+</div>
+
+<button class="copy-btn copy-all" onclick="copyEverything()" style="font-size: 12pt; padding: 12px 22px; background: #0a4a8c;">Копировать все 3 цепочки целиком (9 писем)</button>
+
+<h2>Разводка цепочек по 4 осям</h2>
+<table class="dist">
+  <tr><th>Ось</th><th>A – Сезон</th><th>B – Сезон + видео-обзор</th><th>C – Расширение парка под ключ</th></tr>
+  <tr><td><b>Угол захода</b></td><td>Сезонная пищевка, логистика и доставка</td><td>Сезонная пищевка, простое объяснение продукта + страх БУ</td><td>Расширение/обновление холодильного парка – нужен не только контейнер</td></tr>
+  <tr><td><b>Триггер</b></td><td>Лето близко + дефицит наличия в нужном городе</td><td>Летом не хватает холодильного склада + покупка БУ вслепую</td><td>Бизнес-сценарий: расширение/замена парка, под который нужен контейнер + генератор + сервис</td></tr>
+  <tr><td><b>Боль</b></td><td>Встать без охлаждения в пик</td><td>Не хватает склада + страх купить «кота в мешке»</td><td>Через сезон установка может встать без запчастей и помощи; простой склада = порча сырья / срыв отгрузки</td></tr>
+  <tr><td><b>УТП главное</b></td><td>12 городов, доставка с ближайшего + бесплатно в Урал/Сибирь/Якутию/ДВ</td><td>Видео-обзор по запросу + гарантия 90 дней + свой сервис и склад запчастей</td><td>Вся цепочка под одной крышей: контейнер + генератор + склад запчастей 4 брендов + круглосуточный сервис</td></tr>
+</table>
+
+<h2>Источники</h2>
+<div class="src">
+  <b>Сайт refexpress.ru:</b>
+  – На рынке с 2012 года.<br>
+  – 800+ контейнеров продают и обслуживают ежегодно.<br>
+  – Импорт 300+ контейнеров и навесных дизель-генераторов в год.<br>
+  – Парк 100+ дженсетов в аренду.<br>
+  – Клиенты из 67 регионов РФ, Беларусь, Казахстан.<br>
+  – Терминалы: СПб (Шушары), Новосибирск, Красноярск, Иркутск, Хабаровск, Владивосток.<br>
+  – Бесплатная доставка в Урал, Сибирь, Якутию, Дальний Восток. Своя транспортная компания.<br>
+  – Гарантия 90 дней на БУ после предпродажной подготовки. 30 дней на запчасти. 3 года заводская на новые.<br>
+  – Склад запчастей: Carrier, ThermoKing, StarCool, Daikin плюс аналоги.<br>
+  – Круглосуточный сервис на терминале в Шушарах. Полная проверка контейнера (PTI), восстановление поршневых компрессоров, гарантийный и постгарантийный ремонт.
+</div>
+<div class="src">
+  <b>Созвон с Алексеем (2026-05-18):</b>
+  – «12 городов-миллионников практически везде стоят терминалы» – география работы.<br>
+  – «Сезон близко, к лету спрос на пищевке растет» – подтвержденный заход для №1.<br>
+  – «Можно прислать видео-обзор контейнера. Не после рыбы, не битые, не гнутые.» – основа цепочки B.<br>
+  – «Конкуренты продают рефконтейнеры по самовывозу: приезжайте, забирайте сами» – контраст в А №2.<br>
+  – «Документы на контейнер как на машинах» – формулировка для нейтрального упоминания пакета документов.
+</div>
+<div class="src">
+  <b>Материалы клиента (сегментация, проспектинг от Иванова, 15к ЮЛ):</b>
+  – Сегмент 1 – конечники-производители. Отрасли с объемами: рыболовство 3 225, мясо и птица 4 000, молочное производство 2 400, заморозка и полуфабрикаты 1 800, овощи-фрукты-ягоды 4 000.<br>
+  – Сегмент 2 (запчасти и дизель-генераторы) используется как cross-sell в №2/№3, отдельных цепочек на него не делаем.<br>
+  – Подпись: Алексей Пасюта.
+</div>
+
+<!-- ====== ЦЕПОЧКА A ====== -->
+
+<h3 class="chain">Цепочка A – Сезон</h3>
+<div class="chain-meta">Заход: летний сезон близко и дефицит БУ в нужном городе. №2 – свежий угол про самовывоз и бесплатную доставку в Урал/Сибирь/ДВ. №3 – обнуление + cross-sell генератора в аренду.</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('A')">Копировать все 3 письма цепочки A</button>
+
+<h2>Распределение – цепочка A</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Лето = пик спроса на охлаждение у пищевиков; БУ под нужный город есть не всегда</td><td>С 2012 на рынке, 67 регионов, БиК</td><td>12 городов-миллионников, бесплатная доставка в Урал/Сибирь/Якутию/ДВ, своя ТК</td></tr>
+  <tr><td><b>№2</b></td><td>Конкуренты – самовывоз: логистика на плечах клиента, особенно дорого в дальние регионы</td><td>–</td><td>Бесплатная доставка в дальние регионы + cross-sell запчасти/генераторы (продажа и аренда)</td></tr>
+  <tr><td><b>№3</b></td><td>(обнуление, давления нет)</td><td>Парк 100+ дженсетов</td><td>Аренда генератора + запчасти + сервис в Шушарах как альтернативы, hand-off</td></tr>
+</table>
+
+<h2>Письмо №1 (A)</h2>
+<button class="copy-btn" onclick="copyLetter('A1')">Копировать письмо №1</button>
+<div class="letter" id="A1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Пишу из RefExpress – продаем и обслуживаем рефконтейнеры с 2012 года. Клиенты в 67 регионах России, Беларуси и Казахстана: пищевые производства, рыбохозяйственные предприятия, молочные комбинаты, агропром.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Сезон близко – к лету спрос на охлаждение у пищевиков заметно растет. БУ-контейнеры под нужный город в моменте есть не всегда.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">У нас терминалы в 12 городах-миллионниках России, подбираем контейнер с ближайшей к вам точки. По Уралу, Сибири, Якутии и Дальнему Востоку доставка за наш счет, у нас собственная транспортная компания.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если контейнер нужен на ближайшие месяцы – напишите количество и город, посмотрю что есть в наличии под вас.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2>Письмо №2 (A)</h2>
+<button class="copy-btn" onclick="copyLetter('A2')">Копировать письмо №2</button>
+<div class="letter" id="A2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Один момент про логистику, который часто упускают на этапе сравнения поставщиков.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Большинство компаний продают БУ-контейнеры по самовывозу: оплатили – забирайте сами. На Урал, в Сибирь, Якутию или Дальний Восток это отдельная статья расходов и недели логистики.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">У RefExpress в эти регионы доставка бесплатная, у нас собственная транспортная компания и терминалы в 12 миллионниках. Для пищевого производства это значит, что контейнер приезжает к началу сезона, без многонедельной паузы на самовывоз.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Кроме самих контейнеров у нас есть и запчасти (Carrier, ThermoKing, StarCool, Daikin со своего склада), и навесные дизель-генераторы – в продажу и в аренду. Если на площадке нет подходящего питания, генератор подбираем в комплекте.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">15 минут созвона хватит, чтобы сориентировать вас по срокам и доставке под ваш регион. Удобно созвониться на этой неделе?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2>Письмо №3 (A)</h2>
+<button class="copy-btn" onclick="copyLetter('A3')">Копировать письмо №3</button>
+<div class="letter" id="A3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Закрываю тему, чтобы не загружать письмами.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если рефконтейнер сейчас не в фокусе – пара смежных вариантов на случай, если пригодится.</p>
+  <ul style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">
+    <li>Дизель-генератор в аренду, если контейнер уже стоит и нужно стабильное питание под него. У нас парк больше 100 дженсетов.</li>
+    <li>Запчасти Carrier, ThermoKing, StarCool, Daikin со своего склада – если эксплуатируете установку и срочно нужен какой-то узел.</li>
+    <li>Сервис, проверка, ремонт – в Шушарах круглосуточный сервисный центр, работаем по выезду на склад клиента.</li>
+  </ul>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Знаете коллег, у которых под сезон могут быть задачи по охлаждению? Буду благодарен, если перешлете контакт.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<!-- ====== ЦЕПОЧКА B ====== -->
+
+<h3 class="chain">Цепочка B – Сезон + видео-обзор</h3>
+<div class="chain-meta">Заход: летняя нехватка холодильного склада, простое объяснение продукта, видео-обзор как способ снять страх БУ. №2 – износ установки, бизнес-следствие (простой = потеря продукта). №3 – прямое снятие давления, узкий hand-off на ремонт/запчасть. Применена PayFlux-методика глубокой персонализации (адаптировано под пищевую ЦА).</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('B')">Копировать все 3 письма цепочки B</button>
+
+<h2>Распределение – цепочка B</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Летом не хватает холодильного склада; покупка БУ вслепую – страх «после рыбы», битый, гнутый</td><td>С 2012, 67 регионов, предпродажная подготовка, гарантия 90 дней</td><td>Видео-обзор конкретного экземпляра по запросу, без поездки</td></tr>
+  <tr><td><b>№2</b></td><td>Износ холодильной установки после первого сезона – склад простаивает, продукт портится</td><td>800+ контейнеров через нас в год</td><td>Свой склад запчастей 4 брендов + круглосуточный сервис в Шушарах + ремонт компрессоров</td></tr>
+  <tr><td><b>№3</b></td><td>(обнуление, прямое снятие давления)</td><td>–</td><td>Cross-sell разовый: запчасть со склада, ремонт установки, аренда дженсета на сезон. Узкий hand-off на коллег с ремонтом или ожиданием запчасти</td></tr>
+</table>
+
+<h2>Письмо №1 (B)</h2>
+<button class="copy-btn" onclick="copyLetter('B1')">Копировать письмо №1</button>
+<div class="letter" id="B1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если на производстве летом не хватает холодильного склада – обычно эту нагрузку закрывают рефконтейнером. Это мобильный холодильник, ставится во дворе или на площадке, подключается к сети или дизель-генератору.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Мы из RefExpress – продаем рефконтейнеры с 2012 года, клиенты в 67 регионах России: молочные, мясные, рыбные производства, агропром.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">В наличии есть БУ. На любой из них можем снять видео-обзор под камеру – посмотрите состояние конкретно того экземпляра, что собираетесь брать, без поездки. Все БУ проходят предпродажную подготовку, гарантия 90 дней.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Стоит задача по охлаждению на сезон?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2>Письмо №2 (B)</h2>
+<button class="copy-btn" onclick="copyLetter('B2')">Копировать письмо №2</button>
+<div class="letter" id="B2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Что обычно вылезает после первого сезона с БУ-контейнером – износ холодильной установки. Это типовая история по отрасли. Если в этот момент негде быстро взять запчасть и нет своего сервиса – склад простаивает, продукт портится.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">У RefExpress свой склад запчастей (Carrier, ThermoKing, StarCool, Daikin плюс аналоги), круглосуточный сервис на терминале в Шушарах, ремонт компрессоров. Через нас ежегодно проходит 800+ контейнеров.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Это значит, что после покупки – когда что-то выйдет из строя – не нужно искать стороннего сервисмена и ждать запчасти неделями.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">15 минут – расскажу как это работает под ваш профиль производства. Удобно?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2>Письмо №3 (B)</h2>
+<button class="copy-btn" onclick="copyLetter('B3')">Копировать письмо №3</button>
+<div class="letter" id="B3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Последнее от меня – не страшно, если сейчас не до этого.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если контейнер не в планах, у нас можно начать с разового заказа: запчасть со склада, ремонт холодильной установки, аренда дизель-генератора на сезон. Без обязательств по большому контракту.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если у вас по этому профилю уже все закрыто внутри или с другим поставщиком – ок, не настаиваю.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если у кого-то из коллег в смежном производстве сейчас стоит ремонт холодильной установки или ждут запчасть с длинным сроком поставки – буду благодарен за наводку.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<!-- ====== ЦЕПОЧКА C ====== -->
+
+<h3 class="chain">Цепочка C – Расширение парка под ключ</h3>
+<div class="chain-meta">Заход: бизнес-сценарий адресата (расширение/обновление холодильного парка), под который нужен не только контейнер. №2 – главный риск после покупки = простой склада, и как мы его закрываем. №3 – прямое снятие давления + узкий hand-off. Адаптировано под пищевую ЦА.</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('C')">Копировать все 3 письма цепочки C</button>
+
+<h2>Распределение – цепочка C</h2>
+<table class="dist">
+  <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП</th></tr>
+  <tr><td><b>№1</b></td><td>Расширение парка – это не только контейнер: нужен еще генератор и сервис, иначе через сезон установка может встать</td><td>С 2012, 67 регионов, импорт 300+ контейнеров и дженсетов в год, парк 100+ дженсетов</td><td>Вся цепочка под одной крышей: контейнер + генератор + склад запчастей + круглосуточный сервис</td></tr>
+  <tr><td><b>№2</b></td><td>Главный риск после покупки – простой склада из-за поломки установки: порча сырья или срыв отгрузки</td><td>800+ контейнеров обслуживают ежегодно</td><td>Свой склад запчастей 4 брендов + круглосуточный сервис в Шушарах + подменный генератор в аренду + гарантия 90 дней</td></tr>
+  <tr><td><b>№3</b></td><td>(обнуление, прямое снятие давления)</td><td>–</td><td>Cross-sell разовый: ремонт установки, восстановление компрессора, аренда генератора, подбор запчастей. Узкий hand-off на ремонт/запчасть с долгим ожиданием</td></tr>
+</table>
+
+<h2>Письмо №1 (C)</h2>
+<button class="copy-btn" onclick="copyLetter('C1')">Копировать письмо №1</button>
+<div class="letter" id="C1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Когда на пищевом производстве расширяют или обновляют холодильный парк, рефконтейнер обычно идет в комплекте с дизель-генератором (если на площадке нет подключения к сети) и сервисной поддержкой. Иначе через сезон установка может встать без запчастей и помощи.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Мы из RefExpress – продаем и обслуживаем рефконтейнеры с 2012 года, клиенты в 67 регионах России: молочные, мясные, рыбные производства, агропром.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">У нас вся цепочка под одной крышей: ежегодно импортируем больше 300 контейнеров и навесных дизель-генераторов, в аренде парк больше 100 дженсетов, свой склад запчастей по основным брендам установок (Carrier, ThermoKing, StarCool, Daikin), круглосуточный сервис на терминале в Шушарах.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Стоит задача по расширению или замене парка холодильных контейнеров?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2>Письмо №2 (C)</h2>
+<button class="copy-btn" onclick="copyLetter('C2')">Копировать письмо №2</button>
+<div class="letter" id="C2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">После покупки рефконтейнера главный риск – простой склада из-за поломки установки. На пищевом производстве это либо порча сырья, либо срыв отгрузки.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Большая часть поставщиков на такой случай отправляет к стороннему сервису и сторонним запчастям – это плюс несколько недель простоя.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">У RefExpress свой склад запчастей (Carrier, ThermoKing, StarCool, Daikin плюс аналоги), круглосуточный сервисный центр в Шушарах – гарантийный и постгарантийный ремонт, полная проверка контейнера, восстановление компрессоров. Если установке срочно нужно подменное питание – в аренде у нас больше 100 дженсетов, можем подменить генератор на время ремонта. На каждый БУ – гарантия 90 дней после нашей предпродажной подготовки.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">15 минут – разберем под ваш профиль производства, какой контейнер и питание подходят. Удобно созвониться?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2>Письмо №3 (C)</h2>
+<button class="copy-btn" onclick="copyLetter('C3')">Копировать письмо №3</button>
+<div class="letter" id="C3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Последнее от меня – не страшно, если сейчас не до этого.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если контейнер не в планах, у нас можно начать с разового: ремонт установки или восстановление компрессора, аренда дизель-генератора на сезон, подбор запчастей со склада под Carrier, ThermoKing, StarCool, Daikin. Без обязательств по большому контракту.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если у вас по этому профилю уже все закрыто внутри или с другим поставщиком – ок, не настаиваю.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если у кого-то из коллег в смежном производстве сейчас стоит ремонт холодильной установки или ждут запчасть с длинным сроком поставки – буду благодарен за наводку.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<script>
+function cloneClean(id) {
+  var src = document.getElementById(id).cloneNode(true);
+  src.querySelectorAll('.copy-btn').forEach(function(n){ n.remove(); });
+  return src;
+}
+function copyLetter(id) {
+  var node = cloneClean(id);
+  var html = node.innerHTML;
+  var text = node.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+function copyChain(prefix) {
+  var container = document.createElement('div');
+  ['1','2','3'].forEach(function(i){
+    var h = document.createElement('h2');
+    h.style.cssText = 'font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;';
+    h.innerText = 'Письмо №' + i;
+    container.appendChild(h);
+    container.appendChild(cloneClean(prefix + i));
+  });
+  var html = container.innerHTML;
+  var text = container.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+function copyEverything() {
+  var chains = [
+    {prefix: 'A', title: 'Цепочка A – Сезон'},
+    {prefix: 'B', title: 'Цепочка B – Видео-обзор'},
+    {prefix: 'C', title: 'Цепочка C – Полный стек'}
+  ];
+  var container = document.createElement('div');
+  chains.forEach(function(ch){
+    var hc = document.createElement('h1');
+    hc.style.cssText = 'font-family: Arial, sans-serif; font-size: 20pt; font-weight: bold;';
+    hc.innerText = ch.title;
+    container.appendChild(hc);
+    ['1','2','3'].forEach(function(i){
+      var h = document.createElement('h2');
+      h.style.cssText = 'font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;';
+      h.innerText = 'Письмо №' + i;
+      container.appendChild(h);
+      container.appendChild(cloneClean(ch.prefix + i));
+    });
+  });
+  var html = container.innerHTML;
+  var text = container.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+</script>
+
+</body>
+</html>

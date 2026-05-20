@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>BPMSoft – Цепочка №1 v3 (финальная, отправлена в работу)</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 900px; margin: 30px auto; padding: 0 20px; color: #222; background: #fafafa; }
+  .header { background: #2a5db0; color: #fff; padding: 20px 25px; border-radius: 8px; margin-bottom: 25px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; opacity: 0.92; font-size: 11pt; }
+  .info-card { background: #e8f3ff; border-left: 4px solid #2a5db0; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .copy-all { background: #2a5db0; color: #fff; border: none; padding: 12px 22px; font-size: 11pt; border-radius: 6px; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
+  .copy-all:hover { background: #1f4a92; }
+  .email-block { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; position: relative; }
+  .copy-btn { position: absolute; top: 18px; right: 18px; background: #f0f4fa; color: #2a5db0; border: 1px solid #2a5db0; padding: 6px 14px; font-size: 10pt; border-radius: 5px; cursor: pointer; }
+  .copy-btn:hover { background: #2a5db0; color: #fff; }
+  h2.email-title { font-family: Arial; font-size: 18pt; font-weight: bold; margin: 0 0 12px 0; color: #222; }
+  .subj { font-family: Arial; font-size: 11pt; margin: 0 0 12px 0; color: #555; font-style: italic; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>BPMSoft – Цепочка №1 v3 (по реф. LeadBridge/Coldy)</h1>
+  <p>Финальная версия с правками клиента • Отправлена в работу • Вебинар 26 мая 2026</p>
+</div>
+
+<div class="info-card">
+  <strong>Контекст:</strong> 2 письма. Тема в теле. Плейсхолдер <code>{{firstName}}</code>. Ссылка отправляется отдельно тем, кто ответил «+».
+</div>
+
+<button class="copy-all" onclick="copyAll()">Копировать все письма</button>
+
+<div class="email-block" id="email1">
+  <button class="copy-btn" onclick="copyEmail('email1')">Копировать</button>
+  <h2 class="email-title">Письмо №1</h2>
+  <p class="subj">Тема: Приглашение на вебинар BPMSoft, 26 мая</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">{{firstName}}, [приветствие]</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Меня зовут [имя]. Пишу как маркетинговый партнер BPMSoft – пригласить вас на онлайн-вебинар «Как автоматизировать развитие бизнеса без зоопарка систем», 26 мая в 11:00 мск, бесплатно.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Так как вы отвечаете за [маркетинг / продажи / коммерческое направление / клиентский сервис / IT-инфраструктуру] – думаю, будет актуально.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 8px 0;">На вебинаре разберем:</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– как одной платформой закрыть маркетинг, продажи, закупки и сервис в едином контуре</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– как ускорять работу с лидами на 40% и сокращать сроки закупок на 20%</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">– как повысить точность прогноза продаж и прозрачность процессов</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Среди спикеров Максим Пономарев, директор компании ВОЛМА и Оксана Репина, руководитель в Группе СЕБ-ВОСТОК (Tefal, Krups, Rowenta, Moulinex).</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Подскажите, есть ли интерес? Пришлю ссылку на регистрацию.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<div class="email-block" id="email2">
+  <button class="copy-btn" onclick="copyEmail('email2')">Копировать</button>
+  <h2 class="email-title">Письмо №2</h2>
+  <p class="subj">Тема: Поднимаю переписку</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">{{firstName}}, [приветствие]. Поднимаю переписку – письмо могло затеряться.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 8px 0;">Добавлю конкретики по вебинару 26 мая. Выступают:</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 8px 0;">– Максим Пономарев, директор по цифровой трансформации компании ВОЛМА (Крупнейший представитель стройматериалов). Расскажет, как ВОЛМА ускорила ключевые бизнес-процессы в 5 раз, скорость работы с лидами – на 40%, а сроки закупок сократились на 10-20%.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 8px 0;">– Оксана Репина, руководитель отдела автоматизации бизнес-процессов в Группе СЕБ-ВОСТОК (российское подразделение Groupe SEB – Tefal, Krups, Rowenta, Moulinex). Расскажет, как они повысили эффективность процессов на 30% и убрали рутину у сотрудников.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">– Сергей Петров от BPMSoft – покажет, как платформа закрывает маркетинг, продажи, закупки и сервис в одном контуре.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Вебинар 26 мая в 11:00 мск, онлайн, бесплатно.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Если интересно – ответьте «+», направлю ссылку на регистрацию.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<script>
+function copyEmail(id) {
+  const el = document.getElementById(id);
+  const range = document.createRange();
+  range.selectNode(el);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand('copy');
+  window.getSelection().removeAllRanges();
+}
+function copyAll() {
+  const blocks = document.querySelectorAll('.email-block');
+  let html = '';
+  blocks.forEach(b => html += b.innerHTML + '<br><br>');
+  const blob = new Blob([html], {type: 'text/html'});
+  const data = [new ClipboardItem({'text/html': blob})];
+  navigator.clipboard.write(data);
+}
+</script>
+<!-- PREFLIGHT-OK -->
+</body>
+</html>

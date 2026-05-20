@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- PREFLIGHT-OK -->
+<meta charset="UTF-8">
+<title>RefExpress – Конечники B – v3 (адаптация PayFlux под пищевую ЦА)</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; max-width: 880px; margin: 30px auto; padding: 0 20px; color: #1a1a1a; }
+  h1 { font-family: Arial, sans-serif; font-size: 20pt; margin: 0 0 6px; }
+  h2 { font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold; margin: 26px 0 10px; }
+  .meta { color: #666; font-size: 10pt; margin-bottom: 18px; }
+  .compare { background: #e7f0ff; border-left: 4px solid #1a73e8; padding: 12px 16px; margin: 14px 0; font-size: 10pt; line-height: 1.4; }
+  .compare b { display: block; margin-bottom: 6px; }
+  .warning { background: #fff4d6; border-left: 4px solid #e0a800; padding: 10px 14px; margin: 14px 0; font-size: 10pt; }
+  .letter { border: 1px solid #e1e1e1; border-radius: 6px; padding: 18px 22px; margin: 6px 0 18px; background: #fafafa; }
+  .letter p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 0 0 10px; }
+  .letter ul { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 6px 0 12px 0; padding-left: 0; list-style: none; }
+  .letter ul li { padding-left: 0; margin-bottom: 4px; }
+  .copy-btn { font-family: Arial, sans-serif; font-size: 10pt; background: #1a73e8; color: #fff; border: 0; padding: 8px 14px; border-radius: 4px; cursor: pointer; margin: 0 6px 12px 0; }
+  .copy-btn:hover { background: #1558b8; }
+  .copy-all { font-size: 11pt; padding: 10px 18px; background: #0b5cb8; }
+</style>
+</head>
+<body>
+
+<h1>RefExpress – Конечники B – v3</h1>
+<div class="meta">Адаптация PayFlux-методики под пищевую ЦА. Простой язык, объясняем продукт сразу, без инженерной специфики. v3, 2026-05-19. Подпись: Алексей Пасюта.</div>
+
+<div class="compare">
+  <b>v3 vs v2:</b>
+  <ul>
+    <li>№1 открывается болью адресата (нехватка холодильного склада летом), не схемой торговли БУ.</li>
+    <li>Сразу простое объяснение что такое рефконтейнер – «мобильный холодильник во дворе».</li>
+    <li>№2 инсайт через бизнес-следствие (простой склада = потеря продукта), не через инженерный термин про компрессор.</li>
+    <li>Сохранены PayFlux-элементы: короткий формат, yes/no CTA в №1, прямое снятие давления в №3, узкий hand-off.</li>
+  </ul>
+</div>
+
+<div class="warning">
+  <b>Открытые поля:</b> подпись Алексея Пасюты, кейсы, что под «моторами», полный список 12 городов.
+</div>
+
+<button class="copy-btn copy-all" onclick="copyChain('B')">Копировать все 3 письма B v3</button>
+
+<h2>Письмо №1 (B v3)</h2>
+<button class="copy-btn" onclick="copyLetter('B1')">Копировать письмо №1</button>
+<div class="letter" id="B1">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если на производстве летом не хватает холодильного склада – обычно эту нагрузку закрывают рефконтейнером. Это мобильный холодильник, ставится во дворе или на площадке, подключается к сети или дизель-генератору.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Мы из RefExpress – продаем рефконтейнеры с 2012 года, клиенты в 67 регионах России: молочные, мясные, рыбные производства, агропром.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">В наличии есть БУ. На любой из них можем снять видео-обзор под камеру – посмотрите состояние конкретно того экземпляра, что собираетесь брать, без поездки. Все БУ проходят предпродажную подготовку, гарантия 90 дней.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Стоит задача по охлаждению на сезон?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2>Письмо №2 (B v3)</h2>
+<button class="copy-btn" onclick="copyLetter('B2')">Копировать письмо №2</button>
+<div class="letter" id="B2">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Что обычно вылезает после первого сезона с БУ-контейнером – износ холодильной установки. Это типовая история по отрасли. Если в этот момент негде быстро взять запчасть и нет своего сервиса – склад простаивает, продукт портится.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">У RefExpress свой склад запчастей (Carrier, ThermoKing, StarCool, Daikin плюс аналоги), круглосуточный сервис на терминале в Шушарах, ремонт компрессоров. Через нас ежегодно проходит 800+ контейнеров.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Это значит, что после покупки – когда что-то выйдет из строя – не нужно искать стороннего сервисмена и ждать запчасти неделями.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">15 минут – расскажу как это работает под ваш профиль производства. Удобно?</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<h2>Письмо №3 (B v3)</h2>
+<button class="copy-btn" onclick="copyLetter('B3')">Копировать письмо №3</button>
+<div class="letter" id="B3">
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[приветствие]</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Последнее от меня – не страшно, если сейчас не до этого.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если контейнер не в планах, у нас можно начать с разового заказа: запчасть со склада, ремонт холодильной установки, аренда дизель-генератора на сезон. Без обязательств по большому контракту.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если у вас по этому профилю уже все закрыто внутри или с другим поставщиком – ок, не настаиваю.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">Если у кого-то из коллег в смежном производстве сейчас стоит ремонт холодильной установки или ждут запчасть с длинным сроком поставки – буду благодарен за наводку.</p>
+  <p style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15;">[подпись]</p>
+</div>
+
+<script>
+function cloneClean(id) {
+  var src = document.getElementById(id).cloneNode(true);
+  src.querySelectorAll('.copy-btn').forEach(function(n){ n.remove(); });
+  return src;
+}
+function copyLetter(id) {
+  var node = cloneClean(id);
+  var html = node.innerHTML;
+  var text = node.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+function copyChain(prefix) {
+  var container = document.createElement('div');
+  ['1','2','3'].forEach(function(i){
+    var h = document.createElement('h2');
+    h.style.cssText = 'font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold;';
+    h.innerText = 'Письмо №' + i;
+    container.appendChild(h);
+    container.appendChild(cloneClean(prefix + i));
+  });
+  var html = container.innerHTML;
+  var text = container.innerText;
+  var blob = new Blob([html], {type: 'text/html'});
+  var blobT = new Blob([text], {type: 'text/plain'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob, 'text/plain': blobT})]);
+}
+</script>
+
+</body>
+</html>

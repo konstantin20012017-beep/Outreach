@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>BPMSoft – Цепочка №3 v3 (финальная, отправлена в работу)</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 900px; margin: 30px auto; padding: 0 20px; color: #222; background: #fafafa; }
+  .header { background: #2a5db0; color: #fff; padding: 20px 25px; border-radius: 8px; margin-bottom: 25px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; opacity: 0.92; font-size: 11pt; }
+  .info-card { background: #e8f3ff; border-left: 4px solid #2a5db0; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .copy-all { background: #2a5db0; color: #fff; border: none; padding: 12px 22px; font-size: 11pt; border-radius: 6px; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
+  .email-block { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; position: relative; }
+  .copy-btn { position: absolute; top: 18px; right: 18px; background: #f0f4fa; color: #2a5db0; border: 1px solid #2a5db0; padding: 6px 14px; font-size: 10pt; border-radius: 5px; cursor: pointer; }
+  h2.email-title { font-family: Arial; font-size: 18pt; font-weight: bold; margin: 0 0 12px 0; color: #222; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>BPMSoft – Цепочка №3 v3 (миграция + ROI)</h1>
+  <p>Финальная версия с правками клиента • Отправлена в работу • Вебинар 26 мая 2026</p>
+</div>
+
+<div class="info-card">
+  <strong>Контекст:</strong> 3 письма, ссылка в теле. Заход через миграцию с зарубежного ПО (Salesforce, MS Dynamics, SAP, Oracle) + ФСТЭК + ROI-цифры из реальных проектов.
+</div>
+
+<button class="copy-all" onclick="copyAll()">Копировать все письма</button>
+
+<div class="email-block" id="email1">
+  <button class="copy-btn" onclick="copyEmail('email1')">Копировать</button>
+  <h2 class="email-title">Письмо №1</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 8px 0;">Меня зовут [имя]. Приглашаю вас на бесплатный вебинар 26 мая в 11:00 мск от BPMSoft «Как автоматизировать развитие бизнеса без зоопарка систем». Разберем:</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– как одной платформой закрыть маркетинг, продажи, закупки и сервис в едином контуре</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– как ускорять работу с лидами на 40% и сокращать сроки закупок на 20%</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">– как повысить точность прогноза продаж и прозрачность процессов</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Сейчас многие компании сталкиваются с одной общей проблемой – зарубежные CRM и BPM-системы (Salesforce, MS Dynamics, SAP, Oracle) ушли с российского рынка</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">BPMSoft – это платформа с сертификатом ФСТЭК 4-го уровня доверия и записью в Реестре отечественного ПО – подходит для объектов критической информационной инфраструктуры.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">За последние два года уже перешли ЦУМ, Технологии Доверия (ex-PwC), Группа Б1 (ex-EY), а также Передовые Платежные Решения, Биокодекс, СберФакторинг, GEFCO Россия.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Узнать больше про платформу и не только можно 26 мая в 11:00 мск на бесплатном онлайн-вебинаре «Как автоматизировать развитие бизнеса без зоопарка систем».</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Регистрация: [ссылка]</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<div class="email-block" id="email2">
+  <button class="copy-btn" onclick="copyEmail('email2')">Копировать</button>
+  <h2 class="email-title">Письмо №2</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Возвращаюсь к прошлому письму – про вебинар BPMSoft 26 мая «Как автоматизировать развитие бизнеса без зоопарка систем». Если коротко – BPMSoft это российская low-code платформа, которая автоматизирует управление маркетингом, продажами и сервисом в одном контуре.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">На вебинаре 26 мая сценарии работы разберут два кейс-спикера: директор по цифровой трансформации компании ВОЛМА (бренд №1 в РФ на стройсмесях; БП ускорены в 5 раз, лиды -40%, закупки -20%) и руководитель автоматизации БП Группы СЕБ-ВОСТОК (Tefal, Moulinex; эффективность процессов -30%).</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">У многих компаний при выборе такого решения главный вопрос – окупаемость и стоимость владения. Поэтому добавлю конкретики – цифры из реальных проектов BPMSoft:</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 6px 0;">– Цикл сделки – в 2-3 раза короче. Передовые Платежные Решения после автоматизации довели средний цикл сделки до 2-3 недель.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 6px 0;">– Конверсия онлайн-продаж – x1,5. АСКОНА после внедрения BPMSoft на 4 000+ рабочих мест.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 6px 0;">– Средний чек по сделкам – +24%. Билайн в сегменте крупного и ключевого бизнеса; экономия 4 000 чел.-часов за 5 месяцев.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">– Перенастройка под пик нагрузки – 3 часа. Туту, во время резкого роста клиентских обращений, силами low-code.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">В среднем по проектам BPMSoft – конверсия продаж в 1,5-2 раза, маркетинговые расходы – минус 50% без потери лидов, стоимость владения IT-инфраструктурой – минус 40%, настройка нового бизнес-процесса собственными аналитиками без программистов – 3 часа.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Вебинар пройдет 26 мая, 11:00 мск, онлайн, бесплатно. Регистрация: [ссылка]</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<div class="email-block" id="email3">
+  <button class="copy-btn" onclick="copyEmail('email3')">Копировать</button>
+  <h2 class="email-title">Письмо №3</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Напомню коротко – и больше не беспокою.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">26 мая в 11:00 мск онлайн-вебинар BPMSoft – про автоматизацию маркетинга, продаж, закупок и сервиса в едином контуре. Среди тем – реальные цифры по эффективности от ВОЛМА и Группы СЕБ-ВОСТОК. Бесплатно.</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Если тема актуальна – ссылка на регистрацию: [ссылка]</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">PS – пишу на несколько почт. Если попал не по адресу, перешлите коллеге, который отвечает за CRM или импортозамещение, буду благодарен)</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<script>
+function copyEmail(id) {
+  const el = document.getElementById(id);
+  const range = document.createRange();
+  range.selectNode(el);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand('copy');
+}
+function copyAll() {
+  const blocks = document.querySelectorAll('.email-block');
+  let html = '';
+  blocks.forEach(b => html += b.innerHTML + '<br><br>');
+  const blob = new Blob([html], {type: 'text/html'});
+  navigator.clipboard.write([new ClipboardItem({'text/html': blob})]);
+}
+</script>
+<!-- PREFLIGHT-OK -->
+</body>
+</html>
