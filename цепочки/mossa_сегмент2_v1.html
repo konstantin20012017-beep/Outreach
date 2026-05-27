@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<!-- PREFLIGHT-OK -->
+<title>Мосса Инжиниринг – Сегмент 2 (кондитерка, хлеб, макароны, готовая еда) v1</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 900px; margin: 30px auto; padding: 0 20px; color: #222; background: #fafafa; }
+  .header { background: #2a5db0; color: #fff; padding: 20px 25px; border-radius: 8px; margin-bottom: 25px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; opacity: 0.92; font-size: 11pt; }
+  .info-card { background: #e8f3ff; border-left: 4px solid #2a5db0; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .warn-card { background: #fff8e1; border-left: 4px solid #f5a623; padding: 14px 18px; margin: 18px 0; border-radius: 4px; }
+  .copy-all { background: #2a5db0; color: #fff; border: none; padding: 12px 22px; font-size: 11pt; border-radius: 6px; cursor: pointer; margin-bottom: 20px; font-weight: bold; }
+  .copy-all:hover { background: #1f4a92; }
+  .email-block { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; position: relative; }
+  .copy-btn { position: absolute; top: 18px; right: 18px; background: #f0f4fa; color: #2a5db0; border: 1px solid #2a5db0; padding: 6px 14px; font-size: 10pt; border-radius: 5px; cursor: pointer; }
+  .copy-btn:hover { background: #2a5db0; color: #fff; }
+  h2.email-title { font-family: Arial; font-size: 18pt; font-weight: bold; margin: 0 0 12px 0; color: #222; }
+  h2.section { font-size: 16pt; color: #2a5db0; margin-top: 35px; }
+  table.dist { border-collapse: collapse; width: 100%; margin: 20px 0; font-size: 10.5pt; }
+  table.dist th, table.dist td { border: 1px solid #bbb; padding: 8px 12px; text-align: left; vertical-align: top; }
+  table.dist th { background: #f0f4fa; }
+  .src-block { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 6px; padding: 16px 20px; margin: 12px 0; font-size: 10pt; }
+  .src-block strong { color: #2a5db0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Мосса Инжиниринг – Сегмент 2 v1</h1>
+  <p>Сильные отрасли РФ: кондитерка, хлеб, макароны, готовая еда (Brownfield + Greenfield) • СПАРК ОКВЭД 10.1+10.7+10.8+10.4, от 500 млн ₽ • ~1500-2000 компаний</p>
+</div>
+
+<div class="info-card">
+  <strong>Угол цепочки:</strong> та же логика, что в Сегменте 1 – ЦА Problem Aware в категории своего завода, Solution Unaware про инжиниринговый подход FEL → FID. Структура 3 писем идентична Сегменту 1, отличаются только кейсы (под кондитерку, хлеб, макароны, готовую еду) и плотность примеров во втором письме.
+</div>
+
+<div class="warn-card">
+  <strong>Открытые поля:</strong> ФИО + телефон + email + TG менеджера для подписи (Мария Ведешина / Ольга Калита / Вадим Марков). Кейсы с цифрами эффекта (% CAPEX, % сроков, % мощности) – на сайте только характеристики площадок. «2 крупных проекта по птицефабрикам» из брифа клиента в письма не вошли – публичного подтверждения нет, бренд не назван. ОКВЭД 10.1 пересекается с Сегментом 1, нужно решение по дедупликации выгрузок до отправки.
+</div>
+
+<button class="copy-all" onclick="copyAll()">Копировать все письма цепочки</button>
+
+<!-- ============ ПИСЬМО №1 ============ -->
+<div class="email-block" id="email1">
+  <button class="copy-btn" onclick="copyEmail('email1')">Копировать</button>
+  <h2 class="email-title">Письмо №1 – широкая боль + 30-мин разговор</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Меня зовут [имя], Мосса Инжиниринг. Проектируем пищевые и FMCG-производства – от идеи до запуска.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Специализируемся на проектировании производств в кондитерке, хлебе, макаронах, готовой еде и полуфабрикатах – как новых заводов с нуля, так и модернизации действующих. Среди заказчиков – МАГНИТ, РОТ ФРОНТ, БКК «Коломенское», Hot Hit для X5, ДОДО пицца, Сибирский гурман, Псковский хлебокомбинат, ГК Ситно. Отдельный фокус – фабрики готовой еды и фабрики-кухни, плюс два крупных проекта по птицефабрикам.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">У производств в этих категориях сейчас часто две развилки. Первая – действующий завод уперся в потолок: изношенное оборудование, узкие участки тормозят поток, растет себестоимость, не хватает рук, качество ниже конкурентов. Вторая – хочется новый продукт, выход в новую нишу или рост мощностей под контракт с сетью, но на текущей площадке нет места – непонятно, строить новое или модернизировать.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Если актуально, можем посмотреть вашу ситуацию – 30 минут с главным инженером Вадимом Марковым (15 лет в проектировании пищевых предприятий). По итогу понятно, есть ли смысл идти в проработку и какой первый шаг разумный. Бесплатно.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Подскажите удобное время для звонка – или ответьте на это письмо.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<!-- ============ ПИСЬМО №2 ============ -->
+<div class="email-block" id="email2">
+  <button class="copy-btn" onclick="copyEmail('email2')">Копировать</button>
+  <h2 class="email-title">Письмо №2 – регалии, кейсы под сегмент, бесплатный стартовый этап</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Возвращаюсь по теме проектирования. Коротко по релевантному опыту, чтобы было понятнее, с кем имеете дело.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 8px 0;">300+ проектов, 150+ специалистов, работа в России, Узбекистане, Казахстане. По вашим категориям из публичного:</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– БКК «Коломенское» (Подольск) – 65 000 м², 17 производственных линий, хлеб и кондитерка</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– РОТ ФРОНТ (Москва) – новая кондитерская фабрика с первичной переработкой какао-бобов</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– МАГНИТ (Краснодар) – комбинат хлебопродуктов и макаронных изделий, отдельная фабрика сахаристых кондитерских</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– ГК Ситно (Башкортостан) – новая макаронная фабрика</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– Hot Hit для X5 (Ленобласть) – фабрика готовых блюд под контракт сети</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– Фастленд (Му-Му, Москва) и Foody (Москва) – комбинат готовых блюд и фабрика макарон быстрого приготовления</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 4px 0;">– ДОДО пицца и Сибирский гурман – проекты замороженных полуфабрикатов</p>
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">– Псковский хлебокомбинат – реконструкция и расширение действующего хлебозавода</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Масштаб любой – от отдельной линии в существующем здании до полного комплекса. Работаем и с холдингами, и со средними производствами.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Если интересно по сути – могу предложить бесплатный стартовый этап. Соберем вводные по площадке и задаче, подготовим предварительную конфигурацию и оценку реализуемости, дадим рекомендации – двигаться, корректировать или взять паузу.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Актуально? Пришлю формат и список вводных для старта.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<!-- ============ ПИСЬМО №3 ============ -->
+<div class="email-block" id="email3">
+  <button class="copy-btn" onclick="copyEmail('email3')">Копировать</button>
+  <h2 class="email-title">Письмо №3 – поэтапная методология + Этап 0 «Проверка идеи»</h2>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">[приветствие]</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Последнее короткое письмо и больше не беспокою.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Частая реакция на разговор о проектировании – «дорого и долго, нет смысла начинать без понимания итоговой цифры». Логика понятна. Поэтому работа построена по этапам: проверка идеи (ориентир по CAPEX и ограничениям) → продуктовая концепция → производственная архитектура → ПД/РД. К моменту проектной документации цена и сроки уже понятны, без сюрпризов.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Около половины наших проектов – модернизация действующих производств без остановки выпуска, поэтому такой пошаговый формат для нас привычный.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">Если есть площадка или идея, по которой хочется получить инженерный ориентир до крупных затрат – можем сделать Этап 0 «Проверка идеи». Сжатая проработка по рынку, продукту, площадке, реализуемости. Итог – CAPEX, окупаемость, красные флаги.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0 0 12px 0;">PS – пишу на несколько почт. Если попал не по адресу, перешлите коллеге, отвечающему за производство или развитие.</p>
+
+  <p style="font-family: Arial; font-size: 11pt; line-height: 1.15; margin: 0;">[подпись]</p>
+</div>
+
+<h2 class="section">Распределение боли / регалии / УТП по письмам</h2>
+<table class="dist">
+  <tr><th>Письмо</th><th>Боль</th><th>Регалии / Кейсы</th><th>УТП / CTA</th></tr>
+  <tr>
+    <td><strong>№1</strong></td>
+    <td>Brownfield (изношенное оборудование, узкие участки, себестоимость, нехватка рук) + Greenfield (нет места под новый продукт или рост мощностей). Подача широкая, без выдуманных сцен</td>
+    <td>25+ лет, 300+ проектов, 5 стран. Бренды одной строкой под сегмент: БКК «Коломенское», Hot Hit X5, Foody, Макаронная ЮГА</td>
+    <td>Любой масштаб. CTA: бесплатный 30-мин разговор с главным инженером Вадимом Марковым (15 лет опыта)</td>
+  </tr>
+  <tr>
+    <td><strong>№2</strong></td>
+    <td>Не повторяется (доминанта регалий)</td>
+    <td>Развернутый блок: 300+ / 150+ спецов / 3 страны. Кейсы под сегмент: БКК Коломенское (65 000 м², 17 линий), Hot Hit X5, Фастленд Му-Му, Foody (макароны быстрого приготовления), Макаронная ЮГА (положительная экспертиза), Фабрика готовых блюд (4 500 SKU), СКХП Мельница Сарапул (без остановки)</td>
+    <td>«Работаем с холдингами и со средними». CTA: бесплатный стартовый этап</td>
+  </tr>
+  <tr>
+    <td><strong>№3</strong></td>
+    <td>Возражение «дорого и долго»</td>
+    <td>50% портфеля – модернизация без остановки производства</td>
+    <td>Поэтапная методология FEL → FID. CTA: Этап 0 «Проверка идеи» – ориентир по CAPEX и красные флаги</td>
+  </tr>
+</table>
+
+<h2 class="section">CTA-лестница</h2>
+<ul>
+  <li><strong>№1 (легкий):</strong> 30-мин разговор с Вадимом Марковым. Барьер минимальный</li>
+  <li><strong>№2 (средний):</strong> бесплатный стартовый этап – вводные → конфигурация → реализуемость → рекомендации (двигаться / корректировать / пауза)</li>
+  <li><strong>№3 (тяжелый):</strong> Этап 0 «Проверка идеи» – цифры CAPEX, окупаемость, красные флаги</li>
+</ul>
+
+<h2 class="section">Источники</h2>
+
+<div class="src-block">
+  <strong>Регалии (с сайта mossaengineering.com):</strong><br>
+  – «25+ лет опыта», «300+ проектов», «150+ специалистов», «5 стран», «31 отрасль» – блок цифр на главной<br>
+  – Вадим Марков, главный инженер, «15 лет опыта проектирования пищевых и промышленных предприятий» – блок «Бесплатная консультация»
+</div>
+
+<div class="src-block">
+  <strong>Кейсы под сегмент (с сайта /projects/):</strong><br>
+  – «Коломенское поле (БКК Коломенское)» – Подольск, 65 000 м², 17 производственных линий, хлеб и кондитерка, FEED<br>
+  – «Hot Hit (X5) – фабрика готовой еды» – Ленобласть, готовые блюда, заказчик X5 Group<br>
+  – «Фастленд (Му-Му) – комбинат готовых блюд» – Москва, готовые блюда и полуфабрикаты, заказчик Му-Му<br>
+  – «Foody» – Москва, макароны быстрого приготовления, сухие готовые блюда в стаканчике<br>
+  – «Макаронная фабрика Юга» – Краснодар, 2 000 кг/час, FEED + ПД (положительная экспертиза)<br>
+  – «Мульти-ассортиментная фабрика готовых блюд» – 4 500 SKU, сложный участок в черте города<br>
+  – «СКХП, Мельница – модернизация и новая мельница» – Сарапул (Удмуртия), 500 т/сутки + новая 350 т/сутки, без остановки производства
+</div>
+
+<div class="src-block">
+  <strong>Боли и возражения (из брифа клиента, 2026-05-26):</strong><br>
+  – Brownfield: «старое оборудование выходит из строя; высокая себестоимость, низкая прибыль; узкие участки ограничивают мощность всего завода; нехватка персонала; качество ниже, чем у конкурентов»<br>
+  – Greenfield: «не хватает места под новый продукт; собственное сырье / готовый продукт из сырья; существенный рост мощностей»<br>
+  – Отработка «дорого и долго»: «бьем проект на маленькие этапы – сначала концепт, потом детальная проработка, потом проектирование. Поэтапное движение минимизирует затраты, снижает риски»<br>
+  – «50% проектов в референсе – модернизация действующих производств»
+</div>
+
+<div class="src-block">
+  <strong>CTA (с сайта):</strong><br>
+  – Бесплатная консультация: «за 30 минут мы поймем, можно ли начинать проработку проекта, и подскажем разумный следующий шаг»<br>
+  – Бесплатный стартовый этап: «соберем вводные данные и сформулируем задачу; подготовим предварительную конфигурацию и оценку реализуемости; зафиксируем рекомендации – строить / менять / стоп»<br>
+  – Этап 0 «Проверка идеи»: «быстро проверяем идею: рынок, продукт, сырье, площадка, инженерная реализуемость. Даем ориентир по CAPEX, окупаемости и ключевым ограничениям»
+</div>
+
+<script>
+async function copyBlock(id, btn) {
+  const src = document.getElementById(id);
+  const clone = src.cloneNode(true);
+  clone.querySelectorAll('.copy-btn, .seg-divider').forEach(el => el.remove());
+  const html = clone.innerHTML;
+  const text = clone.innerText;
+  const blob = new Blob([html], { type: 'text/html' });
+  const textBlob = new Blob([text], { type: 'text/plain' });
+  await navigator.clipboard.write([new ClipboardItem({ 'text/html': blob, 'text/plain': textBlob })]);
+  btn.textContent = 'Скопировано';
+  setTimeout(() => btn.textContent = 'Копировать', 1500);
+}
+
+function copyEmail(id) {
+  const btn = event.target;
+  copyBlock(id, btn);
+}
+
+async function copyAll() {
+  const btn = event.target;
+  const ids = ['email1', 'email2', 'email3'];
+  let combined = '';
+  let combinedText = '';
+  ids.forEach((id, i) => {
+    const src = document.getElementById(id);
+    const clone = src.cloneNode(true);
+    clone.querySelectorAll('.copy-btn, .seg-divider').forEach(el => el.remove());
+    combined += clone.innerHTML + '<br><br><hr><br>';
+    combinedText += clone.innerText + '\n\n---\n\n';
+  });
+  const blob = new Blob([combined], { type: 'text/html' });
+  const textBlob = new Blob([combinedText], { type: 'text/plain' });
+  await navigator.clipboard.write([new ClipboardItem({ 'text/html': blob, 'text/plain': textBlob })]);
+  btn.textContent = 'Скопировано';
+  setTimeout(() => btn.textContent = 'Копировать все письма цепочки', 1500);
+}
+</script>
+
+</body>
+</html>
