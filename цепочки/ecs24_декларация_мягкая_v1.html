@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!-- PREFLIGHT-OK -->
+<meta charset="UTF-8">
+<title>ECS24 – Сегмент 1 (Декларация), мягкая версия v1 (A/B к v4)</title>
+<style>
+  body { background: #f5f5f5; padding: 40px 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .top h1 { font-size: 20px; font-weight: 600; margin: 0; }
+  .copy-all { padding: 10px 18px; background: #1a73e8; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; }
+  .copy-all:hover { background: #1557b0; }
+  .card { background: white; padding: 32px; margin-bottom: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); position: relative; }
+  .copy-btn { position: absolute; top: 16px; right: 16px; padding: 6px 14px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 6px; cursor: pointer; font-size: 12px; }
+  .copy-btn:hover { background: #e0e0e0; }
+  .copy-btn.ok { background: #d4edda; border-color: #c3e6cb; }
+  .h2 { font-family: Arial, sans-serif; font-size: 18pt; font-weight: bold; margin: 0 0 12pt 0; line-height: 1.15; color: #000; }
+  .p { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; margin: 0 0 11pt 0; color: #000; }
+  .p:last-child { margin-bottom: 0; }
+  .seg-divider { margin: 40px 0 20px 0; padding: 16px 0; border-top: 3px solid #1a73e8; }
+  .seg-divider h2 { margin: 0; font-size: 18px; color: #1a73e8; }
+  .meta { background: #fff8e1; padding: 20px 24px; border-radius: 8px; margin-bottom: 16px; font-size: 13px; line-height: 1.5; }
+  .meta h3 { margin: 0 0 8px 0; font-size: 14px; }
+  .meta ul { margin: 6px 0 12px 18px; padding: 0; }
+  .meta li { margin-bottom: 4px; }
+  .grid { width: 100%; border-collapse: collapse; margin: 8px 0 0 0; font-size: 12px; }
+  .grid th, .grid td { border: 1px solid #d0d0d0; padding: 8px 10px; text-align: left; vertical-align: top; }
+  .grid th { background: #f0f0f0; font-weight: 600; }
+  .warn { background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 12px 16px; border-radius: 6px; margin: 10px 0; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <h1>ECS24 · Сегмент 1 (Декларация) · мягкая версия v1</h1>
+    <button class="copy-all" onclick="copyBlock('all', this)">Копировать все письма</button>
+  </div>
+
+  <div class="meta">
+    <h3>Угол: спокойный деловой тон (A/B к v4)</h3>
+    <p style="margin:6px 0 12px 0;">Новый вариант под Сегмент 1 на основе статистики рассылки. Сегмент 1 (Декларация) – лидер по ответам (44) и заинтересованным (9) к 29.05, но конверсия в интерес низкая, в ответах получатели просят «не угрожать». Эта версия берет те же смыслы, что и v4, но убирает заход через <b>штраф 600 000 ₽</b> и переводит тон в нейтральный: «заметили, что декларация заканчивается, поможем спокойно продлить». Структура письма: <b>приветствие, спокойный повод, представление + регалия, мягкий призыв</b>.</p>
+
+    <div class="warn">
+      <b>Чем отличается от v4 (что тестируем):</b> в v4 заход через страх штрафа (600 000 ₽ в каждом письме). Здесь штраф убран полностью. Последствие «без документа поставки встают» оставлено, но подано спокойно и без суммы, как нейтральный факт. Цель A/B – проверить, дает ли спокойный тон больше доверия и ответов.
+    </div>
+
+    <div class="warn">
+      <b>Без блока «кейс».</b> У ECS24 в публичных материалах нет узнаваемых брендов, по правилу проекта используем только цифровые регалии (12 лет, 5000+ документов, 3200+ организаций). Если клиент пришлет узнаваемые имена клиентов (пищевка / косметика уровня X) – вернем кейсный блок в следующей версии.
+    </div>
+
+    <h3>Темы письма (одинаковая во всех 3, выбрать одну)</h3>
+    <ul>
+      <li>Декларация ТР ЕАЭС, {Компания}</li>
+      <li>Продление декларации ТР ЕАЭС, {Компания}</li>
+      <li>По декларации ТР ЕАЭС для {Компания}</li>
+      <li>{Компания}: декларация ТР ЕАЭС</li>
+    </ul>
+
+    <h3>Распределение по письмам (без повторов)</h3>
+    <table class="grid">
+      <tr><th></th><th>Боль</th><th>Регалии</th><th>УТП / CTA</th></tr>
+      <tr><td><b>№1</b></td><td>документ заканчивается, продление лучше не тянуть</td><td>12 лет + под ключ, напрямую с аккредитованными лабораториями</td><td>ответ «да» на интерес + продлить быстро и выгоднее текущего варианта</td></tr>
+      <tr><td><b>№2</b></td><td>пауза в поставках (сети, таможня), пока новый не готов</td><td>5000+ документов + гарантия на весь срок</td><td>бесплатная проверка + расчет стоимости и сроков + вся информация</td></tr>
+      <tr><td><b>№3</b></td><td>не успеть подготовиться к сроку</td><td>3200+ организаций + разъяснения таможне</td><td>комфортный срок при старте за 2-3 месяца</td></tr>
+    </table>
+
+    <h3>Источники</h3>
+    <ul>
+      <li><b>Триггер «декларация заканчивается в ближайший месяц» + отрасли</b> – бриф ecs24, Сегмент 1.</li>
+      <li><b>12 лет / аккредитованные лаборатории / 5000+ документов / 3200+ организаций / гарантия на весь срок / разъяснения таможне</b> – сайт ECS24, блок «Единый Центр Сертификации».</li>
+      <li><b>Регламент «за 2-3 месяца, 9-10 дней + пара дней подготовки»</b> – принятая версия клиента (декларация).</li>
+      <li><b>CTA «бесплатная проверка по юрлицу/ИП» и «расчет по перечню продукции»</b> – бриф ecs24, CTA писем №1 и №2.</li>
+      <li><b>«Оформляем под ключ / под какие техрегламенты попадает / документ на основании протокола из аккредитованной лаборатории»</b> – исходники ecs24 (декларация выдается на основании протокола от аккредитованной лаборатории) + анкета («оформляем под ключ, подскажем под какие регламенты попадает»).</li>
+      <li><b>«Продлить выгоднее вашего текущего варианта»</b> – бриф ecs24, УТП Сегмента 1: гарантия более выгодной цены (даем как обещание под конкретный запрос).</li>
+      <li><b>Боль «поставки в сети и через таможню без действующего документа»</b> – бриф ecs24, боли Сегмента 1.</li>
+    </ul>
+  </div>
+
+  <div id="all">
+
+    <div class="seg-divider"><h2>Сегмент №1 – Декларация ТР ЕАЭС (мягкая версия)</h2></div>
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('m1', this)">Копировать</button>
+      <div id="m1">
+        <p class="h2">Письмо №1</p>
+        <p class="p"><b>Тема:</b> Декларация ТР ЕАЭС, {Компания}</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">Обратила внимание, что у вас в ближайший месяц заканчивается декларация ТР ЕАЭС на [пищевую продукцию / косметику / упаковку / зерно / легкопром]. Решила написать заранее – с продлением лучше не тянуть до последнего дня.</p>
+        <p class="p">Меня зовут Екатерина, компания ЕЦС 24. Мы 12 лет оформляем декларации и сертификаты под ключ: подсказываем, под какие техрегламенты попадает продукция, организуем испытания и готовим документ на основании протокола из аккредитованной лаборатории. С лабораториями работаем напрямую, без посредников.</p>
+        <p class="p">Если продление актуально – просто ответьте «да». Расскажу, как продлить декларацию быстро и выгоднее вашего текущего варианта. Ни к чему вас не обязывает.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('m2', this)">Копировать</button>
+      <div id="m2">
+        <p class="h2">Письмо №2</p>
+        <p class="p"><b>Тема:</b> Декларация ТР ЕАЭС, {Компания}</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">Писала ранее про декларацию ТР ЕАЭС – возможно, письмо затерялось.</p>
+        <p class="p">Коротко, почему стоит заняться продлением заранее: если документ закончится между поставками, продукцию временно не примут в сети и не пропустят через таможню, пока новая декларация не будет готова. Когда продлеваете вовремя, паузы в отгрузках не возникает.</p>
+        <p class="p">Мы оформили 5000+ документов и на весь срок действия декларации даем гарантию.</p>
+        <p class="p">Если интересно – пришлите название юрлица или ИП и перечень продукции. Бесплатно проверю, что у вас оформлено и когда заканчивается, посчитаю стоимость и сроки и пришлю всю информацию по продлению.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <button class="copy-btn" onclick="copyBlock('m3', this)">Копировать</button>
+      <div id="m3">
+        <p class="h2">Письмо №3</p>
+        <p class="p"><b>Тема:</b> Декларация ТР ЕАЭС, {Компания}</p>
+        <p class="p">[приветствие]</p>
+        <p class="p">Напомню про декларацию ТР ЕАЭС.</p>
+        <p class="p">Если планируете продлевать – по срокам лучше заложить запас. Само оформление занимает 9-10 дней плюс пара дней на подготовку документов и образцов. Если начать за 2-3 месяца до окончания, все успеваем без спешки.</p>
+        <p class="p">Нас выбрали 3200+ организаций. Если у таможни возникают вопросы по нашим документам – даем официальные разъяснения.</p>
+        <p class="p">Если продлением в компании занимается кто-то другой – подскажите, к кому обратиться, буду благодарна.</p>
+        <p class="p">[подпись]</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+async function copyBlock(id, btn) {
+  const el = document.getElementById(id);
+  const clone = el.cloneNode(true);
+  clone.querySelectorAll('.copy-btn, .seg-divider').forEach(n => n.remove());
+  const temp = document.createElement('div');
+  temp.style.cssText = 'position:fixed;left:-9999px;top:0;';
+  temp.appendChild(clone);
+  document.body.appendChild(temp);
+  const html = clone.innerHTML;
+  const text = clone.innerText;
+  document.body.removeChild(temp);
+  try {
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], {type: 'text/html'}),
+        'text/plain': new Blob([text], {type: 'text/plain'})
+      })
+    ]);
+    const orig = btn.textContent;
+    btn.textContent = 'Скопировано';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = orig; btn.classList.remove('ok'); }, 1500);
+  } catch (e) {
+    alert('Не удалось скопировать: ' + e.message);
+  }
+}
+</script>
+</body>
+</html>
