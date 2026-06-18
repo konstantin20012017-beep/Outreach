@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Мосса Инжиниринг – Темы писем по сегментам</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 860px; margin: 30px auto; padding: 0 20px; color: #222; background: #fafafa; }
+  .header { background: #2a5db0; color: #fff; padding: 20px 25px; border-radius: 8px; margin-bottom: 25px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; opacity: 0.92; font-size: 11pt; }
+  .info-card { background: #e8f3ff; border-left: 4px solid #2a5db0; padding: 14px 18px; margin: 18px 0 28px; border-radius: 4px; font-size: 10.5pt; }
+  .seg { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; }
+  .seg h2 { font-size: 15pt; color: #2a5db0; margin: 0 0 4px 0; }
+  .seg .sub { color: #666; font-size: 10pt; margin: 0 0 16px 0; }
+  .subj-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid #eee; }
+  .subj-row:first-of-type { border-top: none; }
+  .badge { flex: 0 0 auto; font-size: 9pt; font-weight: bold; padding: 3px 9px; border-radius: 4px; }
+  .badge.main { background: #2a5db0; color: #fff; }
+  .badge.alt { background: #eef2f8; color: #2a5db0; border: 1px solid #cdd9ec; }
+  .subj-text { flex: 1 1 auto; font-size: 11.5pt; }
+  .copy-btn { flex: 0 0 auto; background: #f0f4fa; color: #2a5db0; border: 1px solid #2a5db0; padding: 6px 14px; font-size: 9.5pt; border-radius: 5px; cursor: pointer; }
+  .copy-btn:hover { background: #2a5db0; color: #fff; }
+  .note { font-size: 9.5pt; color: #888; margin: 14px 0 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Мосса Инжиниринг – Темы писем</h1>
+  <p>3 сегмента • одна тема на цепочку (одинаковая во всех 3 письмах) • переменная {Компания}</p>
+</div>
+
+<div class="info-card">
+  <strong>Правило:</strong> тема одна на сегмент и ставится одинаково в начале каждого из 3 писем – чтобы письма склеивались в одну ветку в почтовике. Переменная <code>{Компания}</code> подставляет название компании-получателя. Основной вариант – рекомендую к запуску, альтернативы – под A/B-тест темы при желании.
+</div>
+
+<!-- ===== СЕГМЕНТ 1 ===== -->
+<div class="seg">
+  <h2>Сегмент 1 – мясо + молочка РФ</h2>
+  <p class="sub">Угол: завод уперся в потолок / нет места под новый продукт</p>
+
+  <div class="subj-row">
+    <span class="badge main">основной</span>
+    <span class="subj-text" id="s1a">{Компания} – проектирование пищевого производства</span>
+    <button class="copy-btn" onclick="copyText('s1a', this)">Копировать</button>
+  </div>
+  <div class="subj-row">
+    <span class="badge alt">A/B</span>
+    <span class="subj-text" id="s1b">{Компания}: модернизация или новый завод</span>
+    <button class="copy-btn" onclick="copyText('s1b', this)">Копировать</button>
+  </div>
+  <div class="subj-row">
+    <span class="badge alt">A/B</span>
+    <span class="subj-text" id="s1c">Инженерный взгляд на производство – {Компания}</span>
+    <button class="copy-btn" onclick="copyText('s1c', this)">Копировать</button>
+  </div>
+</div>
+
+<!-- ===== СЕГМЕНТ 2 ===== -->
+<div class="seg">
+  <h2>Сегмент 2 – кондитерка, хлеб, макароны, готовая еда РФ</h2>
+  <p class="sub">Угол: рост мощностей под контракт сети / новая ниша / потолок завода</p>
+
+  <div class="subj-row">
+    <span class="badge main">основной</span>
+    <span class="subj-text" id="s2a">{Компания}: рост мощностей под контракт с сетью</span>
+    <button class="copy-btn" onclick="copyText('s2a', this)">Копировать</button>
+  </div>
+  <div class="subj-row">
+    <span class="badge alt">A/B</span>
+    <span class="subj-text" id="s2b">{Компания} – новый продукт или новая ниша</span>
+    <button class="copy-btn" onclick="copyText('s2b', this)">Копировать</button>
+  </div>
+  <div class="subj-row">
+    <span class="badge alt">A/B</span>
+    <span class="subj-text" id="s2c">{Компания}: новая линия или модернизация</span>
+    <button class="copy-btn" onclick="copyText('s2c', this)">Копировать</button>
+  </div>
+</div>
+
+<!-- ===== СЕГМЕНТ 3 ===== -->
+<div class="seg">
+  <h2>Сегмент 3 – СНГ-Узбекистан</h2>
+  <p class="sub">Угол: сложно найти инженерную команду с реальным опытом пищевых производств в РУз</p>
+
+  <div class="subj-row">
+    <span class="badge main">основной</span>
+    <span class="subj-text" id="s3a">{Компания} – проектирование пищевого производства</span>
+    <button class="copy-btn" onclick="copyText('s3a', this)">Копировать</button>
+  </div>
+  <div class="subj-row">
+    <span class="badge alt">A/B</span>
+    <span class="subj-text" id="s3b">{Компания}: инженерная команда с опытом в Узбекистане</span>
+    <button class="copy-btn" onclick="copyText('s3b', this)">Копировать</button>
+  </div>
+  <div class="subj-row">
+    <span class="badge alt">A/B</span>
+    <span class="subj-text" id="s3c">Проектирование производства в Узбекистане – {Компания}</span>
+    <button class="copy-btn" onclick="copyText('s3c', this)">Копировать</button>
+  </div>
+</div>
+
+<p class="note">Без выдуманной конкретики: темы – чистый якорь по теме сегмента + название компании. Цифр и кейсов в теме нет, поэтому атрибуция источников не требуется.</p>
+
+<script>
+async function copyText(id, btn) {
+  const text = document.getElementById(id).innerText;
+  await navigator.clipboard.writeText(text);
+  const old = btn.textContent;
+  btn.textContent = 'Скопировано';
+  setTimeout(() => btn.textContent = old, 1500);
+}
+</script>
+
+</body>
+</html>

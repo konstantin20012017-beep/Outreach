@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Мосса Инжиниринг – опенеры письма №1 (категории в скобках)</title>
+<style>
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 880px; margin: 30px auto; padding: 0 20px; color: #222; background: #fafafa; }
+  .header { background: #2a5db0; color: #fff; padding: 20px 25px; border-radius: 8px; margin-bottom: 22px; }
+  .header h1 { margin: 0 0 6px 0; font-size: 20pt; }
+  .header p { margin: 0; opacity: 0.92; font-size: 11pt; }
+  .info-card { background: #e8f3ff; border-left: 4px solid #2a5db0; padding: 14px 18px; margin: 0 0 26px; border-radius: 4px; font-size: 10.5pt; }
+  .seg { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 22px 26px; margin-bottom: 22px; position: relative; }
+  .seg h2 { font-size: 15pt; color: #2a5db0; margin: 0 0 14px 0; }
+  .txt { font-size: 11pt; }
+  .txt .ph { color: #b8860b; font-weight: bold; }
+  .copy-btn { position: absolute; top: 20px; right: 22px; background: #f0f4fa; color: #2a5db0; border: 1px solid #2a5db0; padding: 6px 14px; font-size: 9.5pt; border-radius: 5px; cursor: pointer; }
+  .copy-btn:hover { background: #2a5db0; color: #fff; }
+  .note { font-size: 9.5pt; color: #888; margin: 14px 0 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Мосса Инжиниринг – опенеры письма №1</h1>
+  <p>Категории внутри скобок • без приветствия • формулировка «развиваете» • только письмо №1</p>
+</div>
+
+<div class="info-card">
+  <strong>Как пользоваться:</strong> опенер ставится в самое начало письма №1. В квадратных скобках уже перечислены все категории сегмента – оператор оставляет одну, под отрасль получателя, остальные удаляет. Ничего искать отдельно не нужно. «[имя]» – плейсхолдер для имени отправителя.
+</div>
+
+<!-- ===== СЕГМЕНТ 1 ===== -->
+<div class="seg">
+  <button class="copy-btn" onclick="copyText('s1', this)">Копировать</button>
+  <h2>Сегмент 1 – мясо + молочка</h2>
+  <p class="txt" id="s1">Вижу, что вы развиваете <span class="ph">[мясопереработку / птицепереработку / колбасное и полуфабрикатное производство / молочное производство / сыроварение / производство мороженого]</span> – поэтому пишу по теме производственных мощностей.</p>
+</div>
+
+<!-- ===== СЕГМЕНТ 2 ===== -->
+<div class="seg">
+  <button class="copy-btn" onclick="copyText('s2', this)">Копировать</button>
+  <h2>Сегмент 2 – кондитерка, хлеб, макароны, готовая еда</h2>
+  <p class="txt" id="s2">Вижу, что вы развиваете <span class="ph">[кондитерское производство / хлебопекарное производство / макаронное производство / мукомольное производство / выпуск готовой еды / производство замороженных полуфабрикатов]</span> – поэтому пишу по теме производственных мощностей.</p>
+</div>
+
+<!-- ===== СЕГМЕНТ 3 ===== -->
+<div class="seg">
+  <button class="copy-btn" onclick="copyText('s3', this)">Копировать</button>
+  <h2>Сегмент 3 – СНГ-Узбекистан</h2>
+  <p class="txt" id="s3">Вижу, что вы развиваете <span class="ph">[молочное производство / мясопереработку / кондитерское производство / хлебопекарное производство / масложировое производство / переработку фруктов и овощей]</span> – поэтому пишу по теме производственных мощностей.</p>
+</div>
+
+<p class="note">Только письмо №1. В письма №2 и №3 опенер не ставим. Скобка – подсказка оператору: оставить одну категорию под получателя, лишние удалить.</p>
+
+<script>
+async function copyText(id, btn) {
+  const text = document.getElementById(id).innerText;
+  await navigator.clipboard.writeText(text);
+  const old = btn.textContent;
+  btn.textContent = 'Скопировано';
+  setTimeout(() => btn.textContent = old, 1500);
+}
+</script>
+
+</body>
+</html>
