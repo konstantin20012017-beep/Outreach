@@ -36,6 +36,7 @@
 - [Выгрузка Google Docs/Drive](reference_google_docs_drive_extract.md)
 - [Извлечение .pptx/office](reference_pptx_office_extract.md)
 - [Webwright venv для обходов](reference_webwright_venv.md)
+- 🔧 [Восстановление памяти после клонирования репо](reference_memory_recovery.md) — память в `.claude/memory` + симлинк; на новой машине симлинк пересоздать вручную (команда внутри)
 
 ## Гипотезы (кандидаты на тест)
 - `гипотезы/алтунин_5писем_бенчмарки.md` — схема 5 писем, метрики 3-5%/1-2% (оценки эксперта). Тест: 5 писем vs наши 3
