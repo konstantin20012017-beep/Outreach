@@ -1,0 +1,135 @@
+# Память проекта Аутрич
+> Деталь правил — в `feedback_*.md`/`reference_*.md`, проектов — в `project_<slug>.md`. Здесь только хук-указатель.
+
+## Система / архитектура
+- [Агентный пайплайн аутрича](project_пайплайн_аутрича.md) — 6 агентов + библиотека победителей
+- [TODO: библиотека кейсов](project_библиотека_кейсов_todo.md)
+- Структура папок: черновики в `готовые цепочки/` (архив), `цепочки/` под текущую, победители в `.claude/agents/аутрич-библиотекарь/победители/`
+- [Данные внутри агента](feedback_данные_внутри_агента.md)
+- [Фундамент текстов — синк со skill](project_фундамент_текстов_синк.md)
+- [Примеры в правилах иллюстративны](feedback_примеры_в_правилах_иллюстративны.md)
+- [Счётчики ≠ артефакты](feedback_счетчики_не_равны_артефактам.md)
+- [Не объявлять отсутствие преждевременно](feedback_не_объявлять_отсутствие_преждевременно.md)
+- [Тема несёт триггер сегмента](feedback_subject_carries_trigger.md)
+- [Подпись = механике CTA](feedback_signature_matches_cta.md)
+- [Персона отправителя — тоже source-check](feedback_no_product_specifics_invented.md)
+- [Переносить ручные правки на все версии](feedback_переносить_правки_на_версии.md)
+- [Цепочки только через агентов](feedback_цепочки_через_агентов.md)
+- [Оркестратор проверяет гейт](feedback_оркестратор_проверяет_гейт.md)
+- [Тема на той же ступени Ханта](feedback_тема_на_той_же_ступени_ханта.md)
+- [Готовое письмо без заглушек](feedback_готовое_письмо_без_заглушек.md)
+- [Живой человеческий тон](feedback_живой_человеческий_тон.md)
+- [Синк памяти после рефактора файлов](feedback_синк_памяти_после_рефактора.md)
+- [Архивация схлопывает версии](feedback_архивация_схлопывает_версии.md)
+- [Таймбокс ресёрча 2-3 мин](feedback_таймбокс_ресерча.md)
+- [Отдавать добытый артефакт, не пересказ](feedback_отдавать_добытый_артефакт.md)
+- [Показывать процесс в реальном времени](feedback_показывать_процесс_realtime.md)
+- [Первоисточник, не выжимка](feedback_первоисточник_не_выжимка.md)
+- [Цифры — в исходники с цитатой](feedback_цифры_в_исходники_не_в_выжимку.md)
+- 🔴 [Гомоглифы: RU-путь не печатать руками](feedback_гомоглифы_в_путях.md) — Bash через find→переменную; Read/Edit — литерал из свежего вывода
+- [Сегмент не клон прошлой цепочки](feedback_сегмент_не_клон_прошлой_цепочки.md)
+- [Финал несёт новый жим; CTA = 3 разных действия](feedback_follow_up_new_push.md)
+- [Следовать указанному инструменту](feedback_следовать_указанному_инструменту.md)
+- [Без англицизмов в письме](feedback_без_англицизмов_в_письме.md)
+- [Без абстрактных слоганов](feedback_без_абстрактных_слоганов.md)
+- [Ритмика письма: короткие абзацы](feedback_ритмика_письма.md)
+- [Выгрузка Google Docs/Drive](reference_google_docs_drive_extract.md)
+- [Извлечение .pptx/office](reference_pptx_office_extract.md)
+- [Webwright venv для обходов](reference_webwright_venv.md)
+
+## Гипотезы (кандидаты на тест)
+- `гипотезы/алтунин_5писем_бенчмарки.md` — схема 5 писем, метрики 3-5%/1-2% (оценки эксперта). Тест: 5 писем vs наши 3
+- `гипотезы/кейсы_аутрич_вебинары_запад.md` — англо-кейсы «аутрич → вебинар» с цифрами; 3-письменная цепочка приглашения подтверждается
+
+## Текущие проекты
+> Детали каждого проекта — в `project_<slug>.md`. Здесь только статус-указатель.
+- [Lexis Voice](project_lexisvoice.md) — голосовой AI-тренажёр для отделов продаж (lexisvoice.ru). Бриф 2026-06-23. **Сегмент 1 «кейс в вашей отрасли» + отправитель Савченко + матрица 9 отраслей + банк 26 реальных кейсов получены 2026-06-23.** Цепочки НЕ начаты. До 3 кампаний × 3 письма. Кейс-якорь Ростелеком +113%
+- [МояКоманда](project_moyakomanda.md) — HRM-платформа. 3 из 4 цепочек готовы (IT/HRD v2/универсал), остался С1 HR-операционный. ⚠ html-бриф отстал от .md
+- [Парк-отель Джубга](project_jubga.md) — «Отдых для B2B». С2 v2 + С3 v1 готовы, С1 ждёт 3 блокера
+- [Промпоставки](project_промпоставки.md) — антидроновая заградсеть. С1 Белгород v1 готова, ждём реальный домен
+- [АСНА](project_асна.md) — онлайн-встреча для первых лиц аптек. v2 + A/B от лица Варпетяна, ждём контакты
+- [Re:activno / СметаИнформ](project_reactivno.md) — SEO-агентство. Бриф рабочий (14 кейсов), цепочки НЕ начаты
+- [dialeads](project_dialeads.md) — техпартнёр (AI/интеграции/MVP). 3 цепочки v1, блокер — реальные кейсы с цифрами
+- [JEZA](project_jeza.md) — премиальная ювелирная студия. Ждём инфо по сегментам
+- Мосса Инжиниринг (mossaengineering.com) — инжиниринг пищевых/FMCG. Бриф `брифы/mossa_бриф.*`. Гарантия 30 лидов. 3 цепочки v1 (мясо+молочка / кондитерка+хлеб+готовая еда / СНГ-Узбекистан)
+- [RefExpress](project_refexpress.md) — БУ реф-контейнеры. Сегмент 1 конечники-пищевики, A/B
+- [ExportBase](project_exportbase.md) — базы B2B-контактов. 2 сегмента (реанимация/маркетплейсы) A/B v1
+- [Ravix Group](project_ravix.md) — маркетинг/SEO. 3 сегмента (фитнес/ecom/B2C) v2
+- [Кормишин / Лига Эффективности](project_kormishin.md) — бизнес-миссии + HR-продукт. Цепочки готовы
+- [BPMSoft](project_bpmsoft.md) — регистрации на вебинар. v3 дали 0 рег → №4 pain-first v1
+- [DITEC](project_ditec.md) — машиностроение (3 продукта). 3 цепочки v1
+- [ECS24 / ЕЦС 24](project_ecs24.md) — сертификация. v4 (С1/С2) + мягкая A/B. С1 лидер по ответам
+- [iso-smk](reference_iso_smk_кейс.md) — кейс-референс по сертификации/СРО/НОК
+- Квадрат — завершён. `готовые цепочки/kvadrat_*.html`
+- Тапир — завершён. `готовые цепочки/tapir_*.html`
+
+## Предпочтения пользователя
+- HTML открывать в Google Chrome; готовые файлы открывать сразу после создания
+- Брифы — в HTML, не только markdown
+- Стиль писем: разговорный, человечный, без «специализируемся»/«пара мыслей»
+- Никогда не «ё» (всегда «е»)
+- PDF: Read не работает → `pdftotext -layout`; не выходит — сказать «не могу прочесть», не пропускать молча. [study_all_materials](feedback_study_all_materials.md)
+
+## Параллельные инициативы
+- [Личный планер на Yonote](project_planner_system.md) — этап 1 сделан, дальше неделя + дашборд
+- [Пилоты планера: Крипто Денис + Мой блог](project_pilots_2026_05.md)
+- [Парсер Telegram (личный)](project_parser_telegram.md) — Этап 3: 23 чата, 332 ключа, 44 антиключа
+- [Парсер — мультиниши + «Контент»](project_parser_multiniche_2026_05_19.md) — авто+контент; Контент = только онлайн-школы/инфобиз
+- 💡 [Парсер — побочные лиды ремонт/сервис](project_parser_repair_leads_opportunity.md)
+- 🚨 [Парсер — pending subscribe 25 чатов](project_parser_pending_subscribe_2026_05_15.md)
+- [Российские VPS режут Telegram MTProto](reference_russian_vps_telegram_block.md) — для Telethon зарубежный ДЦ
+- 🚨 [Telegram банит массовый резолв](reference_telegram_resolve_ratelimit.md) — резолвить десятками, не сотнями
+- [Аккаунты SmartApe](reference_smartape_accounts.md)
+
+## Правила работы
+- [Секреты сразу в файл `.env`](feedback_secrets_persist.md)
+- [Пароль VPS парсера агенту не давать](feedback_parser_vps_no_password.md)
+- [VPS: первая команда — SSH-логин, дальше внутри сессии](feedback_parser_vps_ssh_pattern.md)
+- [Пароль без метки — переспросить](feedback_password_disambiguation.md)
+- [Команды терминала — в HTML, своя кнопка снизу](feedback_commands_as_html_with_copy.md)
+- [SSH — интерактивный логин без пароля в строке](feedback_ssh_interactive_login_first.md)
+- [Каждое изменение — сразу commit + push](feedback_commit_and_push_each_change.md)
+- [Не утверждать состояние удалённой системы без проверки](feedback_verify_before_asserting_state.md)
+- [Терминал — одним окном через sshpass](feedback_terminal_steps_explicit_context.md)
+- [Не обещать «параллельно делаю», если не делаю](feedback_dont_promise_parallel_work.md)
+- [Не переспрашивать то, на что ответили](feedback_dont_re_ask.md)
+- [Перед длинным рендером — проверять окружение](feedback_video_edit_verify_env.md)
+- [Не использовать антитезу в письмах](feedback_no_antithesis.md) — касается всего файла, ловлю grep'ом
+- [Раскрывать регалию модусом в письме №1](feedback_reveal_regalia_modus.md)
+- [Тему пишем; приветствия/подписи — плейсхолдеры](feedback_no_subject_no_greeting.md)
+- [Присланные примеры — не правила](feedback_examples_arent_rules.md)
+- [Прямая просьба клиента переопределяет формат](feedback_client_format_override.md)
+- [Не Whisper для word-level таймкодов](feedback_transcription_quality.md) — Deepgram/AssemblyAI
+- [HTML-цепочки — чистая копия в Google Docs](feedback_html_copy_pattern.md)
+- [Вопрос ≠ команда](feedback_question_vs_command.md)
+- [Вязнем 3+ итерации — предлагать альтернативы](feedback_propose_alternatives_when_stuck.md) — вкл. 3+ перезаписи одного файла
+- [Хук/обслуживание ≠ приоритет пользователя](feedback_hook_maintenance_не_приоритет.md) — сначала задача юзера, обслуживание предложить/таймбоксить
+- [Не выдумывать конкретику продукта; метки [ИСТ]/[КАТ]/[СЦЕНА]](feedback_no_product_specifics_invented.md)
+- [Категория боли ≠ сцена боли](feedback_pain_category_vs_scene.md)
+- [Соцпруф конкретными именами, не «крупные компании»](feedback_concrete_brands_not_vague.md)
+- [Не превращать каждую правку в правило](feedback_dont_over_codify_edits.md)
+- [Уровень осведомлённости по лестнице Ханта](feedback_match_hunt_awareness_level.md) — 0 откликов → pain-first
+- [Применять методички реально, не галочкой](feedback_apply_external_methodology_deeply.md)
+- [Айсбрейкер на языке ЦА, не оффера](feedback_icebreaker_in_audience_language.md)
+- [Боль дожимать до бизнес-следствия](feedback_pain_to_business_consequence.md)
+- [Изучать все присланные материалы до работы](feedback_study_all_materials.md)
+- [Согласовывать род глаголов с подписью](feedback_author_gender_consistency.md)
+- [Не использовать канцелярит](feedback_no_canned_phrases.md)
+- [Предупреждать, что getpass скрывает ввод](feedback_getpass_invisible.md)
+- [Референс — накладывать блок-в-блок](feedback_reference_use_full_text.md)
+- [Перед цепочкой grep'нуть исходники по терминам](feedback_grep_sources_before_writing.md)
+- [Сайт клиента — обязательный источник до цепочек](feedback_client_site_mandatory_source.md)
+- [Между сегментами адаптировать угол, не только бренды](feedback_segment_chains_real_adaptation.md)
+- [Чек-лист идеальной цепочки](../../../Documents/Аутрич/чеклист_цепочки.md) — проходить вслух
+- [Раскрывать ВСЕ свои решения](feedback_disclose_all_silent_decisions.md)
+- [Не делать выводов с непрезентативной выборки](feedback_verify_sample_before_concluding.md)
+- [Оценивать стоимость ДО платных bulk-операций](feedback_estimate_cost_before_bulk_paid.md)
+- [VPS парсера — доступ только у пользователя](feedback_vps_access_user_only.md)
+- [Команды пользователю — по шагам простым языком](feedback_explain_steps_simply.md)
+- [Не убирать молча согласованные элементы структуры](feedback_no_silent_structural_drop.md)
+- [Правки конфига/фильтра — по одному пункту](feedback_one_by_one_for_config_changes.md)
+- [Один запрос = один артефакт](feedback_one_request_one_artifact.md)
+- [Не печатать кириллический путь руками](feedback_verify_cyrillic_path_before_write.md)
+- [Писать «е», не «ё», сразу при генерации](feedback_write_e_not_yo.md) — пост-шаг python ё→е
+- [Целевой файл в Chrome открывать последним](feedback_chrome_open_target_last.md)
+- [Дефолт — оба варианта как A/B](feedback_default_to_ab_variants.md)
