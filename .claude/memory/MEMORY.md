@@ -87,8 +87,10 @@
 - [Парсер Telegram (личный)](project_parser_telegram.md) — Этап 3: 23 чата, 332 ключа, 44 антиключа
 - [Парсер — мультиниши + «Контент»](project_parser_multiniche_2026_05_19.md) — авто+контент; Контент = только онлайн-школы/инфобиз
 - 💡 [Парсер — побочные лиды ремонт/сервис](project_parser_repair_leads_opportunity.md)
+- 🔴 [Парсер: искать СПРОС, не комьюнити практиков](feedback_парсер_спрос_не_комьюнити.md) — чаты под нишу-услугу = доски заказов/бизнес-чаты с запросами, НЕ сообщества исполнителей (n8n/zerocoder/вайбкодеры). 2026-06-26 (ниша ИИ-автоматизация). Кандидаты в `candidates_ai_automation.html` (Tier A — доски заказов с цитатами)
 - 🚨 [Парсер — pending subscribe 25 чатов](project_parser_pending_subscribe_2026_05_15.md)
 - [Российские VPS режут Telegram MTProto](reference_russian_vps_telegram_block.md) — для Telethon зарубежный ДЦ
+- [Ретро-прогон накопленных лидов через Haiku](reference_parser_retro_refilter.md) — Telethon+Haiku только на VPS (локаль режет MTProto + старый ключ в .env); канал выдачи читать через JSON-экспорт TG Desktop (@kreohunter в нём не состоит). 2026-06-25: Контент 978→196 уник→21 одобрено
 - 🚨 [Telegram банит массовый резолв](reference_telegram_resolve_ratelimit.md) — резолвить десятками, не сотнями
 - [Аккаунты SmartApe](reference_smartape_accounts.md)
 
